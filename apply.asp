@@ -57,7 +57,7 @@
   </ul>
 </div>
 <style>
-.applybutton{line-height:150%;border-radius:50%;background:#ff0000;display:black;height:80%;width:80%;}
+.applybutton{height:80%;width:80%;}
 .applybutton img{width:90%;}
 .apply .am-u-sm-3{align:center;}
 </style>
