@@ -21,6 +21,7 @@
                           <li class="nav1-3"><a class="" href="sitespase.asp">空间使用信息</a></li>
                           <!-- <li class="nav1-4"><a class="" href="siteinfo.asp">服务器情况</a></li>
                           <li class="nav1-4"><a class="" href="tdk_list.asp">网站优化设置</a></li>-->
+                          
                       </ul>
                   </li>
                   <li class="sub-menu nav2">
@@ -30,8 +31,11 @@
                           <span class="arrow"></span>
                       </a>
                       <ul class="sub">
+                      
                       <li class="nav2-1"><a class="" href="single.asp?nav=1">会员列表</a></li>
                           <li class="nav2-2"><a class="" href="single.asp?nav=1">ASU申请列表</a></li>
+                          <li class="nav2-3"><a class="" href="pro_class.asp">学区学院管理</a></li>
+                          <li class="nav2-4"><a class="" href="pro_list.asp">专业管理</a></li>
                    <!-- <li class="nav2-3"><a class="" href="single.asp?nav=1">自我评估列表</a></li>-->
 
                       </ul>

@@ -36,6 +36,7 @@
   -->
 
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="xgwl/css/lib/amazeui.chosen.css">
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/app.css">
 </head>
 <body>
@@ -60,35 +61,30 @@
     <legend>校区及专业选择</legend>
 
         <div class="am-form-group">
-            <label for="doc-select-1">校区选择</label>
-                <select id="doc-select-1">
-                    <option value="option1">Tempe</option>
-                    <option value="option2">West</option>
-                    <option value="option3">DownTown</option>
-                    <option value="option3">Poly</option>
-                    <option value="option3">LakeHavasu</option>
+            <label for="doc-select-1" class="">校区选择</label>
+                <select id="doc-select-1" class="schoolzone">
+
                 </select>
             <span class="am-form-caret"></span>
         </div>
         <div class="am-form-group">
             <label for="doc-select-1">学院选择</label>
-                <select id="doc-select-1">
+                <select id="doc-select-1" class="college">
 
                 </select>
             <span class="am-form-caret"></span>
         </div>
                 <div class="am-form-group">
             <label for="doc-select-1">专业选择</label>
-                <select id="doc-select-1">
+                <select id="doc-select-1" class="major">
 
                 </select>
             <span class="am-form-caret"></span>
         </div>
 
+    
 
 
-
-        
 <input type="hidden" class="step" value="2">
 <button type="button" class="am-btn am-btn-default am-u-sm-6 " onClick="save(5)">上一页</button>
         <button type="button" class="am-btn am-btn-danger am-u-sm-6 " onClick="save(7)">下一页</button>
@@ -110,15 +106,17 @@
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
 <script src="xgwl/AmazeUI-2.7.2/assets/js/amazeui.ie8polyfill.min.js"></script>
+<script src="xgwl/js/lib/infinitedropdown.min.js"></script>
 <![endif]-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <!--<![endif]-->
 <script src="xgwl/AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
+<script src="xgwl/js/lib/amazeui.chosen.min.js"></script>
+<script src="xgwl/js/lib/region.js"></script>
 <script>
-
-
+//上传文件
     $(".upfile").on('change', function(e) {
         var fileNames = '';
         console.log(this.files);
