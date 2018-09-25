@@ -6,6 +6,24 @@ $(".save2").click(function(){
 
 update("cg");
 });
+/////////////////////////////////////
+//       替换引号                   //
+/////////////////////////////////////
+function jmyh(e){
+	if (e!=undefined){
+	 e=e.replace("'","%dyh%");
+	 e=e.replace('"','%syh%');
+	 //e=e.replace("\","%fxg%");
+ }
+	 return e;
+ }
+ function jmyh2(e){
+	 if (e!=undefined){
+	 e=e.replace("%dyh%","'");
+	 e=e.replace('%syh%','"');
+	 }
+	 return e;
+ }
 /////////////
 function update(cg){
 	  BigClassName=$("#BigClass").val().split(";")[0];
@@ -28,12 +46,12 @@ function update(cg){
 	tips=$("#tips").val();
 	mj1=$("#mj1").val();
 	mj2=$("#mj2").val();
-	  if(cg=="cg"){
-  Passed=$("#Passed").is(!this.checked);
-  }else{
-	 Passed=$("#Passed").is(':checked') ;
-  }
-  console.log(Passed);
+// 	  if(cg=="cg"){
+//   Passed=$("#Passed").is(!this.checked);
+//   }else{
+// 	 Passed=$("#Passed").is(':checked') ;
+//   }
+//   console.log(Passed);
 	Elite=$("#Elite").is(':checked')
 	action=$("#action").val();//操作指令
 	pro_id=$("#pro_id").val();//产品系统编号
@@ -44,21 +62,21 @@ function update(cg){
 	Description=$("#Description").val();
 	jgzj=$("#jgzj").val();
 	jgjj=$("#jgjj").val();
-	cfjname=$("#cfj").val().split(";")[0];
+	/*cfjname=$("#cfj").val().split(";")[0];
 	cfjid=$("#cfj").val().split(";")[1];
-/*
+
 	clxname=$("#clx").val().split(";")[0];
 	clxid=$("#clx").val().split(";")[1];
-	*/
+
 	clbname=$("#clb").val().split(";")[0];
-	clbid=$("#clb").val().split(";")[1];
+	clbid=$("#clb").val().split(";")[1];	*/
 	content1=$("#content1").val();
 	content2=$("#content2").val();
 	content3=$("#content3").val();
 	content4=$("#content4").val();
 	//二次新加
-	ckfsname=$("#ckfs").val().split(";")[0];
-	ckfsid=$("#ckfs").val().split(";")[1];
+	// ckfsname=$("#ckfs").val().split(";")[0];
+	// ckfsid=$("#ckfs").val().split(";")[1];
 	wz=$("#wz").val();
 	syq=$("#syq").val();
 	jgsj=$("#jgsj").val();
@@ -102,8 +120,8 @@ var clxid =[];//定义一个数组
 	  DefaultPicUrl4:DefaultPicUrl4,
       content:content,
 	  Orderid:Orderid,
-      Passed:Passed,
-	  Elite:Elite,
+    //   Passed:Passed,
+	//   Elite:Elite,
 	  action:action,
 	  pro_id:pro_id,
 	  //新增
@@ -114,17 +132,17 @@ var clxid =[];//定义一个数组
 		  content4:content4,
 	  jgzj:jgzj,
 	  jgjj:jgjj,
-	  cfjname:cfjname,
-	  cfjid:cfjid,
+	//   cfjname:cfjname,
+	//  cfjid:cfjid,
 //	  clxname:clxname,
 	  clxid:clxid,
-	  clbname:clbname,
-	  clbid:clbid,
+	//  clbname:clbname,
+	//  clbid:clbid,
 //	  ctdname:ctdname,
 	  ctdid:ctdid,
 	  //二次新增
-	ckfsname:ckfsname,
-	ckfsid:ckfsid,
+	//ckfsname:ckfsname,
+//	ckfsid:ckfsid,
 	wz:wz,
 	syq:syq,
 	jgsj:jgsj,
@@ -136,7 +154,7 @@ var clxid =[];//定义一个数组
 		//  console.log(data);
 		  /**/
 		 if(data=="add"){
- 					location.href='pic_list.Asp'
+ 					location.href='pro_list.Asp'
 			}else if(data=="addcg"){
 					location.href='pro_mod.Asp'
 			}else if(data=="modcg"){

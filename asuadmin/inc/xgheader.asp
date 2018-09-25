@@ -84,3 +84,8 @@ end if%>
             </div>
         </header>
       <!--header end-->
+<%            function jmyh2(e)
+      		e=Replace(e, "%dyh%",chr(39)) 
+          	e=replace(e,"%syh%",chr(34))
+          response.write e	
+      end function%>

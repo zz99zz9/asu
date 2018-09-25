@@ -114,7 +114,7 @@
 <!--<![endif]-->
 <script src="xgwl/AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
 <script src="xgwl/js/lib/amazeui.chosen.min.js"></script>
-<script src="xgwl/js/lib/region.js"></script>
+<script type="text/javascript" src="xgwl/ajax/apply-6.js"></script>
 <script>
 //上传文件
     $(".upfile").on('change', function(e) {
@@ -143,6 +143,6 @@
     });
 
 </script>
-<script type="text/javascript" src="xgwl/ajax/apply-1.js"></script>
+
 </body>
 </html>

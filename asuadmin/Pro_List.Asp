@@ -28,7 +28,7 @@ rs.open sql,conn,1,1
                   <div class="col-lg-12">
                       <section class="panel">
                           <header class="panel-heading">
-                              产品列表
+                              专业列表 <a href="pro_add.asp" class="btn btn-success add">添加专业</a>
                           </header>
                           
 <!--列表开始-->
@@ -40,33 +40,25 @@ rs.open sql,conn,1,1
           <tr > 
           
             <th width="40" class="hidden-phone"><strong>ID</strong></td>
- <!--           <th width="60" class="hidden-phone"><strong>国家</strong></td>
-                 <th width="70" class="hidden-phone"><strong>城市</strong></td>-->
-            <th width="200" ><strong>项目名称</strong></td>
+           <th width="60" class="hidden-phone"><strong>学区</strong></td>
+                 <th width="70" class="hidden-phone"><strong>学院</strong></td>
+            <th width="200" ><strong>专业</strong></td>
             <th width="80" class="hidden-phone"><strong>加入时间</strong></td>
             <th width="40" class="hidden-phone"><strong>排序</strong></td>
-            <th width="40" class="hidden-phone"><strong>审核</strong></td>
-            <th width="40" class="hidden-phone"><strong>推荐</strong></td>
-            <th width="80" class="hidden-phone"><strong>相册</strong></td>
+
             <th width="178" ><strong>操作</strong></td>
           </tr></thead>
           <tbody>
           <%do while not rs.eof%>
           <tr > 
             <td class="hidden-phone"><%=rs("articleid")%></td>
-            <!--<td class="hidden-phone"><%=rs("bigclassname")%></td>
-                            <td class="hidden-phone"><%=rs("smallclassname")%></td>-->
-            <td><%=rs("title")%> [ <%=rs("entitle")%> ] <%if rs("Passed")=false then%>(草稿)<%end if%></td>
+            <td class="hidden-phone"><%=rs("bigclassname")%></td>
+                            <td class="hidden-phone"><%=rs("smallclassname")%></td>
+            <td><%=rs("title")%> </td>
             <td class="hidden-phone"><%= FormatDateTime(rs("UpdateTime"),2) %></td>
             <td class="hidden-phone"><%=rs("orderid")%></td>
-            <td class="hidden-phone"><%if rs("Passed")=false then%><i class="icon-remove" style="color:#ff6c60;"></i><%else%><i class="icon-ok" style="color:#78cd51;"></i><%end if%></td>
-            <td class="hidden-phone"><%if rs("Elite")=false then%><i class="icon-remove" style="color:#ff6c60;"></i><%else%><i class="icon-ok" style="color:#78cd51;"></i><%end if%></td>
-            <td class="hidden-phone"><a class="btn btn-info btn-xs" href="Pic_list.asp?pro_id=<%=rs("articleid")%>">
-          <span class="glyphicon glyphicon-picture"></span> <%call picN(rs("articleid"))%> </a></td>
+
             <td >
-            <a href="f-hxt_list.asp?ArticleID=<%=rs("articleid")%>" class="btn btn-success btn-xs">户型图</a>
-            <a href="f-ts_list.asp?ArticleID=<%=rs("articleid")%>" class="btn btn-success btn-xs">特色</a>
-            <a href="f-fw_list.asp?ArticleID=<%=rs("articleid")%>" class="btn btn-success btn-xs">设施服务</a>
               <a href="Pro_mod.asp?ArticleID=<%=rs("articleid")%>" class="btn btn-success btn-xs">修改</a> 
               <a href="?ArticleID=<%=rs("ArticleID")%>&Action=Del" onClick="return ConfirmDel();" class="btn btn-danger btn-xs">删除</a> </td>
           </tr>
