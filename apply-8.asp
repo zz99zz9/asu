@@ -112,9 +112,7 @@
             <div id="upfilename"></div>
         </div>
 
-        <div class="am-form-group">
-            <input type="text" class="haddress" placeholder="推荐人/推荐公司/推荐学校">
-        </div>
+
 
 
 

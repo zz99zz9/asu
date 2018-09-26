@@ -65,7 +65,7 @@ header a{color:#fff;}
             <a href="#c3" class="">个人中心</a>
               <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
                   <li class="">
-                    <a href="##" class="">会员登录</a>
+                    <a href="memberlogin.asp" class="">会员登录</a>
                   </li>
                   <li class="">
                     <a href="##" class="">线上课堂</a>
