@@ -1,11 +1,11 @@
-
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <%
 formName=request("formName")
 EditName=request("EditName")
 %>
 <html>
 <head>
-<title>Í¼Æ¬ÉÏ´«</title>
+<title>å›¾ç‰‡ä¸Šä¼ </title>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 
 <style type="text/css">
@@ -31,7 +31,7 @@ function mysub()
   var strFileName=form1.file1.value;
   if (strFileName=="")
   {
-    alert("ÇëÑ¡ÔñÒªÉÏ´«µÄÎÄ¼ş");
+    alert("è¯·é€‰æ‹©è¦ä¸Šä¼ çš„æ–‡ä»¶");
     return false;
   }
 	esave.style.visibility="visible";
@@ -44,17 +44,17 @@ function mysub()
 <form name="form1" method="post" action="upload.asp" enctype="multipart/form-data"  onSubmit="return mysub()">
   <table width="400" border="0" align="center" cellpadding="2" cellspacing="1" class="table">
     <tr class="hback">
-      <td  class="xingmu"height="25" align="center"><strong>Í¼Æ¬ÉÏ´«</strong>
+      <td  class="xingmu"height="25" align="center"><strong>å›¾ç‰‡ä¸Šä¼ </strong>
         <input type="hidden" name="EditName" value="<%=EditName%>">
         <input type="hidden" name="FormName" value="<%=formName%>">
         <input type="hidden" name="act" value="uploadfile"></td>
     </tr>
     <tr  class="hback">
-      <td height="80" align="center">Ñ¡ÔñÎÄ¼ş:
+      <td height="80" align="center">é€‰æ‹©æ–‡ä»¶:
       <input type="file" name="file1" style="width:300" class="tx1" value=""> </td>
     </tr>
     <tr  class="hback">
-      <td height="25" align="center"><input type="submit" name="Submit" value="¿ªÊ¼ÉÏ´«" > </td>
+      <td height="25" align="center"><input type="submit" name="Submit" value="å¼€å§‹ä¸Šä¼ " > </td>
     </tr>
   </table>
   <div id="esave" style="position:absolute; top:18px; left:40px; z-index:10; visibility:hidden">
@@ -63,7 +63,7 @@ function mysub()
 	<TD bgcolor=#104A7B width="60%">
 	<TABLE WIDTH=100% height=120 BORDER=0 CELLSPACING=1 CELLPADDING=0>
 	<TR>
-	          <td bgcolor=#eeeeee align=center><font color=red>ÕıÔÚÉÏ´«ÎÄ¼ş£¬ÇëÉÔºò...</font></td>
+	          <td bgcolor=#eeeeee align=center><font color=red>æ­£åœ¨ä¸Šä¼ æ–‡ä»¶ï¼Œè¯·ç¨å€™...</font></td>
 	</tr>
 	</table>
 	</td><td width=20%></td>

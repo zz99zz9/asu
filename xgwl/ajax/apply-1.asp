@@ -1,1 +1,4 @@
-ok
+<%
+sfzpic=request("sfzpic")
+%>
+<%=sfzpic%>

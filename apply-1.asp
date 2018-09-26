@@ -83,20 +83,18 @@
           
         <button type="button" class="am-btn am-btn-warning am-btn-sm ">
             <i class="am-icon-cloud-upload"></i> 上传身份证正面照片</button>
-        <input type="file" class=" upfile" id="file" multiple>
+        <input type="file" class=" upfile" id="sfzpic" multiple>
         <div id="upfilename"></div>
                        <input type="hidden" class="sfzpic">
         </div>
-<div class="am-form-group am-form-file am-u-sm-6">
+<div class="am-form-group am-u-sm-6">
           
-        <button type="button" class="am-btn am-btn-warning am-btn-sm ">
+        <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" id=".sfzpic2">
             <i class="am-icon-cloud-upload"></i> 上传身份证背面照片</button>
-        <input type="file" class=" upfile" id="file" multiple>
+        <!--<input type="file" class=" upfile" id="file" multiple>-->
         <div id="upfilename"></div>
-                       <input type="hidden" class="sfzpic">
+            <input type="text" class="sfzpic2">
         </div>
-
-
         <div class="am-form-group">
             <input type="text" class="hz" id="" placeholder="护照号码">
         </div>
@@ -156,33 +154,23 @@
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <!--<![endif]-->
 <script src="xgwl/AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
+<!---->
+<form name="form1" method="post" id="form1" action="upload.asp" enctype="multipart/form-data"  onSubmit="return mysub()" target="_blank">
+        <input type="file" id="file1" name="file1" class="eie" >
+      <input type="text" name="file2" class="file2" value="">
+</form>
+<iframe id="frameFile" name="frameFile" style={{display:'none'}}></iframe>
+
+<!---->
 <script>
-
-    $(".upfile").on('change', function(e) {
-        var fileNames = '';
-        console.log(this.files);
-
-
-      $.each(this.files, function() {
-        fileNames += '<span class="am-badge">' + this.name + '</span> ';
-      });
-      $(this).next().html(fileNames);
-      ////上传文件开始
-  
-     console.log(this.value);
-      files=this.value;
-      $.post("inc/upfile.asp",{
-        files:files
-    },
-        function(data,status){
-            
-        //  if(data=="ok" && status=="success"){
-             console.log(data)
-          //    }
-        });
-      ////上传文件结束
-    });
-
+$(".upfile").click(function () {
+var con = $(this).attr("id");
+con=$(".file2").val(con)
+  $("#file1").click();
+   $("#file1").on("change",function(){
+		 document.getElementById("form1").submit(); 
+	 });
+});
 </script>
 <script type="text/javascript" src="xgwl/ajax/apply-1.js"></script>
 </body>

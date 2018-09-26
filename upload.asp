@@ -22,7 +22,7 @@ else
 		if result then
 			'response.Write "文件'" & file.LocalName & "'上传成功，保存位置'" & server.MapPath(savepath & "/" & file.filename) & "',文件大小" & file.size & "字节<br />"
 			response.write "<script>window.opener.document."&upload.forms("FormName")&"."&upload.forms("EditName")&".value='"&replace(savepath,"../","") & "/" & file.filename&"'</script>"
-			response.write "<script language='javascript'>window.alert('文件上传成功!');window.close();</script>"
+			'response.write "<script language='javascript'>window.alert('文件上传成功!');window.close();</script>"
 		else
 			response.Write file.Exception & "<br />"
 		end if
@@ -34,8 +34,9 @@ else
 		if result then
 	'		response.Write "文件'" & file.LocalName & "'上传成功，保存位置'" & server.MapPath(savepath & "/" & file.filename) & "',文件大小" & file.size & "字节<br />"
 			response.write "<script>window.opener.document."&upload.forms("FormName")&"."&upload.forms("EditName")&".value='"&file.filename&"'</script>"
+            response.write "<script>console.log('fdsafdsa');"
 			response.write "<script>window.opener.document."&upload.forms("FormName")&"."&upload.forms("EditName")&".value='"&savepath & "/" & file.filename&"'</script>"
-			response.write "<script language='javascript'>window.alert('文件上传成功!');window.close();</script>"
+			'response.write "<script language='javascript'>window.alert('文件上传成功!');window.close();</script>"
 		else
 			response.Write file.Exception & "<br />"
 		end if

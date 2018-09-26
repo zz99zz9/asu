@@ -1,5 +1,5 @@
 function save(e){
-    location.href='apply-'+e+'.Asp'
+    //location.href='apply-'+e+'.Asp'
     cname=$(".cname").val();
     fname=$(".fname").val();
     lname=$(".lname").val();
@@ -11,7 +11,7 @@ function save(e){
     usa=$(".usa").val();
     cc=$(".cc").val();
     sex=$(".sex").val();
-console.log(e);
+//console.log(e);
       $.post("xgwl/ajax/apply-1.asp",{
         cname:cname,
         fname:fname,
@@ -29,8 +29,8 @@ console.log(e);
         function(data,status){
             
           if(data=="ok" && status=="success"){
-            cookie.set(uid, 1);
-
+           // cookie.set(uid, 1);
+            console.log(data);
               }
         });
     };
