@@ -1,4 +1,4 @@
-<!--#include file="inc/conn.asp"-->
+﻿<!--#include file="inc/conn.asp"-->
 <!doctype html>
 <html class="no-js">
 <head>
@@ -72,8 +72,8 @@
         major=rs("major")
 
     end if
-    Rs.close
-set Rs=Nothing
+ '   Rs.close
+'set Rs=Nothing
     %>
         <div class="am-form-group">
             <label for="doc-select-1" class="">校区选择</label>

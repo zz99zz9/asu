@@ -1,4 +1,4 @@
-<!--#include file="inc/conn.asp"-->
+﻿<!--#include file="inc/conn.asp"-->
 <!doctype html>
 <html class="no-js">
 <head>
@@ -74,8 +74,8 @@
         lwpic=rs("lwpic")
 
     end if
-    Rs.close
-set Rs=Nothing
+'    Rs.close
+'set Rs=Nothing
     %>
         <div class="am-form-group">
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="tjxpic">

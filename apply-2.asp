@@ -1,4 +1,4 @@
-<!--#include file="inc/conn.asp"-->
+﻿<!--#include file="inc/conn.asp"-->
 <!doctype html>
 <html class="no-js">
 <head>
@@ -73,8 +73,8 @@
         code=rs("code")
 
     end if
-    Rs.close
-set Rs=Nothing
+'    Rs.close
+'set Rs=Nothing
     %>
         <div class="am-form-group">
             <input type="text" class="address1" placeholder="地址：国家+城市+详细地址+邮编" value="<%=address1%>">

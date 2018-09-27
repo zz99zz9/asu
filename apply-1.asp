@@ -1,4 +1,4 @@
-<!--#include file="inc/conn.asp"-->
+﻿<!--#include file="inc/conn.asp"-->
 <!doctype html>
 <html class="no-js">
 <head>
@@ -80,8 +80,8 @@
         cc=rs("cc")
         recommend=rs("recommend")
     end if
-    Rs.close
-set Rs=Nothing
+'    Rs.close
+'set Rs=Nothing
     %>
 <form name="form2" id="form2" >
         <div class="am-form-group">

@@ -1,4 +1,4 @@
-<!--#include file="inc/conn.asp"-->
+﻿<!--#include file="inc/conn.asp"-->
 <!doctype html>
 <html class="no-js">
 <head>
@@ -73,8 +73,8 @@
         code=rs("code")
 
     end if
-    Rs.close
-set Rs=Nothing
+ '   Rs.close
+'set Rs=Nothing
     %>
 
 <div class="am-form-group">
