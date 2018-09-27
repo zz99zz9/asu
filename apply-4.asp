@@ -95,11 +95,11 @@ set Rs=Nothing
             <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
-            <input type="text" class="moaddress" placeholder="母亲的工作单位及职位" value="<%=moname%>">
+            <input type="text" class="moaddress" placeholder="母亲的工作单位及职位" value="<%=moaddress%>">
             <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
-            <input type="text" class="motel" placeholder="母亲的联系电话" value="<%=moname%>">
+            <input type="text" class="motel" placeholder="母亲的联系电话" value="<%=motel%>">
             <span class="errinfo"></span>
         </div>
 
