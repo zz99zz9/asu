@@ -1,3 +1,4 @@
+<!--#include file="inc/conn.asp"-->
 <!doctype html>
 <html class="no-js">
 <head>
@@ -37,6 +38,7 @@
 
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/amazeui.min.css">
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/app.css">
+  <link rel="stylesheet" href="xgwl/css/base.css">
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -58,25 +60,47 @@
     <div class="am-form" >
   <fieldset>
     <legend>监护人</legend>
+  <%aid=request.cookies("aid")
 
+    if aid<>"" then
+    set Rs=Server.CreateObject("ADODB.Recordset")
+    Rs.Open "select * from [Table_Application] where id="&aid,conn,1,3
+
+        faname=rs("faname")
+        faaddress=rs("faaddress")
+        fatel=rs("fatel")
+        moname=rs("moname")
+        moaddress=rs("moaddress")
+        motel=rs("motel")
+
+    end if
+    Rs.close
+set Rs=Nothing
+    %>
 
         <div class="am-form-group">
-            <input type="text" class="haddress" placeholder="父亲的名称">
+            <input type="text" class="faname" placeholder="父亲的名称" value="<%=faname%>">
+            <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
-            <input type="text" class="haddress" placeholder="父亲的工作单位及职位">
+            <input type="text" class="faaddress" placeholder="父亲的工作单位及职位" value="<%=faaddress%>">
+            <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
-            <input type="text" class="haddress" placeholder="父亲的联系电话">
+            <input type="text" class="fatel" placeholder="父亲的联系电话" value="<%=fatel%>">
+            <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
-            <input type="text" class="haddress" placeholder="母亲的名称">
+            <input type="text" class="moname" placeholder="母亲的名称" value="<%=moname%>">
+            <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
-            <input type="text" class="haddress" placeholder="母亲的工作单位及职位">
+            <input type="text" class="moaddress" placeholder="母亲的工作单位及职位" value="<%=moname%>">
+            <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
-            <input type="text" class="haddress" placeholder="母亲的联系电话">
+            <input type="text" class="motel" placeholder="母亲的联系电话" value="<%=moname%>">
+            <span class="errinfo"></span>
         </div>
 
 
@@ -138,6 +162,7 @@
     });
 
 </script>
-<script type="text/javascript" src="xgwl/ajax/apply-1.js"></script>
+<script type="text/javascript" src="xgwl/js/base.js"></script>
+<script type="text/javascript" src="xgwl/ajax/apply-4.js"></script>
 </body>
 </html>

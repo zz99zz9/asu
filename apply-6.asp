@@ -1,3 +1,4 @@
+<!--#include file="inc/conn.asp"-->
 <!doctype html>
 <html class="no-js">
 <head>
@@ -38,6 +39,7 @@
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/amazeui.min.css">
   <link rel="stylesheet" href="xgwl/css/lib/amazeui.chosen.css">
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/app.css">
+    <link rel="stylesheet" href="xgwl/css/base.css">
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -59,25 +61,38 @@
     <div class="am-form" >
   <fieldset>
     <legend>校区及专业选择</legend>
+  <%aid=request.cookies("aid")
 
+    if aid<>"" then
+    set Rs=Server.CreateObject("ADODB.Recordset")
+    Rs.Open "select * from [Table_Application] where id="&aid,conn,1,3
+
+        schoolzone=rs("schoolzone")
+        college=rs("college")
+        major=rs("major")
+
+    end if
+    Rs.close
+set Rs=Nothing
+    %>
         <div class="am-form-group">
             <label for="doc-select-1" class="">校区选择</label>
                 <select id="doc-select-1" class="schoolzone">
-
+        <%if schoolzone="" then %> <option value="">请选择校区</option><%else%><option value="<%=schoolzone%>"><%=schoolzone%></option><%end if%>
                 </select>
             <span class="am-form-caret"></span>
         </div>
         <div class="am-form-group">
             <label for="doc-select-1">学院选择</label>
                 <select id="doc-select-1" class="college">
-
+<%if college="" then %> <option value="">请选择学院</option><%else%><option value="<%=college%>"><%=college%></option><%end if%>
                 </select>
             <span class="am-form-caret"></span>
         </div>
                 <div class="am-form-group">
             <label for="doc-select-1">专业选择</label>
                 <select id="doc-select-1" class="major">
-
+<%if major="" then %> <option value="">请选择学院</option><%else%><option value="<%=major%>"><%=major%></option><%end if%>
                 </select>
             <span class="am-form-caret"></span>
         </div>
@@ -114,35 +129,7 @@
 <!--<![endif]-->
 <script src="xgwl/AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
 <script src="xgwl/js/lib/amazeui.chosen.min.js"></script>
+<script type="text/javascript" src="xgwl/js/base.js"></script>
 <script type="text/javascript" src="xgwl/ajax/apply-6.js"></script>
-<script>
-//上传文件
-    $(".upfile").on('change', function(e) {
-        var fileNames = '';
-        console.log(this.files);
-
-
-      $.each(this.files, function() {
-        fileNames += '<span class="am-badge">' + this.name + '</span> ';
-      });
-      $(this).next().html(fileNames);
-      ////上传文件开始
-  
-     console.log(this.value);
-      files=this.value;
-      $.post("inc/upfile.asp",{
-        files:files
-    },
-        function(data,status){
-            
-        //  if(data=="ok" && status=="success"){
-             console.log(data)
-          //    }
-        });
-      ////上传文件结束
-    });
-
-</script>
-
 </body>
 </html>

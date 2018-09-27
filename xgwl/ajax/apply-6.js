@@ -1,19 +1,27 @@
 function save(e){
-    location.href='apply-'+e+'.Asp'
-    cname=$(".cname").val();
-    fname=$(".fname").val();
-    lname=$(".lname").val();
-    bdate=$(".bdate").val();
-    sfz=$(".sfz").val();
-    sfzpic=$(".sfzpic").val();
-    hz=$(".hz").val();
-    hzpic=$(".hzpic").val();
-    usa=$(".usa").val();
-    cc=$(".cc").val();
-    sex=$(".sex").val();
+    
+    schoolzone=$(".schoolzone").val();
+    college=$(".college").val();
+    major=$(".major").val();
+    aid=$(".aid").val();
 
-      
-    };
+    $.post("xgwl/ajax/apply-5.asp",{
+        aid:aid,
+        schoolzone:schoolzone,
+        college:college,
+        major:major
+
+    },
+        function(data,status){
+            
+          if(status=="success"){
+           // cookie.set(uid, 1);
+            console.log(data);
+                location.href='apply-'+e+'.Asp'
+              }
+            });
+
+    }
     /////////////
     
     $.post("xgwl/ajax/apply-6.asp",{
@@ -51,7 +59,7 @@ function save(e){
                         var province = $('.schoolzone').val();
                         for (var i = 0; i < areaMore.length; i++) {
                             if (areaMore[i].Province === province) {
-                                var cityContent = "<option value=''>请选择学院</option>";
+                                var cityContent = "";
                                 for (var j = 0; j < areaMore[i].City.length; j++) {
                                     cityContent += "<option value='" + areaMore[i].City[j] + "' >" + areaMore[i].City[j] + "</option>";
                                 }

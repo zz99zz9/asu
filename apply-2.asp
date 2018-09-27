@@ -1,3 +1,4 @@
+<!--#include file="inc/conn.asp"-->
 <!doctype html>
 <html class="no-js">
 <head>
@@ -37,6 +38,7 @@
 
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/amazeui.min.css">
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/app.css">
+  <link rel="stylesheet" href="xgwl/css/base.css">
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -58,26 +60,46 @@
     <div class="am-form" >
   <fieldset>
     <legend>联系信息</legend>
+  <%aid=request.cookies("aid")
 
+    if aid<>"" then
+    set Rs=Server.CreateObject("ADODB.Recordset")
+    Rs.Open "select * from [Table_Application] where id="&aid,conn,1,3
+
+        address1=rs("address1")
+        address2=rs("address2")
+        email=rs("email")
+        tel=rs("tel")
+        code=rs("code")
+
+    end if
+    Rs.close
+set Rs=Nothing
+    %>
         <div class="am-form-group">
-            <input type="text" class="haddress" placeholder="国家+城市+详细地址+邮编">
+            <input type="text" class="address1" placeholder="地址：国家+城市+详细地址+邮编" value="<%=address1%>">
+            <span class="errinfo"></span>
         </div>
 
         <div class="am-form-group">
-            <input type="text" class="gaddress" placeholder="国家+城市+详细地址+手机号+收件人+邮编">
+            <input type="text" class="address2" placeholder="收件地址：国家+城市+详细地址+手机号+收件人+邮编" value="<%=address2%>">
+            <span class="errinfo"></span>
         </div>
 
         <div class="am-form-group">
-            <input type="text" class="email" placeholder="电子邮箱，非QQ邮箱">
+            <input type="text" class="email" placeholder="电子邮箱，非QQ邮箱" value="<%=email%>">
+            <span class="errinfo"></span>
         </div>
 
         <div class="am-form-group">
-            <input type="text" class="tel" placeholder="手机号，多个号码可用、隔开">
+            <input type="text" class="tel" placeholder="手机号" value="<%=tel%>">
+            <span class="errinfo"></span>
         </div>
 
 
         <div class="am-form-group">
-            <input type="text" class="code" id="" placeholder="邮政编码">
+            <input type="text" class="code" id="" placeholder="邮政编码" value="<%=code%>">
+            <span class="errinfo"></span>
         </div>
 
         
@@ -108,35 +130,8 @@
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <!--<![endif]-->
 <script src="xgwl/AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
-<script>
 
-
-    $(".upfile").on('change', function(e) {
-        var fileNames = '';
-        console.log(this.files);
-
-
-      $.each(this.files, function() {
-        fileNames += '<span class="am-badge">' + this.name + '</span> ';
-      });
-      $(this).next().html(fileNames);
-      ////上传文件开始
-  
-     console.log(this.value);
-      files=this.value;
-      $.post("inc/upfile.asp",{
-        files:files
-    },
-        function(data,status){
-            
-        //  if(data=="ok" && status=="success"){
-             console.log(data)
-          //    }
-        });
-      ////上传文件结束
-    });
-
-</script>
-<script type="text/javascript" src="xgwl/ajax/apply-1.js"></script>
+<script type="text/javascript" src="xgwl/js/base.js"></script>
+<script type="text/javascript" src="xgwl/ajax/apply-2.js"></script>
 </body>
 </html>

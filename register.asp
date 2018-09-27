@@ -37,6 +37,7 @@
 
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/amazeui.min.css">
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/app.css">
+  <link rel="stylesheet" href="xgwl/css/base.css">
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -55,18 +56,23 @@
 <form name="form2" id="form2" >
         <div class="am-form-group">
             <input type="text" class="uname" placeholder="用户名" name="sfzp2">
+            <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
-            <input type="text" class="upwd" id="" placeholder="密码">
+            <input type="password" class="upwd" placeholder="密码">
+            <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
-            <input type="text" class="upwd2" id="" placeholder="确认密码">
+            <input type="password" class="upwd2" placeholder="确认密码">
+            <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
             <input type="text" class="cname" placeholder="姓名">
+            <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
             <input type="text" class="utel" placeholder="手机号">
+            <span class="errinfo"></span>
         </div>
                 <div class="am-form-group am-form-icon">
             <i class="am-icon-calendar"></i>
@@ -90,6 +96,7 @@
 
                 <div class="am-form-group">
             <input type="text" class="recommend" placeholder="推荐人/推荐公司/推荐学校">
+            <input type="hidden" class="action" value="add">
         </div>
 <input type="hidden" class="step" value="1">
 

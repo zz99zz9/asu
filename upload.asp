@@ -28,7 +28,7 @@ else
             response.write "<script>window.opener.document.getElementsByClassName('"&upload.forms("file2")&"ok')[0].style.display = 'block';</script>"
 			response.write "<script language='javascript'>window.close();</script>"
 		else
-			response.Write file.Exception & "<br />"
+		'	response.Write file.Exception & "<br />"
 		end if
 	end if
 
@@ -41,7 +41,7 @@ else
 
 			response.write "<script language='javascript'>window.close();</script>"
 		else
-			response.Write file.Exception & "<br />"
+		'	response.Write file.Exception & "<br />"
 		end if
 	end if
 	

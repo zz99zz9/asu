@@ -1,3 +1,4 @@
+<!--#include file="inc/conn.asp"-->
 <!doctype html>
 <html class="no-js">
 <head>
@@ -37,6 +38,7 @@
 
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/amazeui.min.css">
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/app.css">
+    <link rel="stylesheet" href="xgwl/css/base.css">
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -59,45 +61,60 @@
   <fieldset>
     <legend>资料上传</legend>
 
+  <%aid=request.cookies("aid")
 
-        <div class="am-form-group am-form-file">
-            <button type="button" class="am-btn am-btn-warning am-btn-sm">
-                <i class="am-icon-cloud-upload"></i> 上传推荐信照片
-            </button>
-            <input id="hzpic" type="file" class="upfile hzpic" multiple>
-            <div id="upfilename"></div>
+    if aid<>"" then
+    set Rs=Server.CreateObject("ADODB.Recordset")
+    Rs.Open "select * from [Table_Application] where id="&aid,conn,1,3
+
+        tjxpic=rs("tjxpic")
+        js1pic=rs("js1pic")
+        js2pic=rs("js2pic")
+        js3pic=rs("js3pic")
+        lwpic=rs("lwpic")
+
+    end if
+    Rs.close
+set Rs=Nothing
+    %>
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="tjxpic">
+            <i class="am-icon-cloud-upload"></i> 上传推荐信照片</button>
+            <input type="hidden" class="tjxpic upfile2" name="tjxpic"  value="<%=tjxpic%>">
+            <span class="errinfo"></span>
+            <div class="am-badge tjxpicok" style="display:none;">ok</div>
         </div>
 
-        <div class="am-form-group am-form-file">
-            <button type="button" class="am-btn am-btn-warning am-btn-sm">
-                <i class="am-icon-cloud-upload"></i> 上传自我介绍短视频
-            </button>
-            <input id="hzpic" type="file" class="upfile hzpic" multiple>
-            <div id="upfilename"></div>
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="js1pic">
+            <i class="am-icon-cloud-upload"></i> 上传自我介绍短视频1</button>
+            <input type="hidden" class="js1pic upfile2" name="js1pic"  value="<%=js1pic%>">
+            <span class="errinfo"></span>
+            <div class="am-badge js1picok" style="display:none;">ok</div>
         </div>
 
-        <div class="am-form-group am-form-file">
-            <button type="button" class="am-btn am-btn-warning am-btn-sm">
-                <i class="am-icon-cloud-upload"></i> 上传自我介绍短视频2
-            </button>
-            <input id="hzpic" type="file" class="upfile hzpic" multiple>
-            <div id="upfilename"></div>
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="js2pic">
+            <i class="am-icon-cloud-upload"></i> 上传自我介绍短视频2</button>
+            <input type="hidden" class="js2pic upfile2" name="js2pic" value="<%=js2pic%>">
+            <span class="errinfo"></span>
+            <div class="am-badge js2picok" style="display:none;">ok</div>
         </div>
 
-        <div class="am-form-group am-form-file">
-            <button type="button" class="am-btn am-btn-warning am-btn-sm">
-                <i class="am-icon-cloud-upload"></i> 上传自我介绍短视频3
-            </button>
-            <input id="hzpic" type="file" class="upfile hzpic" multiple>
-            <div id="upfilename"></div>
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="js3pic">
+            <i class="am-icon-cloud-upload"></i> 上传自我介绍短视频3</button>
+            <input type="hidden" class="js3pic upfile2" name="js3pic"  value="<%=js3pic%>">
+            <span class="errinfo"></span>
+            <div class="am-badge js3picok" style="display:none;">ok</div>
         </div>
 
-        <div class="am-form-group am-form-file">
-            <button type="button" class="am-btn am-btn-warning am-btn-sm">
-                <i class="am-icon-cloud-upload"></i> 上传论文
-            </button>
-            <input id="hzpic" type="file" class="upfile hzpic" multiple>
-            <div id="upfilename"></div>
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="lwpic">
+            <i class="am-icon-cloud-upload"></i> 上传论文</button>
+            <input type="hidden" class="lwpic upfile2" name="lwpic"  value="<%=lwpic%>">
+            <span class="errinfo"></span>
+            <div class="am-badge lwpicok" style="display:none;">ok</div>
         </div>
 
 
@@ -130,35 +147,8 @@
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <!--<![endif]-->
 <script src="xgwl/AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
-<script>
-
-
-    $(".upfile").on('change', function(e) {
-        var fileNames = '';
-        console.log(this.files);
-
-
-      $.each(this.files, function() {
-        fileNames += '<span class="am-badge">' + this.name + '</span> ';
-      });
-      $(this).next().html(fileNames);
-      ////上传文件开始
-  
-     console.log(this.value);
-      files=this.value;
-      $.post("inc/upfile.asp",{
-        files:files
-    },
-        function(data,status){
-            
-        //  if(data=="ok" && status=="success"){
-             console.log(data)
-          //    }
-        });
-      ////上传文件结束
-    });
-
-</script>
-<script type="text/javascript" src="xgwl/ajax/apply-1.js"></script>
+<!--#include file="inc/upfile.asp"-->
+<script type="text/javascript" src="xgwl/js/base.js"></script>
+<script type="text/javascript" src="xgwl/ajax/apply-5.js"></script>
 </body>
 </html>

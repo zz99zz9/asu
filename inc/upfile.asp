@@ -1,40 +1,16 @@
-<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
-<%con=request("con")
-files=request("files")
-%>
-      ////上传文件开始
-  
-     console.log(this.value);
-      files=this.value;
-      $.post("inc/upfile.asp",{
-        files:files,
-        con:con
-    },
-        function(data,status){
-
-        //  if(data=="ok" && status=="success"){
-//data='{"files":"https://blog.csdn.net/","con":"sfzpic"}'
-             console.log(data)
-             
-         var jsObjstr =JSON.parse(data);
-             console.log(jsObjstr.con);
-
-          //    }
-        });
-      ////上传文件结束
-
-<!--{"files":"<%=request("files")%>","con":"<%=request("con")%>"}-->
-
-   $(".upfile").on('change', function(e) {
-        var fileNames = '';
-       // console.log(this.files);
-        var con = $(this).attr("id");
-       // console.log(con);
-      $.each(this.files, function() {
-        fileNames += '<span class="am-badge">' + this.name + '</span> ';
-      });
-      $(this).next().html(fileNames);
-//上传开始
-$(".tx1").val("ff")
-//
-    });
+<!--上传用隐式表单-->
+<form name="form1" method="post" id="form1" action="upload.asp" enctype="multipart/form-data"  onSubmit="return mysub()" target="blank" style="display:none;">
+        <input type="file" id="file1" name="file1" >
+      <input type="text" name="file2" class="file2" value="">
+</form>
+<script>
+$(".upfile").click(function () {
+var con = $(this).attr("data-id");
+con=$(".file2").val(con)
+  $("#file1").click();
+   $("#file1").on("change",function(){
+		 document.getElementById("form1").submit(); 
+	 });
+});
+</script>
+<!--上传用隐式表单结束-->

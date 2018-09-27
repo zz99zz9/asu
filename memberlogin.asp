@@ -37,6 +37,7 @@
 
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/amazeui.min.css">
   <link rel="stylesheet" href="xgwl/AmazeUI-2.7.2/assets/css/app.css">
+    <link rel="stylesheet" href="xgwl/css/base.css">
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -55,14 +56,16 @@
 <form name="form2" id="form2" >
         <div class="am-form-group">
             <input type="text" class="uname" placeholder="用户名" name="sfzp2">
+            <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
-            <input type="text" class="upwd" id="" placeholder="密码">
+            <input type="password" class="upwd" id="" placeholder="密码">
+            <span class="errinfo"></span>
         </div>
 
 <input type="hidden" class="step" value="1">
         
-        <button type="button" class="am-btn am-btn-danger am-u-sm-12 " onClick="register('<%=url%>')">立即登录</button>
+        <button type="button" class="am-btn am-btn-danger am-u-sm-12 " onClick="mlogin('<%=url%>')">立即登录</button>
         <br><br>
         <a type="button" class="am-btn am-btn-default am-u-sm-12 " href="register.asp">新用户注册</a>
         </form>
@@ -90,7 +93,7 @@
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <!--<![endif]-->
 <script src="xgwl/AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
-
-<script type="text/javascript" src="xgwl/ajax/register.js"></script>
+<script type="text/javascript" src="xgwl/js/base.js"></script>
+<script type="text/javascript" src="xgwl/ajax/memberlogin.js"></script>
 </body>
 </html>

@@ -1,5 +1,30 @@
 <%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!--#include file="../../inc/conn.asp"-->
+<%aid=request("aid")
+	  schoolzone=request("schoolzone")
+	  college=request("college")
+	  major=request("major")
+
+%>
+    <%if aid="" then
+
+else
+    set Rs=Server.CreateObject("ADODB.Recordset")
+Rs.Open "select * from [Table_Application] where id="&aid,conn,1,3
+
+rs("schoolzone")=trim(schoolzone)
+Rs("college")=Trim(college)
+rs("major")=trim(major)
+
+
+Rs("uptime")=now()
+
+Rs.Update
+'response.write "ok"
+end if
+Rs.close
+set Rs=Nothing
+%>
 <%
 json="["
     set bRs=Server.CreateObject("ADODB.Recordset")
