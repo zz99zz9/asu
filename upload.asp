@@ -23,9 +23,9 @@ else
 		result = file.saveToFile(savepath,0,true)
 		if result then
 			response.Write "文件'" & file.LocalName & "'上传成功，保存位置'" & server.MapPath(savepath & "/" & file.filename) & "',文件大小" & file.size & "字节<br />"
-			response.write "<script>window.opener.document.form2."&upload.forms("file2")&".value='/"&savepath& "/" & file.filename&"'</script>"
-            response.write "<script>window.opener.document.getElementsByClassName('"&upload.forms("file2")&"ok')[0].innerHTML = '" & file.filename&"';</script>"
-            response.write "<script>window.opener.document.getElementsByClassName('"&upload.forms("file2")&"ok')[0].style.display = 'block';</script>"
+			response.write "<script>window.parent.document.form2."&upload.forms("file2")&".value='/"&savepath& "/" & file.filename&"'</script>"
+            response.write "<script>window.parent.document.getElementsByClassName('"&upload.forms("file2")&"ok')[0].innerHTML = '" & file.filename&"';</script>"
+            response.write "<script>window.parent.document.getElementsByClassName('"&upload.forms("file2")&"ok')[0].style.display = 'block';</script>"
 			response.write "<script language='javascript'>window.close();</script>"
 		else
 		'	response.Write file.Exception & "<br />"
@@ -37,7 +37,7 @@ else
 		result = file.saveToFile(savepath,1,true)
 		if result then
 	'		response.Write "文件'" & file.LocalName & "'上传成功，保存位置'" & server.MapPath(savepath & "/" & file.filename) & "',文件大小" & file.size & "字节<br />"
-			response.write "<script>window.opener.document.form2."&upload.forms("file2")&".value='"&file.filename&"'</script>"
+			response.write "<script>window.parent.document.form2."&upload.forms("file2")&".value='"&file.filename&"'</script>"
 
 			response.write "<script language='javascript'>window.close();</script>"
 		else
