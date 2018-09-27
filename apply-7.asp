@@ -175,6 +175,6 @@
     });
 
 </script>
-<script type="text/javascript" src="xgwl/ajax/apply-1.js"></script>
+<script type="text/javascript" src="xgwl/ajax/apply-7.js"></script>
 </body>
 </html>
