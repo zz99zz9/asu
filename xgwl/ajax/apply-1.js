@@ -29,7 +29,7 @@ function save(e){
     check1(".cname");
     check1(".fname");
     check1(".lname");
-    check2(".sfz");
+    check1(".sfz");
 
     if ($(".cname").hasClass("no")||$(".fname").hasClass("no")||$(".lname").hasClass("no")||$(".sfz").hasClass("no")){
         console.log("over");
