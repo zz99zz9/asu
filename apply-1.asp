@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 ﻿<!--#include file="inc/conn.asp"-->
+=======
+<%if request.cookies("uid")="" then 
+
+end if%>
+<!--#include file="inc/conn.asp"-->
+>>>>>>> 766aa8e183856e97db400b93b9eed572a4026b29
 <!doctype html>
 <html class="no-js">
 <head>
