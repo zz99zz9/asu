@@ -1,3 +1,6 @@
+<%if request.cookies("uid")="" then 
+
+end if%>
 <!--#include file="inc/conn.asp"-->
 <!doctype html>
 <html class="no-js">
