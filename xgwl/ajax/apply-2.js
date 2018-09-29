@@ -1,6 +1,4 @@
-$(".address1").blur(function(){
-    check1(".address1");
-});
+
 $(".address2").blur(function(){
     check1(".address2");
 });
@@ -17,12 +15,12 @@ $(".code").blur(function(){
 });
 
 function save(e){
-    check1(".address1");
+
     check1(".address2");
     check3(".email");
     check2(".tel");
     check1(".code");
-    if ($(".address1").hasClass("no")||$(".address2").hasClass("no")||$(".email").hasClass("no")||$(".tel").hasClass("no")||$(".code").hasClass("no")){
+    if ($(".address2").hasClass("no")||$(".email").hasClass("no")||$(".tel").hasClass("no")||$(".code").hasClass("no")){
         console.log("over");
     }else{
     aid=$(".aid").val();

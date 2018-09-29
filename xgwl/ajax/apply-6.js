@@ -59,7 +59,7 @@ function save(e){
                         var province = $('.schoolzone').val();
                         for (var i = 0; i < areaMore.length; i++) {
                             if (areaMore[i].Province === province) {
-                                var cityContent = "";
+                                var cityContent = "<option value=''>请选择学校</option>";
                                 for (var j = 0; j < areaMore[i].City.length; j++) {
                                     cityContent += "<option value='" + areaMore[i].City[j] + "' >" + areaMore[i].City[j] + "</option>";
                                 }

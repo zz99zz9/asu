@@ -27,15 +27,17 @@
                   <li class="sub-menu nav2">
                       <a href="javascript:;" class="">
                           <i class="icon-cogs"></i>
-                          <span>会员信息管理</span>
+                          <span>立即申请管理</span>
                           <span class="arrow"></span>
                       </a>
                       <ul class="sub">
                       
-                      <li class="nav2-1"><a class="" href="single.asp?nav=1">会员列表</a></li>
-                          <li class="nav2-2"><a class="" href="single.asp?nav=1">ASU申请列表</a></li>
-                          <li class="nav2-3"><a class="" href="pro_class.asp">学区学院管理</a></li>
-                          <li class="nav2-4"><a class="" href="pro_list.asp">专业管理</a></li>
+
+                          <li class="nav2-1"><a class="" href="asu_list.asp">ASU申请列表</a></li>
+                          <li class="nav2-2"><a class="" href="pro_class.asp">学区学院管理</a></li>
+                          <li class="nav2-3"><a class="" href="pro_list.asp">专业管理</a></li>
+                          <li class="nav2-4"><a class="" href="class_visa.asp">签证国家管理</a></li>
+                          <li class="nav2-5"><a class="" href="visa_list.asp">签证列表管理</a></li>
                    <!-- <li class="nav2-3"><a class="" href="single.asp?nav=1">自我评估列表</a></li>-->
 
                       </ul>
@@ -44,19 +46,27 @@
   <li class="sub-menu nav3">
                       <a href="javascript:;" class="">
                           <i class="icon-tasks"></i>
-                          <span>内容管理</span>
+                          <span>留学生活管理</span>
                           <span class="arrow"></span>
                       </a>
                       <ul class="sub">
-
-                    <li class="nav3-1"><a class="" href="single.asp?nav=21">签证中心</a></li>
-                    <li class="nav3-2"><a class="" href="single.asp?nav=22">ASU微群</a></li>
-                    <li class="nav3-3"><a class="" href="single.asp?nav=23">校内生活</a></li>
-                    <li class="nav3-4"><a class="" href="single.asp?nav=23">学校周边</a></li>
-                    <li class="nav3-5"><a class="" href="single.asp?nav=23">联系我们</a></li>
+                    <li class="nav3-1"><a class="" href="Prod_list.Asp?Prod_Type=1">ASU微群</a></li>
+                    <li class="nav3-2"><a class="" href="Prod_list.Asp?Prod_Type=2">校内生活</a></li>
+                    <li class="nav3-3"><a class="" href="Prod_list.Asp?Prod_Type=3">学校周边</a></li>
                       </ul>
                   </li>
- 
+   <li class="sub-menu nav4">
+                      <a href="javascript:;" class="">
+                          <i class="icon-tasks"></i>
+                          <span>个人中心管理</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                      <li class="nav4-1"><a class="" href="member_list.asp">会员列表</a></li>
+
+                    <li class="nav4-2"><a class="" href="single.asp?nav=1">联系我们</a></li>
+                      </ul>
+                  </li>
 
                   <li>
                       <a class="" href="LogInout.Asp">

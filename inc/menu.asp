@@ -1,8 +1,9 @@
 <style>
-.asu-header{background:#fcc641;}
+.asu-header{background:#8e1e42;color:#fff;}
 header a{color:#fff;}
+/*fcc641*/
 </style>
-<header data-am-widget="header" class="am-header am-btn-warning am-no-layout ">
+<header data-am-widget="header" class="am-header asu-header am-no-layout ">
       <div class="am-header-left am-header-nav">
           <a href="apply.asp" class="">
 
@@ -40,7 +41,7 @@ header a{color:#fff;}
                     <a href="apply.asp" class="">申请ASU</a>
                   </li>
                   <li class="">
-                    <a href="##" class="">签证中心</a>
+                    <a href="Visa.asp" class="">签证中心</a>
                   </li>
                   <li class="">
                     <a href="##" class="">自我评估</a>
@@ -51,13 +52,13 @@ header a{color:#fff;}
             <a href="##" class="">留学生活</a>
               <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
                   <li class="">
-                    <a href="##" class="">ASU微群</a>
+                    <a href="wechat.asp" class="">ASU微群</a>
                   </li>
                   <li class="">
-                    <a href="##" class="">校内生活</a>
+                    <a href="live.asp" class="">校内生活</a>
                   </li>
                   <li class="">
-                    <a href="##" class="">学校周边</a>
+                    <a href="periphery.asp" class="">学校周边</a>
                   </li>
               </ul>
           </li>
@@ -65,13 +66,13 @@ header a{color:#fff;}
             <a href="#c3" class="">个人中心</a>
               <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
                   <li class="">
-                    <a href="memberlogin.asp" class="">会员登录</a>
+                    <a href="member.asp" class="">会员中心</a>
                   </li>
                   <li class="">
                     <a href="##" class="">线上课堂</a>
                   </li>
                   <li class="">
-                    <a href="##" class="">联系我们</a>
+                    <a href="Contact_us.asp" class="">联系我们</a>
                   </li>
               </ul>
           </li>

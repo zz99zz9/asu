@@ -16,9 +16,9 @@ function check1(v){
     //     $(v).addClass("no");
     //     $(v).next(".errinfo").html("不能含有非法字符");
 
-    }else if(getLength($(v).val())<4){
-        $(v).addClass("no");
-        $(v).next(".errinfo").html("不能少于4个字符");
+    // }else if(getLength($(v).val())<1){
+    //     $(v).addClass("no");
+    //     $(v).next(".errinfo").html("不能少于1个字符");
 
     }else if(getLength($(v).val())>218){
         $(v).addClass("no");

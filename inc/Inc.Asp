@@ -521,6 +521,7 @@ response.write("selected='selected'")
 end if
 end sub
 '-------------------------类别id转名称---------------------------
+'call showName("表名",id,"对比字段名","输出字段名")
 sub showName(table,countt,idname,tit)
 safeRequest(countt)
 set oRs=Server.CreateObject("ADODB.Recordset")

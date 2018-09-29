@@ -91,39 +91,16 @@ End Function
   <div class="row" style="margin-top:15px;">
   <div class="col-lg-offset-1 col-lg-8">
 <textarea name="content" id="content" style="width:100%;height:450px;visibility:hidden;" class="form-control"><%=htmlspecialchars(htmlData)%></textarea>
-<%htmlData =texten%>
-<script>
-		KindEditor.ready(function(K) {
-			var editor1 = K.create('textarea[name="contenten"]', {
-				cssPath : 'kindeditor-4.1.7/plugins/code/prettify.css',
-				uploadJson : 'kindeditor-4.1.7/asp/upload_json.asp',
-				fileManagerJson : 'kindeditor-4.1.7/asp/file_manager_json.asp',
-				allowFileManager : true,
-				afterCreate : function() {
-					var self = this;
-					K.ctrl(document, 13, function() {
-						self.sync();
-						K('form[name=example]')[0].submit();
-					});
-					K.ctrl(self.edit.doc, 13, function() {
-						self.sync();
-						K('form[name=example]')[0].submit();
-					});
-				},afterBlur: function(){this.sync();}
-			});
-			prettyPrint();
-		});
-	</script>
-<textarea name="contenten" id="contenten" style="width:100%;height:450px;visibility:hidden;" class="form-control"><%=htmlspecialchars(htmlData)%></textarea>
-<input name="type_wj" id="type_wj" class="form-control" value="<%=title%>" type="text">
-<input name="type_wjen" id="type_wjen" class="form-control" value="<%=titleen%>" type="text">
+
+<input name="type_wj" id="type_wj" class="form-control" value="<%=title%>" type="hidden">
+<input name="type_wjen" id="type_wjen" class="form-control" value="<%=titleen%>" type="hidden">
 <input type="hidden" value="<%=type_wj%>" id="gsjsid">
-<input name="t" id="t" class="form-control" value="<%=t%>" type="text" placeholder="中文标题">
-<input name="d" id="d" class="form-control" value="<%=d%>" type="text" placeholder="中文描述">
-<input name="k" id="k" class="form-control" value="<%=k%>" type="text" placeholder="中文关键词">
-<input name="te" id="te" class="form-control" value="<%=te%>" type="text" placeholder="英文标题">
-<input name="de" id="de" class="form-control" value="<%=de%>" type="text" placeholder="英文描述">
-<input name="ke" id="ke" class="form-control" value="<%=ke%>" type="text" placeholder="英文关键词">
+<input name="t" id="t" class="form-control" value="<%=t%>" type="hidden" placeholder="中文标题">
+<input name="d" id="d" class="form-control" value="<%=d%>" type="hidden" placeholder="中文描述">
+<input name="k" id="k" class="form-control" value="<%=k%>" type="hidden" placeholder="中文关键词">
+<input name="te" id="te" class="form-control" value="<%=te%>" type="hidden" placeholder="英文标题">
+<input name="de" id="de" class="form-control" value="<%=de%>" type="hidden" placeholder="英文描述">
+<input name="ke" id="ke" class="form-control" value="<%=ke%>" type="hidden" placeholder="英文关键词"><!---->
 </div>
 </div>
 <div class="row">
@@ -144,23 +121,12 @@ End Function
   </section>
 
 <!--#include file="inc/xgfooter.asp"-->
-<%
-type_wj=int(type_wj)
-if type_wj<7 then
-wj=2
-elseif type_wj>6 and type_wj<17 then
-wj=3
-elseif type_wj>16 and type_wj<21 then
- wj=7
-elseif type_wj>20  then
-wj=4
-end if
-%>
+
   <script type="text/javascript">
 //导航菜单
 
-$(".nav<%=wj%>").addClass('active');
-$(".nav<%=wj%>-<%=type_wj%>").addClass('active');
+$(".nav4").addClass('active');
+$(".nav4-2").addClass('active');
 
 
 </script>

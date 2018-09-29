@@ -13,6 +13,10 @@ $(".lname").blur(function(){
 $(".sfz").blur(function(){
     check1(".sfz");
 });
+$(".recommend").blur(function(){
+    check1(".recommend");
+});
+
 // $(".sfzpic1").blur(function(){
 //     check1(".sfzpic1");
 // });
@@ -30,8 +34,9 @@ function save(e){
     check1(".fname");
     check1(".lname");
     check1(".sfz");
+    check1(".recommend")
 
-    if ($(".cname").hasClass("no")||$(".fname").hasClass("no")||$(".lname").hasClass("no")||$(".sfz").hasClass("no")){
+    if ($(".recommend").hasClass("no")||$(".cname").hasClass("no")||$(".fname").hasClass("no")||$(".lname").hasClass("no")||$(".sfz").hasClass("no")){
         console.log("over");
     }else{
     aid=$(".aid").val();
