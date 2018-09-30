@@ -46,7 +46,7 @@ rsBigClass.open "Select * from [Table_ProBigClass] order by Orderid",conn,1,3
   <script type="text/javascript">
 //导航菜单
 $(".nav2").addClass('active');
-$(".nav2-4").addClass('active');
+$(".nav2-2").addClass('active');
 
 $(document).ready(function(e) {
    defalutlist("list");
