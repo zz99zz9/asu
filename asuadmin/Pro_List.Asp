@@ -96,7 +96,7 @@ end if
   <script type="text/javascript">
 //导航菜单
 $(".nav2").addClass('active');
-$(".nav2-4").addClass('active');
+$(".nav2-3").addClass('active');
 
 function ConfirmDel()
 {
