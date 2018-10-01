@@ -24,7 +24,7 @@ Set rs= Server.CreateObject("ADODB.Recordset")
 rs.open sql,conn,1,1
 %>
  <%do while not rs.eof%>
-    <div class="am-u-sm-4 guojia">
+    <div class="am-u-sm-6 guojia">
       <a type="button" class="am-btn am-btn-danger am-btn-block" href="visa_from.asp?cid=<%=rs("cid")%>"><%=rs("cname")%></a>
     </div>
 <%
@@ -37,7 +37,7 @@ rs.open sql,conn,1,1
 <footer class="am-margin-top">
   <hr/>
   <p class="am-text-center">
-    一对一指导及预约
+    一对一指导及预约2d
   </p>
 </footer>
 <!-- 以上页面内容 开发时删除 -->
