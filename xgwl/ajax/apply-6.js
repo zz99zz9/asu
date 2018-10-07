@@ -1,11 +1,16 @@
 function save(e){
-    
+    // check1(".schoolzone");
+    // check1(".college");
+    // check1(".major");
+    // if ($(".schoolzone").hasClass("no")||$(".college").hasClass("no")||$(".major").hasClass("no")){
+    //     console.log("over");
+    // }else{
     schoolzone=$(".schoolzone").val();
     college=$(".college").val();
     major=$(".major").val();
     aid=$(".aid").val();
 
-    $.post("xgwl/ajax/apply-5.asp",{
+    $.post("xgwl/ajax/apply-6.asp",{
         aid:aid,
         schoolzone:schoolzone,
         college:college,
@@ -22,6 +27,7 @@ function save(e){
             });
 
     }
+// }
     /////////////
     
     $.post("xgwl/ajax/apply-6.asp",{
@@ -40,7 +46,7 @@ function save(e){
                 return e;
             }
                 
-            //    console.log (yh(data));
+                console.log (yh(data));
             var areaMore=JSON.parse(yh(data));
             (function ($) {
                 'use strict';

@@ -23,7 +23,7 @@ function save(e){
     if ($(".address2").hasClass("no")||$(".email").hasClass("no")||$(".tel").hasClass("no")||$(".code").hasClass("no")){
         console.log("over");
     }else{
-    aid=$(".aid").val();
+
     address1=$(".address1").val();
     address2=$(".address2").val();
     email=$(".email").val();
@@ -31,7 +31,7 @@ function save(e){
     code=$(".code").val();
 //console.log(e);
       $.post("xgwl/ajax/apply-2.asp",{
-        aid:aid,
+
         address1:address1,
         address2:address2,
         email:email,

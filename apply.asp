@@ -19,22 +19,22 @@
 </style>
 <div class="am-u-sm-12 apply">
     <div class="am-u-sm-3 ">
-    <a class="applybutton" href="apply-0.asp">
+    <a class="applybutton" href="apply-1.asp?kid=1">
         <img src="xgwl/img/b1.png">
     </a>
     </div>
     <div class="am-u-sm-3 ">
-    <a class="applybutton" href="apply-0.asp">
+    <a class="applybutton" href="apply-1.asp?kid=2">
         <img src="xgwl/img/b2.png">
     </a>
     </div>
     <div class="am-u-sm-3 ">
-    <a class="applybutton" href="apply-0.asp">
+    <a class="applybutton" href="apply-1.asp?kid=3">
         <img src="xgwl/img/b3.png">
         </a>
     </div>
     <div class="am-u-sm-3 ">
-    <a class="applybutton" href="apply-0.asp">
+    <a class="applybutton" href="apply-1.asp?kid=4">
         <img src="xgwl/img/b4.png">
         </a>
     </div>

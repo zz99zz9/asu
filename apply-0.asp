@@ -1,6 +1,4 @@
-<%if request.cookies("uid")="" then 
-Response.Redirect "memberlogin.Asp?err=请先登录再继续操作"
-end if%>
+
 <%title="asu申请表"%>
 <!--#include file="inc/conn.asp"-->
  <!--#include file="inc/header.asp">

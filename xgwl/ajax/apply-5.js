@@ -2,16 +2,17 @@
 
 function save(e){
 
-    aid=$(".aid").val();
+
     tjxpic=$(".tjxpic").val();
     js1pic=$(".js1pic").val();
     js2pic=$(".js2pic").val();
     js3pic=$(".js3pic").val();
     lwpic=$(".lwpic").val();
     
-//console.log(e);
+console.log(tjxpic);
+
       $.post("xgwl/ajax/apply-5.asp",{
-        aid:aid,
+
         tjxpic:tjxpic,
         js1pic:js1pic,
         js2pic:js2pic,

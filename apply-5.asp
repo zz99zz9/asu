@@ -1,4 +1,5 @@
-﻿<!--#include file="inc/conn.asp"-->
+﻿<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
+<!--#include file="inc/conn.asp"-->
 <%title="asu申请表"%>
  <!--#include file="inc/header.asp">
 <!-- 页面内容 开发时删除 -->
@@ -13,6 +14,7 @@
   <div class="am-u-sm-12">
     <div class="am-form" >
   <fieldset>
+
     <legend>资料上传</legend>
 
   <%aid=request.cookies("aid")
@@ -31,6 +33,7 @@
 '    Rs.close
 'set Rs=Nothing
     %>
+    <form name="form2" id="form2" >
         <div class="am-form-group">
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="tjxpic">
             <i class="am-icon-cloud-upload"></i> 上传推荐信照片</button>
@@ -66,7 +69,7 @@
         <div class="am-form-group">
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="lwpic">
             <i class="am-icon-cloud-upload"></i> 上传论文</button>
-            <input type="hidden" class="lwpic upfile2" name="lwpic"  value="<%=lwpic%>">
+            <input type="hidden" class="lwpic upfile2" name="lwpic" value="<%=lwpic%>">
             <span class="errinfo"></span>
             <div class="am-badge lwpicok" style="display:none;">ok</div>
         </div>
@@ -77,6 +80,7 @@
 <input type="hidden" class="step" value="2">
 <button type="button" class="am-btn am-btn-default am-u-sm-6 " onClick="save(4)">上一页</button>
         <button type="button" class="am-btn am-btn-danger am-u-sm-6 " onClick="save(6)">下一页</button>
+</form>
   </fieldset>
    </div>
 

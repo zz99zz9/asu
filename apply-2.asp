@@ -1,4 +1,5 @@
-﻿<!--#include file="inc/conn.asp"-->
+﻿<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
+<!--#include file="inc/conn.asp"-->
 <%title="asu申请表"%>
  <!--#include file="inc/header.asp">
 <!-- 页面内容 开发时删除 -->

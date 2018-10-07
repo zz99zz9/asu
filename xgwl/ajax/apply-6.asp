@@ -1,6 +1,6 @@
 <%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!--#include file="../../inc/conn.asp"-->
-<%aid=request("aid")
+<%aid=request.cookies("aid")
 	  schoolzone=request("schoolzone")
 	  college=request("college")
 	  major=request("major")

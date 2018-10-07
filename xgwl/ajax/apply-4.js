@@ -16,7 +16,7 @@ $(".moaddress").blur(function(){
 $(".motel").blur(function(){
     check2(".motel");
 });
-
+console.log($(".aid").val());
 function save(e){
     check1(".faname");
     check1(".faaddress");
@@ -27,7 +27,6 @@ function save(e){
     if ($(".faname").hasClass("no")||$(".faaddress").hasClass("no")||$(".fatel").hasClass("no")||$(".moname").hasClass("no")||$(".moaddress").hasClass("no")||$(".motel").hasClass("no")){
         console.log("over");
     }else{
-    aid=$(".aid").val();
     faname=$(".faname").val();
     faaddress=$(".faaddress").val();
     fatel=$(".fatel").val();
@@ -36,7 +35,6 @@ function save(e){
     motel=$(".motel").val();
 //console.log(e);
       $.post("xgwl/ajax/apply-4.asp",{
-        aid:aid,
         faname:faname,
         faaddress:faaddress,
         fatel:fatel,

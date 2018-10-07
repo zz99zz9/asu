@@ -1,4 +1,7 @@
-﻿<!--#include file="inc/conn.asp"-->
+﻿<%if request.cookies("uid")="" then 
+Response.Redirect "memberlogin.Asp?err=请先登录再继续操作"
+end if%>
+<!--#include file="inc/conn.asp"-->
 <%title="asu申请表"%>
  <!-- #include file="inc/header.asp">
  <link rel="stylesheet" href="xgwl/css/lib/normalize3.0.2.min.css" />
@@ -17,7 +20,7 @@
   <fieldset>
     <legend>基本信息</legend>
     <%aid=request.cookies("aid")
-
+kid=request.cookies("kid")
     if aid<>"" then
     set Rs=Server.CreateObject("ADODB.Recordset")
     Rs.Open "select * from [Table_Application] where id="&aid,conn,1,3

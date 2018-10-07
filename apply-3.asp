@@ -1,4 +1,5 @@
-﻿<!--#include file="inc/conn.asp"-->
+﻿<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
+<!--#include file="inc/conn.asp"-->
 <%title="asu申请表"%>
  <!--#include file="inc/header.asp">
 <!-- 页面内容 开发时删除 -->
@@ -20,11 +21,9 @@
     set Rs=Server.CreateObject("ADODB.Recordset")
     Rs.Open "select * from [Table_Application] where id="&aid,conn,1,3
 
-        address1=rs("address1")
-        address2=rs("address2")
-        email=rs("email")
-        tel=rs("tel")
-        code=rs("code")
+        asu=rs("asu")
+        asuid=rs("asuid")
+        asuselect=rs("asuselect")
 
     end if
  '   Rs.close
@@ -34,27 +33,27 @@
 <div class="am-form-group">
         <label for="doc-ipt-email-1">已经有ASU ID：</label>
             <label class="am-radio-inline">
-                <input type="radio"  value="是" name="asu" class="asu"> 是
+                <input type="radio"  value="是" name="asu" class="asu" <%if asu="是" then%> checked<%end if%>> 是
             </label>
             <label class="am-radio-inline">
-                <input type="radio"  value="否" name="asu" class="asu"> 否
+                <input type="radio"  value="否" name="asu" class="asu" <%if asu="否" then%> checked<%end if%>> 否
             </label>
 
         </div>
         <div class="am-form-group">
-            <input type="text" class="haddress" class="asuid" placeholder="如果有请填写您的ASU ID，没有可为空">
+            <input type="text" class="asuid" placeholder="如果有请填写您的ASU ID，没有可为空" value="<%=asuid%>">
         </div>
 
         <div class="am-form-group">
             <label for="doc-select-1">是否在ASU就读过？</label>
-                <select id="doc-select-1" class="alasu">
-                    <option value="曾在ASU完成本科学位">曾在ASU完成本科学位</option>
-                    <option value="曾在ASU就读，没有拿到学位证">曾在ASU就读，没有拿到学位证</option>
-                    <option value="曾经参加过ASU的全球项目">曾经参加过ASU的全球项目</option>
-                    <option value="曾经参与过ASU全球新生学院">曾经参与过ASU全球新生学院</option>
-                    <option value="曾经参加过ASU夏令营">曾经参加过ASU夏令营</option>
-                    <option value="其他">其他</option>
-                    <option value="从没到过ASU">从没到过ASU</option>
+                <select id="doc-select-1" class="alasu asuselect">
+                    <option value="曾在ASU完成本科学位" <%if asuselect="曾在ASU完成本科学位" then%>selected="selected"<%end if%>>曾在ASU完成本科学位</option>
+                    <option value="曾在ASU就读，没有拿到学位证" <%if asuselect="曾在ASU就读，没有拿到学位证" then%>selected="selected"<%end if%>>曾在ASU就读，没有拿到学位证</option>
+                    <option value="曾经参加过ASU的全球项目" <%if asuselect="曾经参加过ASU的全球项目" then%>selected="selected"<%end if%>>曾经参加过ASU的全球项目</option>
+                    <option value="曾经参与过ASU全球新生学院" <%if asuselect="曾经参与过ASU全球新生学院" then%>selected="selected"<%end if%>>曾经参与过ASU全球新生学院</option>
+                    <option value="曾经参加过ASU夏令营" <%if asuselect="曾经参加过ASU夏令营" then%>selected="selected"<%end if%>>曾经参加过ASU夏令营</option>
+                    <option value="其他" <%if asuselect="其他" then%>selected="selected"<%end if%>>其他</option>
+                    <option value="从没到过ASU" <%if asuselect="从没到过ASU" then%>selected="selected"<%end if%>>从没到过ASU</option>
                 </select>
             <span class="am-form-caret"></span>
         </div>

@@ -1,6 +1,6 @@
 <%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!--#include file="../../inc/conn.asp"-->
-<%aid=request("aid")
+<%aid=request.cookies("aid")
 	  address1=request("address1")
 	  address2=request("address2")
 	  email=request("email")
