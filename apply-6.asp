@@ -32,21 +32,21 @@
         <div class="am-form-group">
             <label for="doc-select-1" class="">校区选择</label>
                 <select id="doc-select-1" class="schoolzone">
-        <!--<%if schoolzone="" then %> <option value="">请选择校区</option><%else%><option value="<%=schoolzone%>"><%=schoolzone%></option><%end if%>-->
+      
                 </select>
             <span class="am-form-caret"></span>
         </div>
         <div class="am-form-group">
             <label for="doc-select-1">学院选择</label>
                 <select id="doc-select-1" class="college">
-<!--<%if college="" then %> <option value="">请选择学院</option><%else%><option value="<%=college%>"><%=college%></option><%end if%>-->
+
                 </select>
             <span class="am-form-caret"></span>
         </div>
                 <div class="am-form-group">
             <label for="doc-select-1">专业选择</label>
                 <select id="doc-select-1" class="major">
-<!--<%if major="" then %> <option value="">请选择学院</option><%else%><option value="<%=major%>"><%=major%></option><%end if%>-->
+
                 </select>
             <span class="am-form-caret"></span>
         </div>
