@@ -109,10 +109,13 @@ kid=request.cookies("kid")
         <div class="am-form-group">
        <label for="doc-ipt-email-1">本人是美国公民：</label>
             <label class="am-radio-inline">
-                <input type="radio"  value="是" name="usa" class="usa"> 是
+                <input type="radio"  value="是" name="usa" class="usa" <%if usa="是" then%> checked<%end if%>> 是
             </label>
             <label class="am-radio-inline">
-                <input type="radio"  value="否" name="usa" class="usa"> 不是
+                <input type="radio"  value="有绿卡" name="usa" class="usa" <%if usa="有绿卡" then%> checked<%end if%>> 有绿卡
+            </label>
+            <label class="am-radio-inline">
+                <input type="radio"  value="否" name="usa" class="usa" <%if usa="否" then%> checked<%end if%>> 不是
             </label>
         </div>
 
@@ -120,10 +123,10 @@ kid=request.cookies("kid")
         <div class="am-form-group">
         <label for="doc-ipt-email-1">性别：</label>
             <label class="am-radio-inline">
-                <input type="radio"  value="男" name="sex" class="sex"> 男
+                <input type="radio"  value="男" name="sex" class="sex" <%if sex="男" then%> checked<%end if%>> 男
             </label>
             <label class="am-radio-inline">
-                <input type="radio"  value="女" name="sex" class="sex"> 女
+                <input type="radio"  value="女" name="sex" class="sex" <%if sex="女" then%> checked<%end if%>> 女
             </label>
 
         </div>

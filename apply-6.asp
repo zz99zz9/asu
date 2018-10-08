@@ -20,11 +20,11 @@
     if aid<>"" then
     set Rs=Server.CreateObject("ADODB.Recordset")
     Rs.Open "select * from [Table_Application] where id="&aid,conn,1,3
-
-        schoolzone=rs("schoolzone")
-        college=rs("college")
-        major=rs("major")
-
+      if not(rs.eof and rs.bof) then
+          schoolzone=rs("schoolzone")
+          college=rs("college")
+          major=rs("major")
+      end if
     end if
  '   Rs.close
 'set Rs=Nothing
@@ -55,6 +55,7 @@
 
 
 <input type="hidden" class="step" value="2">
+<input type="hidden" class="action" value="add">
 <button type="button" class="am-btn am-btn-default am-u-sm-6 " onClick="save(5)">上一页</button>
         <button type="button" class="am-btn am-btn-danger am-u-sm-6 " onClick="save(7)">下一页</button>
   </fieldset>
@@ -71,6 +72,7 @@
 </footer>
 <!-- 以上页面内容 开发时删除 -->
 <!--#include file="inc/footer.asp"-->
+<script src="xgwl/js/lib/amazeui.chosen.min.js"></script>
 <script type="text/javascript" src="xgwl/ajax/apply-6.js"></script>
 </body>
 </html>

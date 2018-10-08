@@ -1,28 +1,22 @@
 <%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!--#include file="../../inc/conn.asp"-->
-<%aid=request.cookies("aid")
+<%aid=request("aid")
 	  schoolzone=request("schoolzone")
 	  college=request("college")
 	  major=request("major")
-
+      action=request("action")
 %>
-    <%if aid="" then
-
-else
+    <%if action="add" then
     set Rs=Server.CreateObject("ADODB.Recordset")
 Rs.Open "select * from [Table_Application] where id="&aid,conn,1,3
-
 rs("schoolzone")=trim(schoolzone)
 Rs("college")=Trim(college)
 rs("major")=trim(major)
-
-
 Rs("uptime")=now()
-
 Rs.Update
 'response.write "ok"
 end if
-Rs.close
+'Rs.close
 set Rs=Nothing
 %>
 <%
@@ -68,11 +62,8 @@ json="["
     brs.movenext
     bi=bi+1
     loop
-
 json=json+"]"
 'json="[{'Province':'bc1','City':['bc1-sc1','bc1-sc2'],'_Area':[['a'],['b']]},{'Province':'bc2','City':['bc2-sc1'],'_Area':[['a'],['b']]},{'Province':'bc3','City':['bc3-sc1'],'_Area':[['a'],['b']]},{'Province':'bc4','City':[],'_Area':[['a'],['b']]}]"
 response.write json
-
 '[{ "Province": "<%=", "City": ["校区一学校一", "校区一学校二", "校区一学校三"], "_Area": [["校区一学校一专业一", "校区一学校一专业二", "校区一学校一专业三", "校区一学校一专业四"], ["昆都仑区", "东河区"], ["海勃湾区", "海南区", "乌达区"]]}]
-
 %>

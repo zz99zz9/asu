@@ -1,22 +1,33 @@
 
 
 function save(e){
-    location.href='apply-'+e+'.Asp'
-    aid=$(".aid").val();
-    tjxpic=$(".tjxpic").val();
-    js1pic=$(".js1pic").val();
-    js2pic=$(".js2pic").val();
-    js3pic=$(".js3pic").val();
-    lwpic=$(".lwpic").val();
+ 
+
+    toefl=$(".toefl").val();
+    ielts=$(".ielts").val();
+    act=$(".act").val();
+    sat=$(".sat").val();
+    gmat=$(".gmat").val();
+    mschool=$(".mschool").val();
+    mspic=$(".mspic").val();
+    hschool=$(".hschool").val();
+    hspic=$(".hspic").val();
+    uschool=$(".uschool").val();
+    uspic=$(".uspic").val();
     
 //console.log(e);
-      $.post("xgwl/ajax/apply-5.asp",{
-        aid:aid,
-        tjxpic:tjxpic,
-        js1pic:js1pic,
-        js2pic:js2pic,
-        js3pic:js3pic,
-        lwpic:lwpic
+      $.post("xgwl/ajax/apply-7.asp",{
+        toefl:toefl,
+        ielts:ielts,
+        act:act,
+        sat:sat,
+        gmat:gmat,
+        mschool:mschool,
+        mspic:mspic,
+        hschool:hschool,
+        hspic:hspic,
+        uschool:uschool,
+        uspic:uspic
 
     },
         function(data,status){
