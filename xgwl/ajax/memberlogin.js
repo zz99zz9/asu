@@ -25,9 +25,9 @@ function mlogin(v){
           if(data=="ok" && status=="success"){
            // cookie.set(uid, 1);
             console.log(data);
-            location.href='apply-0.Asp'
+            location.href='apply-1.Asp'
               }else if(data=="err" && status=="success"){
-                location.href='memberlogin.Asp?err=用户名或密码错误，请修改重试'
+                location.href='memberlogin.Asp?err=用户名或密码错误，请修改重试!'
               }
         });
     }
