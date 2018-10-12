@@ -63,7 +63,14 @@
         
 <input type="hidden" class="step" value="2">
 <button type="button" class="am-btn am-btn-default am-u-sm-6 " onClick="save(3)">上一页</button>
-        <button type="button" class="am-btn am-btn-danger am-u-sm-6 " onClick="save(5)">下一页</button>
+<%
+if request.cookies("kid")=2 then
+    n=6
+    else
+    n=5
+end if
+%>
+        <button type="button" class="am-btn am-btn-danger am-u-sm-6 " onClick="save(<%=n%>)">下一页</button>
   </fieldset>
    </div>
 

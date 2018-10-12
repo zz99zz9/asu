@@ -4,7 +4,9 @@
 <!-- 页面内容 开发时删除 -->
 <style>
 .am-control-nav{display:none;}
+
 </style>
+
 <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
   <ul class="am-slides">
     <li><img src="xgwl/img/ad1.png" /></li>
@@ -13,6 +15,7 @@
   </ul>
 </div>
 <!--广告结束-->
+
 <div class="am-g am-g-fixed am-margin-top">
   <div class="am-u-sm-12">
   <style>
