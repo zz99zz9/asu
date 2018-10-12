@@ -20,7 +20,8 @@ end if%>
   <fieldset>
     <legend>基本信息</legend>
     <%aid=request.cookies("aid")
-kid=request.cookies("kid")
+
+response.cookies("kid")=request.QueryString("kid")
     if aid<>"" then
     set Rs=Server.CreateObject("ADODB.Recordset")
     Rs.Open "select * from [Table_Application] where id="&aid,conn,1,3
