@@ -14,9 +14,9 @@ Table=request("Table")
   case "list"
   
   case "add"
-  conn.execute"INSERT INTO ["&Table&"] (CName,OID,Cdate,CFile,Ctxt) VALUES ('"&CName&"','"&OID&"','"&now()&"','"&CFile&"','"&Ctxt&"')"
+  conn.execute"INSERT INTO ["&Table&"] (CName,OID,Cdate,CFile) VALUES ('"&CName&"','"&OID&"','"&now()&"','"&CFile&"')"
   case "mod"
-  conn.execute"update ["&Table&"] set CName='"&CName&"',OID="&OID&",Ctxt="&Ctxt&",Cdate='"&now()&"',CFile='"&CFile&"' where Cid="&CID&""
+  conn.execute"update ["&Table&"] set CName='"&CName&"',OID="&OID&",Cdate='"&now()&"',CFile='"&CFile&"' where Cid="&CID&""
 
   case "del"
   '可加判断是否删除
