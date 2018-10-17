@@ -43,6 +43,18 @@
                       </ul>
                   </li>
                    
+  <li class="sub-menu nav5">
+                      <a href="javascript:;" class="">
+                          <i class="icon-tasks"></i>
+                          <span>留学生活分类管理</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                    <li class="nav5-1"><a class="" href="class_wc.Asp">ASU微群分类</a></li>
+                    <li class="nav5-2"><a class="" href="class_live.Asp">校内生活分类</a></li>
+                    <li class="nav5-3"><a class="" href="class_zb.Asp">学校周边分类</a></li>
+                      </ul>
+                  </li>
   <li class="sub-menu nav3">
                       <a href="javascript:;" class="">
                           <i class="icon-tasks"></i>

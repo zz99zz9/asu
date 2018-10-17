@@ -10,6 +10,7 @@ $(".save").click(function(){
 	CName=$("#XGCName").val();
 	CID=$("#XGCID").val();
 	CFile=$("#XGCFile").val();
+	Ctxt=$("#XGCtxt").val();
 	Action=$("#XGAction").val();
 	OID=$("#XGOID").val();
 	Table=$("#XGTable").val();
@@ -21,7 +22,9 @@ $(".save").click(function(){
 		$("#XGOID").tooltip('show');
 	}else{
 		$(this).attr("data-dismiss","modal");//隐藏弹窗
- XgClass(CName,Action,CID,OID,Table,CFile);//执行修改操作
+		
+ XgClass(CName,Action,CID,OID,Table,CFile,Ctxt);//执行修改操作
+
 /*		  console.log(CID);
 		  console.log(CName);
 		  console.log(Action);
@@ -32,7 +35,24 @@ $(".save").click(function(){
 	}
 
 })
-
+/////////////////////////////////////
+//       替换引号                   //
+/////////////////////////////////////
+function jmyh(e){
+	if (e!=undefined){
+	 e=e.replace("'","%dyh%");
+	 e=e.replace('"','%syh%');
+	 //e=e.replace("\","%fxg%");
+ }
+	 return e;
+ }
+ function jmyh2(e){
+	 if (e!=undefined){
+	 e=e.replace("%dyh%","'");
+	 e=e.replace('%syh%','"');
+	 }
+	 return e;
+ }
 
 
 /////////////////////////////////////
@@ -40,7 +60,7 @@ $(".save").click(function(){
 ////////////////////////////////////
 function defalutlist(v,tablename){
 
- XgClass("",v,"","",tablename,"");
+ XgClass("",v,"","",tablename,"","");
 
 
 };
@@ -48,10 +68,10 @@ function defalutlist(v,tablename){
 /////////////////////////////////////
 //              输出类别列表         //
 ////////////////////////////////////
-function XgClass(CName,Action,CID,OID,Table,CFile){
+function XgClass(CName,Action,CID,OID,Table,CFile,Ctxt){
 
 //ajax操作数据库
-	 $.post("ajax/xgclass.asp",{CID:CID,CName:CName,Action:Action,OID:OID,Table:Table,CFile:CFile},
+	 $.post("ajax/xgclass.asp",{CID:CID,CName:CName,Action:Action,OID:OID,Table:Table,CFile:CFile,Ctxt:Ctxt},
 	  function(data,status){
 	  if(status=="success"){
 		var jsObjstr =JSON.parse(data);
@@ -76,6 +96,7 @@ function XgClass(CName,Action,CID,OID,Table,CFile){
 	str+='$(".mod").click(function(){';
 	str+='var cname=$(this).data("cname");';
 	str+='var cfile=$(this).data("cfile");';
+	str+='var ctxt=$(this).data("ctxt");';
 	str+='var cid=$(this).data("cid");';
 	str+='var oid=$(this).data("oid");';
 	str+='var action=$(this).data("action");';
@@ -86,6 +107,7 @@ function XgClass(CName,Action,CID,OID,Table,CFile){
 	str+='$("#XGAction").val("add");';
 	str+='$("#XGTable").val("'+Table+'");';
 	str+='$("#XGCFile").val("");';
+	str+='$("#XGCtxt").val("");';
 	str+='$("p").remove();'
 	str+='$("#xg-class .form-group:not(.form-group:first)").css("display","block");'
 	str+='$("#XGCName").removeAttr("disabled");'
@@ -95,6 +117,7 @@ function XgClass(CName,Action,CID,OID,Table,CFile){
 	str+='$("#XGTable").val("'+Table+'");';
 	str+='$("#XGAction").val("mod");';
 	str+='$("#XGCFile").val(cfile);';
+	str+='$("#XGCtxt").val(ctxt);';
 	str+='$("#XGCID").val(cid);';
 	str+='$("#XGCName").removeAttr("disabled");'
 	str+='$("p").remove();'
@@ -105,6 +128,7 @@ function XgClass(CName,Action,CID,OID,Table,CFile){
 	str+='$("#XGAction").val("del");';
 	str+='$("#XGTable").val("'+Table+'");';
 	str+='$("#XGCID").val(cid);';
+	str+='$("#XGCtxt").val(ctxt);';
 	str+='$("#XGCName").attr("disabled","");'
 	str+='$("#XGOID").val(oid);';
 	str+='$("p").remove();'
@@ -122,7 +146,7 @@ str+='$("#xg-class").before("<p>是否确定要删除以下类别及相关产品
 	str+='<tr ><th style="padding-left:50px;"><strong>栏目名称</strong></th><th>排序</th><th ><strong>操作选项</strong></th></tr>';
 	for (var i=0;i<jsObjstr.length;i++)
 					{
-	str+='<tr style="background-color:#F9F9F9;"><td style="padding-left:50px;"><img src="xgwl/img/jia.gif" width="15" height="15">'+jsObjstr[i].CName+' | '+jsObjstr[i].CFile+'</td><td>'+jsObjstr[i].OID+'</td><td><button class="btn btn-success btn-xs mod" data-action="mod" data-cid="'+jsObjstr[i].CID+'" data-cname="'+jsObjstr[i].CName+'" data-cfile="'+jsObjstr[i].CFile+'" data-toggle="modal" data-oid="'+jsObjstr[i].OID+'" data-xgtable="'+Table+'">修改</button> <button class="btn btn-danger btn-xs mod" data-action="del" data-cid="'+jsObjstr[i].CID+'" data-cname="'+jsObjstr[i].CName+'" data-toggle="modal" data-oid="'+jsObjstr[i].OID+'" data-xgtable="'+Table+'">删除</button></td></tr>';
+	str+='<tr style="background-color:#F9F9F9;"><td style="padding-left:50px;"><img src="xgwl/img/jia.gif" width="15" height="15">'+jsObjstr[i].CName+' | '+jsObjstr[i].CFile+' | '+jsObjstr[i].Ctxt+'</td><td>'+jsObjstr[i].OID+'</td><td><button class="btn btn-success btn-xs mod" data-action="mod" data-cid="'+jsObjstr[i].CID+'" data-cname="'+jsObjstr[i].CName+'" data-cfile="'+jsObjstr[i].CFile+'" data-ctxt="'+jsObjstr[i].Ctxt+'" data-toggle="modal" data-oid="'+jsObjstr[i].OID+'" data-xgtable="'+Table+'">修改</button> <button class="btn btn-danger btn-xs mod" data-action="del" data-ctxt="'+jsObjstr[i].Ctxt+'" data-cid="'+jsObjstr[i].CID+'" data-cname="'+jsObjstr[i].CName+'" data-toggle="modal" data-oid="'+jsObjstr[i].OID+'" data-xgtable="'+Table+'">删除</button></td></tr>';
 }
 	str+='</table>';
 //	

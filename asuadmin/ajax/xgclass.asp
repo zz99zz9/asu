@@ -8,14 +8,15 @@ Action=request("Action")
 CID=request("CID")
 OID=request("OID")
 CFile=request("CFile")
+Ctxt=request("Ctxt")
 Table=request("Table")
  select case Action
   case "list"
   
   case "add"
-  conn.execute"INSERT INTO ["&Table&"] (CName,OID,Cdate,CFile) VALUES ('"&CName&"','"&OID&"','"&now()&"','"&CFile&"')"
+  conn.execute"INSERT INTO ["&Table&"] (CName,OID,Cdate,CFile,Ctxt) VALUES ('"&CName&"','"&OID&"','"&now()&"','"&CFile&"','"&Ctxt&"')"
   case "mod"
-  conn.execute"update ["&Table&"] set CName='"&CName&"',OID="&OID&",Cdate='"&now()&"',CFile='"&CFile&"' where Cid="&CID&""
+  conn.execute"update ["&Table&"] set CName='"&CName&"',OID="&OID&",Ctxt="&Ctxt&",Cdate='"&now()&"',CFile='"&CFile&"' where Cid="&CID&""
 
   case "del"
   '可加判断是否删除
@@ -32,13 +33,10 @@ Table=request("Table")
 '--------------------------------------------%>
 [<%  
 set rs=server.createobject("adodb.recordset")
-sql="select * from ["&Table&"]"
-if Table="class_prod" then 
-sql=sql+" where cid<>8"
-end if
-sql=sql+" order by oid desc"
+sql="select * from ["&Table&"] order by oid desc"
+
 rs.open sql,conn,3,3
-do while not rs.eof%><%if i>0 then %>,<%end if%>{"CID":"<%=Rs("CID")%>","CName":"<%=Rs("CName")%>","OID":"<%=Rs("Oid")%>","CFile":"<%=Rs("CFile")%>"}<%
+do while not rs.eof%><%if i>0 then %>,<%end if%>{"CID":"<%=Rs("CID")%>","CName":"<%=Rs("CName")%>","OID":"<%=Rs("Oid")%>","CFile":"<%=Rs("CFile")%>","Ctxt":"<%=Rs("Ctxt")%>"}<%
 rs.movenext
 	i=i+1
     loop

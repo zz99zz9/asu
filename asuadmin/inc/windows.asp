@@ -171,6 +171,13 @@ QQ 4659489
 <input type="text" name="XGCFile" class="form-control" id="XGCFile" data-toggle="tooltip" title="请点击右侧上传按钮">
 <span class="input-group-addon b_h" onClick="window.open('Yr_UpFile.Asp?formname=xgclass&editname=XGCFile&uppath=images/guanggao&filelx=jpg','','status=no,scrollbaRs=no,top=20,left=110,width=420,height=165')">上传附件</span>
     </div>
+
+  </div>
+          <div class="form-group">
+    <label for="XGOID" class="col-sm-3 control-label text-right">简介</label>
+    <div class="col-sm-8">
+      <textarea id="XGCtxt" name="XGCtxt" rows="3" class="form-control" ></textarea>
+    </div>
   </div>
 </form>
                                           </div>
