@@ -1,23 +1,23 @@
-$(".uname").blur(function(){
-    check1(".uname");
+$(".umail").blur(function(){
+    check1(".umail");
 });
 $(".upwd").blur(function(){
     check1(".upwd");
 });
 function mlogin(v){
-    check1(".uname");
+    check1(".umail");
     check1(".upwd");
-    if ($(".uname").hasClass("no")||$(".upwd").hasClass("no")){
+    if ($(".umail").hasClass("no")||$(".upwd").hasClass("no")){
         console.log("over");
     }else{
        
-    uname=$(".uname").val();
+    umail=$(".umail").val();
     upwd=$(".upwd").val();
 
 
     $.post("xgwl/ajax/memberlogin.asp",{
         upwd:upwd,
-        uname:uname
+        umail:umail
 
     },
         function(data,status){

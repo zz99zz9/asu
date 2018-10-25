@@ -15,7 +15,7 @@
 </div>
 <%end if%>
         <div class="am-form-group">
-            <input type="text" class="uname" placeholder="用户名" >
+            <input type="text" class="umail" placeholder="邮箱" >
             <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
