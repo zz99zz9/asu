@@ -872,7 +872,7 @@
         END_EVENT = 'touchend mouseup',
         onMove = function (e) {
             if (scrollable) {
-                e.preventDefault();
+            //    e.preventDefault();
                 stop = getCoord(e, 'Y');
                 inst.scroll(target, index, constrain(pos + (start - stop) / h, min - 1, max + 1));
             }
