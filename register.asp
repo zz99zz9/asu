@@ -9,7 +9,7 @@
     <legend>用户注册</legend>
 <form name="form2" id="form2" >
         <div class="am-form-group">
-            <input type="text" class="uname" placeholder="用户名" name="sfzp2">
+            <input type="text" class="umail" placeholder="邮箱" >
             <span class="errinfo"></span>
         </div>
         <div class="am-form-group">

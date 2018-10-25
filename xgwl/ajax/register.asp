@@ -2,7 +2,7 @@
 <!--#include file="../../inc/conn.asp"-->
 <!--#include file="../../inc/md5.asp"-->
 <%
-uname=request("uname")
+umail=request("umail")
 	  upwd=request("upwd")
 	  utel=request("utel")
 	  cname=request("cname")
@@ -18,7 +18,7 @@ Case "add"
 set Rs=Server.CreateObject("ADODB.Recordset")
 Rs.Open "select * from [Table_member] ",conn,1,3
 Rs.Addnew
-Rs("uname")=Trim(uname)
+Rs("umail")=Trim(umail)
 Rs("upwd")=Md5(Trim(upwd))
 Rs("utel")=Trim(utel)
 Rs("cname")=Trim(cname)
