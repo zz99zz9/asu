@@ -1,11 +1,11 @@
 $(".umail").blur(function(){
-    check1(".umail");
+    check3(".umail");
 });
 $(".upwd").blur(function(){
     check1(".upwd");
 });
 function mlogin(v){
-    check1(".umail");
+    check3(".umail");
     check1(".upwd");
     if ($(".umail").hasClass("no")||$(".upwd").hasClass("no")){
         console.log("over");
@@ -13,7 +13,7 @@ function mlogin(v){
        
     umail=$(".umail").val();
     upwd=$(".upwd").val();
-
+4
 
     $.post("xgwl/ajax/memberlogin.asp",{
         upwd:upwd,
