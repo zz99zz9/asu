@@ -43,36 +43,12 @@
         拍照上传
     </div>
         <div class="am-form-group">
-<<<<<<< HEAD
-            <label for="doc-select-1" class="">校区选择</label>
-                <select id="doc-select-1" class="schoolzone">
-      
-                </select>
-            <span class="am-form-caret"></span>
-        </div>
-        <div class="am-form-group">
-            <label for="doc-select-1">学院选择</label>
-                <select id="doc-select-1" class="college">
-
-                </select>
-            <span class="am-form-caret"></span>
-        </div>
-                <div class="am-form-group">
-            <label for="doc-select-1">专业选择</label>
-                <select id="doc-select-1" class="major">
-
-                </select>
-            <span class="am-form-caret"></span>
-        </div>
-
-=======
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="major">
             <i class="am-icon-cloud-upload"></i> 上传我的专业选择表</button>
             <input type="hidden" class="major upfile2" name="major"  value="<%=major%>">
             <span class="errinfo"></span>
             <div class="am-badge majorok" style="display:none;">ok</div>
         </div>
->>>>>>> dev
     
 <div class="am-form-group">
 <BR>

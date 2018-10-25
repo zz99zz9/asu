@@ -30,7 +30,9 @@
         </div>
                 <div class="am-form-group am-form-icon">
             <i class="am-icon-calendar"></i>
-            <input type="text" class="am-form-field bdate" placeholder="请选择您的生日" data-am-datepicker readonly required >
+            <link href="xgwl/css/lib/mobiscroll.css" rel="stylesheet" />
+        <link href="xgwl/css/lib/mobiscroll_date.css" rel="stylesheet" />
+        <input type="text" name="USER_AGE" id="USER_AGE" readonly class="input bdate am-form-field " value="<%=bdate%>" placeholder="请填写你的出生日期" />
         </div>
         <div class="am-form-group">
         <label for="doc-ipt-email-1">性别：</label>
@@ -73,5 +75,30 @@
 <!-- 以上页面内容 开发时删除 -->
 <!--#include file="inc/footer.asp"-->
 <script type="text/javascript" src="xgwl/ajax/register.js"></script>
+<script src="xgwl/js/lib/mobiscroll_date.js" ></script> 
+<script src="xgwl/js/lib/mobiscroll.js"></script> 
+<script type="text/javascript">
+$(function () {
+	var currYear = (new Date()).getFullYear();	
+	var opt={};
+	opt.date = {preset : 'date'};
+	opt.datetime = {preset : 'datetime'};
+	opt.time = {preset : 'time'};
+	opt.default = {
+		theme: 'android-ics light', //皮肤样式
+		display: 'modal', //显示方式 
+		mode: 'scroller', //日期选择模式
+		dateFormat: 'yyyy-mm-dd',
+		lang: 'zh',
+		showNow: true,
+		nowText: "今天",
+		startYear: currYear - 30, //开始年份
+		endYear: currYear - 10 //结束年份
+	};
+
+	$("#USER_AGE").mobiscroll($.extend(opt['date'], opt['default']));
+
+});
+</script>
 </body>
 </html>
