@@ -14,7 +14,7 @@ rs("ranNum")=trim(ranNum)
 Rs("uptime")=now()
 
 Rs.Update
-Call SendAction ("Reset password of ASU",umail,"ASUmentor","http://asu.lvovl.cn/memberpassword.asp?ranNum="&ranNum)%>
+Call SendAction ("Reset password of ASU",umail,"ASUmentor","http://asu.lvovl.cn/memberpassword.asp?ranNum="&ranNum&"")%>
 
 {"ok":1,"ranNum":"<%=ranNum%>","umail":"<%=umail%>"}
 <%
