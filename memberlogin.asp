@@ -28,7 +28,7 @@
         <button type="button" class="am-btn am-btn-danger am-u-sm-12 " onClick="mlogin('<%=url%>')">立即登录</button>
         <br><br>
         <a type="button" class="am-btn am-btn-default am-u-sm-12 " href="register.asp">新用户注册</a>
-       <!-- <br><br><a type="button" class="am-btn am-btn-default am-u-sm-12 " href="memberforget.asp">忘记密码</a>-->
+       <br><br><a type="button" class="am-btn am-btn-default am-u-sm-12 " href="memberforget.asp">忘记密码</a>
         </form>
   </fieldset>
    </div>
