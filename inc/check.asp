@@ -1,4 +1,5 @@
 <%
+On Error Resume Next
 Dim JMail 
 Set JMail=Server.CreateObject("JMail.Message") 
 If JMail Is Nothing Then 
