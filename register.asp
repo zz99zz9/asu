@@ -1,12 +1,14 @@
 <%title="会员注册"%>
  <!--#include file="inc/header.asp">
 <!-- 页面内容 开发时删除 -->
-
-<div class="am-g am-g-fixed am-margin-top">
+<link rel="stylesheet" href="xgwl/css/user.css">
+<div class="yellow"><img src="xgwl/img/logo.png"></div>
+<div class="am-g am-g-fixed am-margin-top userbox">
   <div class="am-u-sm-12">
     <div class="am-form" >
+    
   <fieldset>
-    <legend>用户注册</legend>
+    <legend>— 用户注册 —</legend>
 <form name="form2" id="form2" >
         <div class="am-form-group">
             <input type="text" class="umail" placeholder="邮箱" >
@@ -58,7 +60,7 @@
 
         <button type="button" class="am-btn am-btn-danger am-u-sm-12 " onClick="register('<%=url%>')">立即注册</button>
         <br><br>
-        <a type="button" class="am-btn am-btn-default am-u-sm-12 " href="memberlogin.asp">返回登录</a>
+        <a class="link tc am-u-sm-12" href="memberlogin.asp">← 返回登录</a>
         </form>
   </fieldset>
    </div>

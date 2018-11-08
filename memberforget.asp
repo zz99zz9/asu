@@ -2,12 +2,14 @@
  <!--#include file="inc/header.asp">
  <!--#include file="inc/md5.asp">
 <!-- 页面内容 开发时删除 -->
-
-<div class="am-g am-g-fixed am-margin-top">
-  <div class="am-u-sm-12">
+<link rel="stylesheet" href="xgwl/css/user.css">
+<div class="yellow"><img src="xgwl/img/logo.png"></div>
+<div class="am-g am-g-fixed am-margin-top userbox">
+  <div class="am-u-sm-12 ">
     <div class="am-form" >
+    
   <fieldset>
-    <legend>找回密码</legend>
+    <legend>— 找回密码 —</legend>
     <%err2=Request.QueryString("err")%>
 <form name="form2" id="form2" >
 <%if err<>"" then%>
@@ -25,10 +27,10 @@
 ranNum = month(Now())&day(Now())&hour(Now())&minute(Now())&second(Now())%>
 
 <input type="hidden" class="ranNum" value="<%=ranNum*9987%>">
+        <a class="am-u-sm-6 link" href="register.asp">新用户注册</a>
+  <a class="am-u-sm-6 right link" href="memberlogin.asp">返回登录</a>
+        <button type="button" class="am-btn am-btn-danger am-u-sm-12 mt15" onClick="forget()">找回密码</button>
 
-        <button type="button" class="am-btn am-btn-danger am-u-sm-12 " onClick="forget()">找回密码</button>
-<br><br>
-        <a type="button" class="am-btn am-btn-default am-u-sm-12 " href="memberlogin.asp">返回登录</a>
         </form>
   </fieldset>
    </div>
@@ -37,7 +39,7 @@ ranNum = month(Now())&day(Now())&hour(Now())&minute(Now())&second(Now())%>
 
 
 <footer class="am-margin-top">
-  <hr/>
+
   <p class="am-text-center">
     <small></small>
   </p>
