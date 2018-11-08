@@ -1,38 +1,22 @@
 <!--#include file="inc/conn.asp"-->
-<%title="微信群"%>
+<%title="ASU微群"%>
  <!--#include file="inc/header.asp">
-
 <!-- 页面内容 开发时删除 -->
-<style>
-.am-control-nav{display:none;}
-</style>
-<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
-  <ul class="am-slides">
-    <li><img src="xgwl/img/ad1.png" /></li>
-    <li><img src="xgwl/img/ad2.png" /></li>
-    <li><img src="xgwl/img/ad3.png" /></li>
-  </ul>
-</div>
+<link rel="stylesheet" href="xgwl/css/list.css">
 <!--广告结束-->
+
 <div class="am-g am-g-fixed am-margin-top">
   <div class="am-u-sm-12">
-  <style>
-.wechat{margin-bottom:1em;margin-top:1em;}
-.wechat img{width:100%;}
-.wechat .tit{line-height:2em;background:#f5f5f5;text-align:center;color:#666;}
-  </style>
+
   <%
-sql="select * From [prod] where classid=1"
-sql=sql & " order by oid desc,prod_ID desc"
+sql="select * From [class_wc] where cID>0"
+sql=sql & " order by oid desc,cID desc"
 Set rs= Server.CreateObject("ADODB.Recordset")
 rs.open sql,conn,1,1
 %>
  <%do while not rs.eof%>
-    <div class="am-u-sm-12 wechat">
-    <img src="<%=rs("prod_pic")%>">
-    <div class="tit">
-     <%=rs("prod_name")%>
-     </div>
+     <div class="am-u-sm-6 guojia">
+      <a class="vli" href="#<%=rs("Cid")%>" style="background-image:url(<%=rs("CFile")%>);"><%=rs("cname")%></a>
     </div>
 <%
 	      rs.movenext
