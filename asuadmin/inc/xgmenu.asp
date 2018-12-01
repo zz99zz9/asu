@@ -21,6 +21,8 @@
                           <li class="nav1-3"><a class="" href="sitespase.asp">空间使用信息</a></li>
                           <!-- <li class="nav1-4"><a class="" href="siteinfo.asp">服务器情况</a></li>
                           <li class="nav1-4"><a class="" href="tdk_list.asp">网站优化设置</a></li>-->
+                          <li class="nav1-5"><a class="" href="class_year.asp">年份设置</a></li>
+                          <li class="nav1-6"><a class="" href="class_month.asp">月份设置</a></li>
                           
                       </ul>
                   </li>
@@ -34,10 +36,12 @@
                       
 
                           <li class="nav2-1"><a class="" href="asu_list.asp">ASU申请列表</a></li>
-                          <li class="nav2-2"><a class="" href="pro_class.asp">学区学院管理</a></li>
-                          <li class="nav2-3"><a class="" href="pro_list.asp">专业管理</a></li>
+                          <li class="nav2-2"><a class="" href="class_country.asp">国家管理</a></li>
+                          <!--<li class="nav2-2"><a class="" href="pro_class.asp">学区学院管理</a></li>
+                          <li class="nav2-3"><a class="" href="pro_list.asp">专业管理</a></li>-->
                           <li class="nav2-4"><a class="" href="class_visa.asp">签证国家管理</a></li>
                           <li class="nav2-5"><a class="" href="visa_list.asp">签证列表管理</a></li>
+
                    <!-- <li class="nav2-3"><a class="" href="single.asp?nav=1">自我评估列表</a></li>-->
 
                       </ul>

@@ -1,4 +1,40 @@
-
+$(".pathway").click(function(){
+    var isValue = $('input[name="exam"]:checked ').val();
+    if(isValue == "TOEFL"){
+        $(".s2").hide();
+    }
+    if(isValue == "IELTS"){
+        $(".s2").hide();
+    }
+    if(isValue == "Pearson PTE"){
+        $(".s2").hide();
+    }
+    if(isValue == "Kaplan iBT"){
+        $(".s2").hide();
+    }
+    if(isValue == "Other"){
+        $(".s2").show();
+    }
+})
+$(".exam").click(function(){
+    var isValue = $('input[name="exam"]:checked ').val();
+    if(isValue == "TOEFL"){
+        $(".s2").hide();
+    }
+    if(isValue == "IELTS"){
+        $(".s2").hide();
+    }
+    if(isValue == "Pearson PTE"){
+        $(".s2").hide();
+    }
+    if(isValue == "Kaplan iBT"){
+        $(".s2").hide();
+    }
+    if(isValue == "Other"){
+        $(".s2").show();
+    }
+})
+//dri js
 $(".address2").blur(function(){
     check1(".address2");
 });

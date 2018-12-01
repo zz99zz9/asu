@@ -141,7 +141,7 @@ response.cookies("kid")=request.QueryString("kid")
             <label for="doc-ipt-email-1">Have you previously attended or are you currently attending a college or university? <span>*</span></label>
         </div>
         <div class="am-form-group">
-            <select name="" class="">
+            <select name="college" class="college">
                 <option></option>
                 <option value="I currently am or have attended college or university">I currently am or have attended college or university</option>
                 <option value="I have completely withdrawn from a college or university">I have completely withdrawn from a college or university</option>
@@ -152,13 +152,14 @@ response.cookies("kid")=request.QueryString("kid")
             <label class="f-gray">ASU reserves the right to verify your prior enrollment. Failure to list a prior college/university on your application may result in denial of admission for failure to submit accurate information.</label>
         </div>
         <!--如果选1\2\4就显示start-->
-            <div class="am-form-group s1">
+            <div class="am-form-group hide s1 s2">
                 <label>Enter the total number of college and/or university semester credits you have completed (grades of C- or higher) </label>
                 <input type="text" name="stu" class="stu" >
             </div>
         <!--如果选1\2\4就显示end-->
         <!--如果选1\2\3\4就显示start-->
-            <div class="am-form-group s2">
+            <div class="hide s1">
+            <div class="am-form-group">
                 <label>Name of current (or most recent) college/university <span>*</span></label>
                 <input type="text" name="stu" class="stu" >
             </div>
@@ -214,7 +215,7 @@ response.cookies("kid")=request.QueryString("kid")
             </div>
             <div class="am-form-group">
                 <label>Have you attended another college or university? <span>*</span></label>
-                <select name="" class="">
+                <select name="college2" class="college2">
                 <option></option>
                 <option value="I have attended another college or university">I have attended another college or university</option>
                 <option value="I have completely withdrawn from another college or university">I have completely withdrawn from another college or university</option>
@@ -225,6 +226,7 @@ response.cookies("kid")=request.QueryString("kid")
                 <label class="f-gray">ASU reserves the right to verify your prior enrollment. Failure to list a prior college/university on your application may result in denial of admission for failure to submit accurate information.</label>
             </div>
             <!--2如果选1\2\3\4就显示start-->
+            <div class="hide s3">
             <div class="am-form-group">
                 <label for="doc-ipt-email-1">Country <span>*</span></label>
                 <select id="country" name="country" size="1" required="" class="fsField fsRequired" aria-required="true">
@@ -276,7 +278,11 @@ response.cookies("kid")=request.QueryString("kid")
 
             </div>
             <!--2如果选1\2\3\4就显示end-->
-             <legend>Previous College Eligibility</legend>
+
+            </div>
+            </div>
+        <!--如果选1\2\3\4就显示end-->
+                     <legend>Previous College Eligibility</legend>
              <div class="am-form-group">
                 <label>Are you eligible to return to each of the colleges or universities you have attended in the last 7 years? <span>*</span></label>
                             <label class="am-radio-inline">
@@ -286,7 +292,6 @@ response.cookies("kid")=request.QueryString("kid")
                 <input type="radio"  value="No" name="sex" class="sex" <%if sex="No" then%> checked<%end if%>> No
             </label>
             </div>
-        <!--如果选1\2\3\4就显示end-->
         <%'备选表单%>
 
 <div class="am-form-group">
@@ -313,6 +318,6 @@ p=2%>
 <!--#include file="inc/footer.asp"-->
 
 
-<script type="text/javascript" src="xgwl/ajax/apply-2.js"></script>
+<script type="text/javascript" src="xgwl/ajax/apply-22.js"></script>
 </body>
 </html>

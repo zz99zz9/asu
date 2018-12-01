@@ -1,6 +1,6 @@
 
 function save(e){
-
+    location.href='apply-'+e+'.Asp'
     aid=$(".aid").val();
     asu=$(".asu").val();
     asuid=$(".asuid").val();

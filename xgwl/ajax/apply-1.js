@@ -1,3 +1,57 @@
+$(".stu").click(function(){
+    var isValue = $('input[name="stu"]:checked ').val();
+    if(isValue == "Student"){
+        $(".s1").show();
+        
+        $(".s2").hide();
+        $(".s3").hide();
+        $(".sx").show();
+    }
+    if(isValue == "StudentAgent"){
+        $(".s1").hide();
+        $(".s5").show();
+        $(".s2").show();
+        $(".s3").hide();
+        $(".sx").show();
+    }
+    if(isValue == "Agent"){
+        $(".s1").hide();
+        $(".s5").show();
+        $(".s2").show();
+        $(".s3").show();
+        $(".sx").show();
+    }
+})
+$(".citizenship").click(function(){
+    var isValue = $('input[name="citizenship"]:checked ').val();
+    if(isValue == "Yes"){
+        $(".s4").show();
+    }
+    if(isValue == "No"){
+        $(".s4").hide();
+    }
+})
+$(".Admission").click(function(){
+    var isValue = $('input[name="Admission"]:checked ').val();
+  //  console.log(isValue);
+    if(isValue == "Undergraduate academic pathway: ASU-USA Pathways"){
+        $(".s5").show();
+        $(".s6").hide();
+        $(".s7").hide();
+    }
+    if(isValue == "Bachelor's degree" || isValue == "Complete a bachelor's degree: transfer admission" || isValue=="Transfer: complete a bachelor's degree"){
+        $(".s5").hide();
+        $(".s7").hide();
+        $(".s6").show();
+        
+    }
+    if(isValue == "Master's degree"){
+        $(".s5").hide();
+        $(".s6").hide();
+        $(".s7").show();
+    }
+})
+//原代码
 $(".cname").blur(function(){
     check1(".cname");
 });
@@ -29,7 +83,10 @@ $(".hz").blur(function(){
 // $(".hzpic").blur(function(){
 //     check1(".hzpic");
 // });
+
+
 function save(e){
+    location.href='apply-'+e+'.Asp'
     check1(".cname");
     check1(".fname");
     check1(".lname");
