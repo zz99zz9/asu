@@ -2,9 +2,8 @@
 <%title="asu申请表"%>
  <!--#include file="inc/header.asp">
 <!-- 页面内容 开发时删除 -->
-<style>
-.am-control-nav{display:none;}
-</style>
+
+ <link rel="stylesheet" href="xgwl/css/apply.css" />
 <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
   <ul class="am-slides">
     <li><img src="xgwl/img/ad1.png" /></li>
@@ -12,38 +11,12 @@
     <li><img src="xgwl/img/ad3.png" /></li>
   </ul>
 </div>
-<style>
-.applybutton{height:80%;width:80%;}
-.applybutton img{width:90%;}
-.apply .am-u-sm-3{align:center;}
-</style>
+
 <div class="am-u-sm-12 apply">
-    <div class="am-u-sm-3 ">
-    <a class="applybutton" href="apply-1.asp?kid=1">
-        <img src="xgwl/img/b1.png">
-    </a>
-    </div>
-    <div class="am-u-sm-3 ">
-    <a class="applybutton" href="apply-1.asp?kid=2">
-        <img src="xgwl/img/b2.png">
-    </a>
-    </div>
-    <div class="am-u-sm-3 ">
-    <a class="applybutton" href="apply-1.asp?kid=3">
-        <img src="xgwl/img/b3.png">
-        </a>
-    </div>
-    <div class="am-u-sm-3 ">
-    <a class="applybutton" href="apply-1.asp?kid=4">
-        <img src="xgwl/img/b4.png">
-        </a>
-    </div>
+   <a href="apple-1.asp" class="asubtn">立即提交留学申请</a>
 </div>
 <!--学院简介-->
-<style>
-.info{padding-left:1.1em;margin-top:0.5em;}
-.am-accordion-basic .am-active .am-accordion-title{color:#8c1442;}
-</style>
+
 <div class="am-u-sm-12 info">
     <!---->
 <section data-am-widget="accordion" class="am-accordion am-accordion-basic " data-am-accordion='{  }' >

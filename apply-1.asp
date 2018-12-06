@@ -194,7 +194,7 @@ response.cookies("kid")=request.QueryString("kid")
             </label>
 
         </div>
-        <div class="hide s5">
+        
         <div class="am-form-group">
         <label for="doc-ipt-email-1">Admission type <span>*</span> :</label>
         
@@ -212,6 +212,7 @@ response.cookies("kid")=request.QueryString("kid")
             </label>
 
         </div>
+        <div class="hide s5">
         <div class="am-form-group">
             <label for="doc-ipt-email-1">Choose direct or transfer admission even if you are applying for conditional admission on English level</label>
             </div>
