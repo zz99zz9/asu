@@ -34,21 +34,31 @@ $(".citizenship").click(function(){
 $(".Admission").click(function(){
     var isValue = $('input[name="Admission"]:checked ').val();
   //  console.log(isValue);
-    if(isValue == "Undergraduate academic pathway: ASU-USA Pathways"){
+    if(isValue == "Undergraduate pathway: ASU-USA Pathways" || isValue == "Undergraduate academic pathway: ASU-USA Pathways"){
         $(".s5").show();
         $(".s6").hide();
         $(".s7").hide();
+        //21
     }
-    if(isValue == "Bachelor's degree" || isValue == "Complete a bachelor's degree: transfer admission" || isValue=="Transfer: complete a bachelor's degree"){
+    if(isValue == "Bachelor's degree"){
         $(".s5").hide();
         $(".s7").hide();
         $(".s6").show();
+        //22
+        
+    }
+    if(isValue == "Complete a bachelor's degree: transfer admission" || isValue=="Transfer: complete a bachelor's degree"){
+        $(".s5").hide();
+        $(".s7").hide();
+        $(".s6").show();
+        //23
         
     }
     if(isValue == "Master's degree"){
         $(".s5").hide();
         $(".s6").hide();
         $(".s7").show();
+        //24
     }
 })
 //原代码

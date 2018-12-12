@@ -195,7 +195,7 @@ response.cookies("kid")=request.QueryString("kid")
 
         </div>
         
-        <div class="am-form-group">
+        <div class="am-form-group hide s2">
         <label for="doc-ipt-email-1">Admission type <span>*</span> :</label>
         
             <label class="am-radio">
