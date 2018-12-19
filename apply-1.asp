@@ -59,7 +59,6 @@ response.cookies("kid")=request.QueryString("kid")
 <form name="form2" id="form2" >
     <legend>Your application</legend>
         <div class="am-form-group">
-
             <label for="doc-ipt-email-1">I am making this application as <span>*</span> :</label>
             <label class="am-radio">
                 <input type="radio"  value="Student" name="stu" class="stu" > a student on my own
@@ -72,7 +71,6 @@ response.cookies("kid")=request.QueryString("kid")
             </label>
             </div>
         <legend class=" hide s2 ">Agent's contact details</legend>
-        
         <div class="am-form-group hide s2 s3" >
 
             <label for="doc-ipt-email-1">After entering your contact details below, the rest of the application form is related to the student. Agents must answer on the applicant's behalf. However, only the applicant can sign the student declaration in Step 4.</label>
