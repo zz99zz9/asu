@@ -176,7 +176,7 @@ QQ 4659489
           <div class="form-group">
     <label for="XGOID" class="col-sm-3 control-label text-right">简介</label>
     <div class="col-sm-8">
-      <input id="XGCtxt" name="XGCtxt"  class="form-control" />
+      <input id="XGCTxt" name="XGCTxt"  class="form-control" />
     </div>
   </div>
 </form>

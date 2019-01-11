@@ -11,7 +11,7 @@ classid=$("#classid").val();
     DefaultPicUrl=$("#DefaultPicUrl").val();
     content=$("#content").val();
 	content1=$("#content1").val();
-
+	cid=$("#cid").val();
 
 	Oid=$("#Oid").val();
 	url=$("#url").val();
@@ -37,7 +37,8 @@ console.log(action);
       Passed:Passed,
 	  Elite:Elite,
 	  action:action,
-	  pid:pid
+	  pid:pid,
+	  cid:cid
 
 	  },
 	  

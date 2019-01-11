@@ -14,9 +14,9 @@ Table=request("Table")
   case "list"
   
   case "add"
-  conn.execute"INSERT INTO ["&Table&"] (CName,OID,Cdate,CFile) VALUES ('"&CName&"','"&OID&"','"&now()&"','"&CFile&"')"
+  conn.execute"INSERT INTO ["&Table&"] (CName,OID,Cdate,CFile,CTxt) VALUES ('"&CName&"','"&OID&"','"&now()&"','"&CFile&"','"&CTxt&"')"
   case "mod"
-  conn.execute"update ["&Table&"] set CName='"&CName&"',OID="&OID&",Cdate='"&now()&"',CFile='"&CFile&"' where Cid="&CID&""
+  conn.execute"update ["&Table&"] set CName='"&CName&"',OID="&OID&",Cdate='"&now()&"',CFile='"&CFile&"',CTxt='"&CTxt&"' where Cid="&CID&""
 
   case "del"
   '可加判断是否删除
@@ -36,7 +36,7 @@ set rs=server.createobject("adodb.recordset")
 sql="select * from ["&Table&"] order by oid desc"
 
 rs.open sql,conn,3,3
-do while not rs.eof%><%if i>0 then %>,<%end if%>{"CID":"<%=Rs("CID")%>","CName":"<%=Rs("CName")%>","OID":"<%=Rs("Oid")%>","CFile":"<%=Rs("CFile")%>","Ctxt":"<%=Rs("Ctxt")%>"}<%
+do while not rs.eof%><%if i>0 then %>,<%end if%>{"CID":"<%=Rs("CID")%>","CName":"<%=Rs("CName")%>","OID":"<%=Rs("Oid")%>","CFile":"<%=Rs("CFile")%>","CTxt":"<%=Rs("Ctxt")%>"}<%
 rs.movenext
 	i=i+1
     loop

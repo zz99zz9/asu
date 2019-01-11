@@ -52,7 +52,7 @@ rs.open sql,conn,1,1
           <%do while not rs.eof%>
           <tr > 
             <td class="hidden-phone"><%=rs("id")%></td>
-            <td><%=rs("uname")%></td>
+            <td><%=rs("umail")%></td>
             <td class="hidden-phone"><%= rs("cname") %></td>
             <td class="hidden-phone"><%=rs("utel")%></td>
             <td class="hidden-phone"><%= FormatDateTime(rs("uptime"),2) %></td>

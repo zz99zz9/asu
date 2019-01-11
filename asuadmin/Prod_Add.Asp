@@ -30,6 +30,33 @@ classid=request.QueryString("Prod_Type")%>
                               信息发布
                           </header>
                       <form name="myform" id="myform">    
+    <div class="form-group row">
+    <label for="prod_name" class="col-sm-2 control-label text-right xglab">所属类别</label>
+    <div class="col-sm-7">
+       <%
+       Set crs=Server.CreateObject("ADODB.Recordset")
+csql = "select * from [Class_wc] order by oid desc,cid desc"
+crs.open csql,conn,1,1
+if crs.eof and crs.bof then
+	response.write "请先添加栏目。"
+else
+%>
+<select name="cid" id="cid" class="form-control" size="1">
+          
+<%
+
+	do while not crs.eof
+%>
+             <option value="<%=trim(crs("CID"))%>"><%=trim(crs("CName"))%></option>
+            <%
+			crs.movenext
+		loop
+end if
+	crs.close
+%>
+        </select>
+    </div>
+  </div>
 
     <div class="form-group row">
     <label for="prod_name" class="col-sm-2 control-label text-right xglab">标题</label>

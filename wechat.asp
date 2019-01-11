@@ -16,7 +16,7 @@ rs.open sql,conn,1,1
 %>
  <%do while not rs.eof%>
      <div class="am-u-sm-6 guojia">
-      <a class="vli" href="#<%=rs("Cid")%>" style="background-image:url(<%=rs("CFile")%>);"><%=rs("cname")%></a>
+      <a class="vli" href="WCList.asp?typeid=<%=rs("Cid")%>" style="background-image:url(<%=rs("CFile")%>);"><%=rs("cname")%></a>
     </div>
 <%
 	      rs.movenext
