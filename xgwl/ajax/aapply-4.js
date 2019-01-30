@@ -12,35 +12,24 @@ $(".c2").click(function(){
 $(".d6").change(function(){
     var str = '';
     var ii='';
-    for (var i=0;i<$("select[name='d6']").val();i++) {  
-       console.log(i);  
-        ii=i+1;
-        str += '<div class="am-form-group">';
-        str += '<button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a'+ii+'">';
-        str += '<i class="am-icon-cloud-upload"></i> Upload '+ii+'st file </button>';
-        str += '<input type="hidden" class="d6a'+ii+' upfile2" name="d6a'+ii+'"  value="<%=d6a1%>">';
-        str += '<span class="errinfo"></span>';
-        str += '<div class="am-badge d6a'+ii+'ok" style="display:none;">ok</div>';
-        str += '</div>';
-        
+    var xx='';
+    var o=$("select[name='d6']").val();
+    var oo=parseInt(o)+1;
+//console.log($("select[name='d6']").val());
+    for (var i=0;i<o;i++) {  
+       //console.log(i);  
+       ii=i+1
+        $(".d6aa"+ii).show();
     } 
-
-    str +='<form name="form1" method="post" id="form1" action="upload.asp" enctype="multipart/form-data"  onSubmit="return mysub()" target="myFrame" style="display:none;">';
-    str +='<input type="file" id="file1" name="file1" >';
-    str +='<input type="text" name="file2" class="file2" value="">';
-    str +='</form>';
-str +='<script>';
-str += '$(".upfile").click(function () {';
-str +=' var con = $(this).attr("data-id");';
-str += 'con=$(".file2").val(con)';
-str += '$("#file1").click();';
-str += '$("#file1").on("change",function(){';
-    str += 'document.getElementById("form1").submit(); ';
-    str += 	 '});';
-    str += '});';
-str += '</script>';
-str+='<iframe name="myFrame" src="" style="display:none;"></iframe> ';
-    $("#upfileslist").html(str);  
+    console.log(oo);
+    for (var x=oo;x<10;x++){
+       // xx=x+1
+        $(".d6aa"+x).hide();
+        //console.log(x);
+        
+    }
+   
+ //   $("#upfileslist").html(str);  
 });
 
 //验证表现（填写过程中）

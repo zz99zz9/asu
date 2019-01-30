@@ -104,9 +104,90 @@ response.cookies("kid")=request.QueryString("kid")
                 </div>
     <!--d6a-->
     <div id="upfileslist">
+        <div class="d6aa1 hide">
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a1">
+            <i class="am-icon-cloud-upload"></i> Upload 1st file </button>
+            <input type="hidden" class="d6a1 upfile2" name="d6a1"  value="<%=d6a1%>">
+            <span class="errinfo"></span>
+            <div class="am-badge d6a1ok" style="display:none;">ok</div>
+        </div>
+        </div>
+        <div class="d6aa2 hide">
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a2">
+            <i class="am-icon-cloud-upload"></i> Upload 2st file </button>
+            <input type="hidden" class="d6a2 upfile2" name="d6a2"  value="<%=d6a2%>">
+            <span class="errinfo"></span>
+            <div class="am-badge d6a2ok" style="display:none;">ok</div>
+        </div>
+        <div class="d6aa3 hide">
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a3">
+            <i class="am-icon-cloud-upload"></i> Upload 3st file </button>
+            <input type="hidden" class="d6a3 upfile2" name="d6a3"  value="<%=d6a3%>">
+            <span class="errinfo"></span>
+            <div class="am-badge d6a3ok" style="display:none;">ok</div>
+        </div>
+        </div>
+        <div class="d6aa4 hide">
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a4">
+            <i class="am-icon-cloud-upload"></i> Upload 4st file </button>
+            <input type="hidden" class="d6a4 upfile2" name="d6a4"  value="<%=d6a4%>">
+            <span class="errinfo"></span>
+            <div class="am-badge d6a4ok" style="display:none;">ok</div>
+        </div>
+        </div>
+        <div class="d6aa5 hide">
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a5">
+            <i class="am-icon-cloud-upload"></i> Upload 5st file </button>
+            <input type="hidden" class="d6a5 upfile2" name="d6a5"  value="<%=d6a5%>">
+            <span class="errinfo"></span>
+            <div class="am-badge d6a5ok" style="display:none;">ok</div>
+        </div>
+        </div>
+        <div class="d6aa6 hide">
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a6">
+            <i class="am-icon-cloud-upload"></i> Upload 6st file </button>
+            <input type="hidden" class="d6a6 upfile2" name="d6a6"  value="<%=d6a6%>">
+            <span class="errinfo"></span>
+            <div class="am-badge d6a6ok" style="display:none;">ok</div>
+        </div>
+        </div>
+        <div class="d6aa7 hide">
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a7">
+            <i class="am-icon-cloud-upload"></i> Upload 7st file </button>
+            <input type="hidden" class="d6a7 upfile2" name="d6a7"  value="<%=d6a7%>">
+            <span class="errinfo"></span>
+            <div class="am-badge d6a7ok" style="display:none;">ok</div>
+        </div>
+        </div>
+        <div class="d6aa8 hide">
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a8">
+            <i class="am-icon-cloud-upload"></i> Upload 8st file </button>
+            <input type="hidden" class="d6a8 upfile2" name="d6a8"  value="<%=d6a8%>">
+            <span class="errinfo"></span>
+            <div class="am-badge d6a8ok" style="display:none;">ok</div>
+        </div>
+        </div>
+        <div class="d6aa9 hide">
+        <div class="am-form-group">
+            <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a9">
+            <i class="am-icon-cloud-upload"></i> Upload 9st file </button>
+            <input type="hidden" class="d6a9 upfile2" name="d6a9"  value="<%=d6a9%>">
+            <span class="errinfo"></span>
+            <div class="am-badge d6a9ok" style="display:none;">ok</div>
+        </div>
+        </div>
+
     </div>
 
-
+<!--d6a end-->
 <legend>Additional information</legend>
 <!--d7-->
         <div class="am-form-group">
@@ -168,8 +249,8 @@ response.cookies("kid")=request.QueryString("kid")
 
 <input type="hidden" class="aid" value="<%=request.cookies("aid")%>">
 <input type="hidden" class="step" value="3">
-        <button type="button" class="am-btn am-btn-default am-u-sm-6 " onClick="save(2)">Previous</button>
-        <button type="button" class="am-btn am-btn-danger am-u-sm-6 " onClick="save(4)">Next</button>
+        <button type="button" class="am-btn am-btn-default am-u-sm-6 " onClick="save(3)">Previous</button>
+        <button type="button" class="am-btn am-btn-danger am-u-sm-6 " onClick="save(5)">Next</button>
         </form>
   </fieldset>
    </div>

@@ -3,3 +3,15 @@
         <input type="file" id="file" name="file" class="eie" >
       <input type="text" name="file1" class="filename" value="">
 </form>
+
+<script>
+$(".upfile").click(function () {
+ var con = $(this).attr("data-id");
+con=$(".file2").val(con)
+$("#file1").click();
+$("#file1").on("change",function(){
+    document.getElementById("form1").submit(); 
+    });
+    });
+</script>
+<iframe name="myFrame" src="" style="display:none;"></iframe> 
