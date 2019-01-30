@@ -21,7 +21,7 @@ $(".d6").change(function(){
        ii=i+1
         $(".d6aa"+ii).show();
     } 
-    console.log(oo);
+  //  console.log(oo);
     for (var x=oo;x<10;x++){
        // xx=x+1
         $(".d6aa"+x).hide();

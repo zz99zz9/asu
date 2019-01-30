@@ -10,7 +10,7 @@ end if%>
 <div class="am-g am-g-fixed am-margin-top">
   <div class="am-u-sm-12">
 <div class="am-progress am-progress-striped am-progress-sm am-active ">
-  <div class="am-progress-bar am-progress-bar-danger"  style="width: 50%"></div>
+  <div class="am-progress-bar am-progress-bar-danger"  style="width: 75%"></div>
 </div>
   </div>
 </div>
