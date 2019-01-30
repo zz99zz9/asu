@@ -13,7 +13,7 @@
 </div>
 
 <div class="am-u-sm-12 apply">
-   <a href="apply-1.asp" class="asubtn">立即提交留学申请</a>
+   <a href="aapply-1.asp" class="asubtn">立即提交留学申请</a>
 </div>
 <!--学院简介-->
 
