@@ -172,8 +172,8 @@ $(function () {
 		lang: 'zh',
 		showNow: true,
 		nowText: "Today",
-		startYear: currYear - 30, //开始年份
-		endYear: currYear - 10 //结束年份
+		startYear: currYear - 55, //开始年份
+		endYear: currYear + 1 //结束年份
 	};
 
 	$("#USER_AGE").mobiscroll($.extend(opt['date'], opt['default']));

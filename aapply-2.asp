@@ -206,8 +206,8 @@ response.cookies("kid")=request.QueryString("kid")
             </label>
         </div>            
 
-<legend>Choice of ASU master's program</legend>
-<a href="" target="blank">Download PDF</a>
+<legend>Choice of ASU undergraduate degree</legend>
+<a href="xgwl/pdf/ASU_degrees.pdf" target="blank">Download PDF</a>
 <!--b4-->
         <div class="am-form-group">
         <label for="doc-ipt-email-1">First choice of major <span>*</span> :</label>
@@ -603,8 +603,8 @@ $(function () {
 		lang: 'zh',
 		showNow: true,
 		nowText: "Today",
-		startYear: currYear - 30, //开始年份
-		endYear: currYear - 10 //结束年份
+		startYear: currYear - 55, //开始年份
+		endYear: currYear + 1 //结束年份
 	};
 
 	$(".bdate").mobiscroll($.extend(opt['date'], opt['default']));
