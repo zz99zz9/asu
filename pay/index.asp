@@ -28,7 +28,7 @@ end function
 </head>
 <body style="background:#fff">
 <div class="wxg">
-	<div class="title">微信公众号支付</div>
+	<div class="title">签证付款</div>
 	<div class="form">
 		<form action="wx_pay.asp" method="post">
 		<div class="input">
@@ -48,7 +48,7 @@ end function
 		<div class="submit"><a href="#" class="kill_btn" onClick="kill()">放弃支付</a></div>			
 		</form>	
 	</div>
-	<div class="footer">QQ：24147824 | <script src="https://s19.cnzz.com/z_stat.php?id=1263104899&web_id=1263104899" language="JavaScript"></script></div>
+	
 </div>
 <script type="text/javascript">	
 wx.config({
