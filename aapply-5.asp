@@ -17,18 +17,14 @@
 
 
         <div class="am-form-group">
-            您的申请信息我们已经收到，请保持手机畅通，我们将尽快与您联系。<br><br>
-            如有疑问，欢迎至电<br><a href="tel:400-8888-8888" style="font-size:1.5em;line-height:150%;">400-8888-8888</a>
+            Thank you<br><br>
+Thank you for your interest in Arizona State University. Your form was sent successfully, and one of our specialist advisors will reply by phone or email within 2 working days.<br><br>
+ 
+Please check your junk email folder if you haven’t heard from us.<br><br>
+ 
+If you have any questions, please feel free to contact: <a href="mailto:apply.asu@umentoredu.com" >apply.asu@umentoredu.com</a><br><br>
         </div>
-        <div class="am-form-group">
-            注意事项：
-            <ul>
-                <li>注意事项内容部份。</li>
-                <li>注意事项内容部份。</li>
-                <li>注意事项内容部份。</li>
-                <li>注意事项内容部份。</li>
-            </ul>
-        </div>
+ 
 
   </fieldset>
    </div>
