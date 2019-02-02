@@ -70,7 +70,9 @@ function onBridgeReady()
 	function(res) {
 		if (res.err_msg == "get_brand_wcpay_request:ok") {
 			alert ("支付成功");
+	//	self.location='wx_pay_ok.asp?body=<%=body%>&total_fee=<%=total_fee%>&out_trade_no=<%=out_trade_no%>'; 
 			self.location='wx_pay_ok.asp?body=<%=body%>&total_fee=<%=total_fee%>&out_trade_no=<%=out_trade_no%>'; 
+
 		} else {
 			alert("支付失败");
 		}
