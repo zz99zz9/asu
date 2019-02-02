@@ -266,7 +266,7 @@ response.cookies("kid")=request.QueryString("kid")
 </footer>
 <!-- 以上页面内容 开发时删除 -->
 <!--#include file="inc/footer.asp"-->
-<!-- # include file="inc/upfile.asp"-->
+<!--#include file="inc/upfile.asp"-->
 
 <script src="xgwl/js/lib/mobiscroll_date.js" ></script> 
 <script src="xgwl/js/lib/mobiscroll.js"></script> 
