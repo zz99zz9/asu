@@ -362,7 +362,29 @@ response.cookies("kid")=request.QueryString("kid")
                 </div>
 
         </div>
-
+<!--b25-->
+        <div class="am-form-group">
+        <label for="doc-ipt-email-1">Have you previously attended or are you currently attending a college or university? <span>*</span></label>
+            <label class="am-radio">
+                <input type="radio"  value="A" name="b25" class=" b25" > I currently am or have attended college or university
+            </label>
+            <label class="am-radio">
+                <input type="radio"  value="B" name="b25" class=" b25" > I have completely withdrawn from a college or university
+            </label>
+            <label class="am-radio">
+                <input type="radio"  value="C" name="b25" class=" b25" > I have only receieved non-passing grades
+            </label>
+            <label class="am-radio">
+                <input type="radio"  value="D" name="b25" class=" b25" > I am a high school student currently attentiong or have attended college
+            </label>
+            <label class="am-radio">
+                <input type="radio"  value="E" name="b25" class=" b25" > I have never attended a college or university
+            </label>
+            
+            <span class="errinfo"></span>
+        </div>
+<!--大学信息开始 -->
+<div class="collegeinfo hide">
 <legend>About your College/ university</legend>
 <!--b15-->
         <div class="am-form-group">
@@ -473,7 +495,12 @@ response.cookies("kid")=request.QueryString("kid")
                 </div>
 
         </div>
-        <legend>Credit transfer</legend>
+
+
+</div>
+<!--大学信息结束-->
+
+<legend>Credit transfer</legend>
 
 <!--b22-->
 <div class="am-form-group">

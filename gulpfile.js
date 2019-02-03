@@ -9,7 +9,6 @@ gulp.task('default', function() {
               '**/*.js'    
             ];
         browserSync.init(files,{
-            proxy: "192.168.1.113" 
+            proxy: "192.168.1.119" 
              });
             });
-            

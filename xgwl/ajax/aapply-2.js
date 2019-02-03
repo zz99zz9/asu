@@ -45,6 +45,15 @@ $(".b24").click(function(){
     }
 
 })
+$(".b25").click(function(){
+    var isValue = $('input[name="b25"]:checked ').val();
+    if(isValue == "A" || isValue == "B" || isValue == "C" || isValue == "D"){
+        $(".collegeinfo").show();
+    }else{
+        $(".collegeinfo").hide();
+    }
+
+})
 
 //验证表现（填写过程中）
 $(".b1").blur(function(){
@@ -120,6 +129,7 @@ function save(e){
     b23b3=$(".b23b3").val();
     b24=$(".b24").val();
     b24a1=$(".b24a1").val();
+    b25=$(".b25").val();
 
 //console.log(e);
 //console.log("fdsa");
@@ -174,6 +184,7 @@ function save(e){
         b23b2:b23b2,
         b23b3:b23b3,
         b24:b24,
+        b25:b25,
         b24a1:b24a1
     
     },
