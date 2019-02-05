@@ -207,7 +207,7 @@ response.cookies("kid")=request.QueryString("kid")
         </div>            
 
 <legend>Choice of ASU undergraduate degree</legend>
-<a href="xgwl/pdf/ASU_degrees.pdf" target="blank">Download PDF</a>
+<a href="xgwl/pdf/ASU_degrees.pdf" target="blank">Download Graduate degrees's PDF</a>
 <!--b4-->
         <div class="am-form-group">
         <label for="doc-ipt-email-1">First choice of major <span>*</span> :</label>
