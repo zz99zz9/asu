@@ -58,7 +58,7 @@ rs.open sql,conn,1,1
             <td class="hidden-phone"><%=rs("a6")%></td>
             <td class="hidden-phone"><%= FormatDateTime(rs("uptime"),2) %></td>
             <td > 
-              <!--<a href="asu_mod.asp?ID=<%=rs("id")%>" class="btn btn-success btn-xs">修改</a>gg -->
+              <a href="asu_detail.asp?ID=<%=rs("id")%>" class="btn btn-success btn-xs">查看</a>
               <a href="?id=<%=rs("id")%>&Action=Del" onClick="return ConfirmDel();" class="btn btn-danger btn-xs">删除</a> </td>
           </tr>
           <%
