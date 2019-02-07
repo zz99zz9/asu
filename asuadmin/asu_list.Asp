@@ -10,7 +10,7 @@
 dim i
 dim sql,rs
 'classid=request.QueryString("Prod_Type")
-sql="select * From [Table_application] "
+sql="select * From [Application] "
 sql=sql & " order by id desc"
 
 Set rs= Server.CreateObject("ADODB.Recordset")
@@ -43,22 +43,20 @@ rs.open sql,conn,1,1
             <th width="40" class="hidden-phone"><strong>ID</strong></td>
             <th width="60" ><strong>名称</strong></td>
             <th width="60" ><strong>生日</strong></td>
-            <th width="50" class="hidden-phone"><strong>身份证</strong></td>
-            <th width="50" class="hidden-phone"><strong>护照</strong></td>
+            <th width="50" class="hidden-phone"><strong>出生国</strong></td>
+            <th width="50" class="hidden-phone"><strong>户籍</strong></td>
             <th width="40" class="hidden-phone"><strong>申请时间</td>
-            <th width="40" class="hidden-phone"><strong>推荐人</td>
             <th width="48" ><strong>操作</strong></td>
           </tr></thead>
           <tbody>
           <%do while not rs.eof%>
           <tr > 
             <td class="hidden-phone"><%=rs("id")%></td>
-            <td><%=rs("cname")%> [<%=rs("fname")%> <%=rs("lname")%>]</td>
-            <td class="hidden-phone"><%= rs("bdate") %></td>
-            <td class="hidden-phone"><%=rs("sfz")%></td>
-            <td class="hidden-phone"><%=rs("hz")%></td>
+            <td><%=rs("a1")%> <%=rs("a2")%></td>
+            <td class="hidden-phone"><%= rs("a4") %></td>
+            <td class="hidden-phone"><%=rs("a5")%></td>
+            <td class="hidden-phone"><%=rs("a6")%></td>
             <td class="hidden-phone"><%= FormatDateTime(rs("uptime"),2) %></td>
-            <td class="hidden-phone"><%=rs("recommend")%></td>
             <td > 
               <!--<a href="asu_mod.asp?ID=<%=rs("id")%>" class="btn btn-success btn-xs">修改</a> -->
               <a href="?id=<%=rs("id")%>&Action=Del" onClick="return ConfirmDel();" class="btn btn-danger btn-xs">删除</a> </td>
