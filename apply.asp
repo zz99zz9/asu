@@ -1,5 +1,5 @@
 <!--#include file="inc/conn.asp"-->
-<%title="asu申请表"%>
+<%title="ASU申请表"%>
  <!--#include file="inc/header.asp">
 <!-- 页面内容 开发时删除 -->
 
