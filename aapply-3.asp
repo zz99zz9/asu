@@ -1,4 +1,4 @@
-﻿<%if request.cookies("uid")="" then 
+<%if request.cookies("uid")="" then 
 Response.Redirect "memberlogin.Asp?err=请先登录再继续提交申请~"
 end if%>
 <!--#include file="inc/conn.asp"-->
