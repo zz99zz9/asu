@@ -48,6 +48,7 @@ response.cookies("kid")=request.QueryString("kid")
         d6a5=rs("d6a5")
         d6a6=rs("d6a6")
         d6a7=rs("d6a7")
+        d9a1=rs("d9a1")
 
     end if
 '    Rs.close
@@ -227,7 +228,15 @@ response.cookies("kid")=request.QueryString("kid")
             
                 </label>
         </div>
-
+        <!--d9a-->
+        <div class="d9a hide">
+                <div class="am-form-group">
+                    <label for="doc-ipt-email-1">What is your ASU Affiliate ID?</label>
+                    <input type="text" class="d9a1" placeholder="" value="<%=d9a1%>">
+                    <span class="errinfo"></span>
+                </div>
+        </div>
+        <!--d9aend-->
 
 <!--d10-->
 <div class="am-form-group">

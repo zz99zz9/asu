@@ -20,6 +20,7 @@
     d6a7=request("d6a7")
     d6a8=request("d6a8")
     d6a9=request("d6a9")
+    d9a1=request("d9a1")
 	 
 
 
@@ -55,7 +56,7 @@ Rs("d6a6")=Trim(d6a6)
 Rs("d6a7")=Trim(d6a7)
 Rs("d6a8")=Trim(d6a8)
 Rs("d6a9")=Trim(d6a9)
-
+Rs("d9a1")=Trim(d9a1)
 Rs("uptime")=now()
 
 Rs.Update

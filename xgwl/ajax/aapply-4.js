@@ -32,6 +32,15 @@ $(".d6").change(function(){
  //   $("#upfileslist").html(str);  
 });
 
+$(".d9").click(function(){
+    var isValue = $('input[name="d9"]:checked ').val();
+    if(isValue == "B" || isValue == "C" || isValue == "D" || isValue == "E" || isValue == "G"){
+        $(".d9a").show();
+    }else{
+        $(".d9a").hide();
+    }
+
+});
 //验证表现（填写过程中）
 // $(".b1").blur(function(){
 //     check1(".b1");
@@ -75,6 +84,7 @@ function save(e){
     d6a7=$(".d6a7").val();
     d6a8=$(".d6a8").val();
     d6a9=$(".d6a9").val();
+    d9a1=$(".d9a1").val();
 
 //console.log(e);
 //console.log("fdsa");
@@ -99,7 +109,8 @@ function save(e){
         d6a6:d6a6,
         d6a7:d6a7,
         d6a8:d6a8,
-        d6a9:d6a9
+        d6a9:d6a9,
+        d9a1:d9a1
 
 
     

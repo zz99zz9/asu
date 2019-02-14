@@ -126,5 +126,3 @@ console.log(sta);
 <script type="text/javascript" src="xgwl/assets/data-tables/jquery.dataTables.js"></script>
 <script type="text/javascript" src="xgwl/assets/data-tables/DT_bootstrap.js"></script>
 <script src="xgwl/js/dynamic-table.js"></script>
-t>
-s"></script>
