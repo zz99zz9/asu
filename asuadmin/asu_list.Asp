@@ -88,7 +88,7 @@ rs.open sql,conn,1,1
 action=request.QueryString("Action")
 delid=request.QueryString("id")
 if action="Del" then
-conn.execute "delete from [Table_application] where id="&Trim(delid)
+conn.execute "delete from [application] where id="&Trim(delid)
 response.Redirect("asu_List.Asp?sta=del")
 end if
 %>

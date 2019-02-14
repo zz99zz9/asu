@@ -1,4 +1,5 @@
 <%
+'忘记密码发邮件
 Sub SendAction(subject, email, sender, content) 
 Set Mail = CreateObject("CDO.Message")
 Mail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2
