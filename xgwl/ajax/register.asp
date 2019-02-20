@@ -31,13 +31,13 @@ Rs.Update
 
 
 set Rs=Server.CreateObject("ADODB.Recordset")
-Rs.Open "select * from [Table_member] where uname='"&Trim(uname)&"' order by id desc",conn,1,3
+Rs.Open "select * from [Table_member] where cname='"&Trim(cname)&"' order by id desc",conn,1,3
 uid=Rs("id")
 Rs.close
 set Rs=Nothing
 response.write "ok"
 response.cookies("uid")=uid
-response.cookies("uname")=uname
+response.cookies("cname")=cname
 case "mod"
 
 end select
