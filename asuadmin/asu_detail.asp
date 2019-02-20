@@ -69,11 +69,11 @@ rs.open sql,conn,1,1
         </tr>
         <tr>
           <th scope="row">Country of brith</th>
-          <td><%=rs("a5")%></td>
+          <td><%call country(rs("a5"))%></td>
         </tr>
         <tr>
           <th scope="row">Country of citizenship</th>
-          <td><%=rs("a6")%></td>
+          <td><%call country(rs("a6"))%></td>
         </tr>
         <tr>
           <th scope="row">Do you hold citizenship for any other countries?</th>
@@ -192,7 +192,7 @@ rs.open sql,conn,1,1
         </tr>
         <tr>
           <th scope="row">Country</th>
-          <td><%=rs("b9")%></td>
+          <td><%call country(rs("b9"))%></td>
         </tr>
         <tr>
           <th scope="row">State/ Province/ Region</th>
@@ -221,7 +221,7 @@ rs.open sql,conn,1,1
             </tr>
             <tr>
             <th scope="row">Country</th>
-            <td><%=rs("b16")%></td>
+            <td><%call country(rs("b16"))%></td>
             </tr>
             <tr>
             <th scope="row">State/ Province/ Region</th>
@@ -270,7 +270,7 @@ rs.open sql,conn,1,1
         </tr>
         <tr>
           <th scope="row" >Country</th>
-          <td><%=rs("b16")%></td>
+          <td><%call country(rs("b16"))%></td>
         </tr>
         <tr>
           <th scope="row" >State/ Province/ Region</th>
@@ -299,7 +299,7 @@ rs.open sql,conn,1,1
                 </tr>
                 <tr>
                 <th scope="row" >Country</th>
-                <td><%=rs("b21a2")%></td>
+                <td><%call country(rs("b21a2"))%></td>
                 </tr>
                 <tr>
                 <th scope="row" >State/ Province/ Region</th>
@@ -512,7 +512,7 @@ rs.open sql,conn,1,1
         </tr>
         <tr>
           <th scope="row" >Permanent home country</th>
-          <td><%=rs("c15")%></td>
+          <td><%call country(rs("c15"))%></td>
         </tr>
         <tr>
           <th scope="row" >Mailing address for immigration documents</th>
