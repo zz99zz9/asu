@@ -552,6 +552,22 @@ oRs.close
 set oRs=Nothing
 response.write (xmname&" [ "&enname&" ]")
 end sub
+'--------------------------表单id调取国家--------------
+sub country(v)
+if v="Please select..." or v="0" or v="" then
+cname="nothing"
+else
+
+set oRs=Server.CreateObject("ADODB.Recordset")
+oRs.Open "select * from [class_country] where cId="&v,conn,1,1
+If Not oRs.eof Then
+cname=ors("cname")
+End if
+oRs.close
+set oRs=Nothing
+end if
+response.write (cname)
+end sub
 '------------------显示当前项目图片数-------------------------------------
 sub picN(v)
 safeRequest(v)

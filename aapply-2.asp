@@ -218,7 +218,7 @@ response.cookies("kid")=request.QueryString("kid")
         <div class="am-form-group">
         <label for="doc-ipt-email-1">First choice major:which campus do you want to attend? <span>*</span></label>
             <select id="country" name="b5" size="1" required="" class="fsField fsRequired b5" aria-required="true">
-            <option >Please select...</option>
+            <option  value="0">Please select...</option>
             <option value="A">Tempe</option>
             <option value="B">Downtown Phoenix</option>
             <option value="C">Polytechnic</option>
@@ -238,7 +238,7 @@ response.cookies("kid")=request.QueryString("kid")
         <div class="am-form-group">
         <label for="doc-ipt-email-1">Second choice major:which campus do you want to attend? <span>*</span></label>
             <select id="country" name="b7" size="1" required="" class="fsField fsRequired b7" aria-required="true">
-            <option >Please select...</option>
+            <option  value="0">Please select...</option>
             <option value="A">Tempe</option>
             <option value="B">Downtown Phoenix</option>
             <option value="C">Polytechnic</option>
@@ -261,7 +261,7 @@ response.cookies("kid")=request.QueryString("kid")
        <div class="am-form-group">
         <label for="doc-ipt-email-1">Country <span>*</span></label>
             <select id="country" name="b9" size="1" required="" class="fsField fsRequired b9" aria-required="true">
-            <option >Please select...</option>
+            <option  value="0">Please select...</option>
                 <%=CountrysList%>
             </select>
             <span class="errinfo"></span>
@@ -324,7 +324,7 @@ response.cookies("kid")=request.QueryString("kid")
             <div class="am-form-group">
                 <label for="doc-ipt-email-1">Country <span>*</span></label>
                     <select id="country" name="b14a2" size="1" required="" class="fsField fsRequired b14a2" aria-required="true">
-                    <option >Please select...</option>
+                    <option  value="0">Please select...</option>
                         <%=CountrysList%>
                     </select>
                     <span class="errinfo"></span>
@@ -396,7 +396,7 @@ response.cookies("kid")=request.QueryString("kid")
        <div class="am-form-group">
         <label for="doc-ipt-email-1">Country <span>*</span></label>
             <select id="country" name="b16" size="1" required="" class="fsField fsRequired b16" aria-required="true">
-            <option >Please select...</option>
+            <option  value="0">Please select...</option>
                 <%=CountrysList%>
             </select>
             <span class="errinfo"></span>
@@ -457,7 +457,7 @@ response.cookies("kid")=request.QueryString("kid")
             <div class="am-form-group">
                 <label for="doc-ipt-email-1">Country <span>*</span></label>
                     <select id="country" name="b21a2" size="1" required="" class="fsField fsRequired b21a2" aria-required="true">
-                    <option >Please select...</option>
+                    <option  value="0">Please select...</option>
                         <%=CountrysList%>
                     </select>
                     <span class="errinfo"></span>

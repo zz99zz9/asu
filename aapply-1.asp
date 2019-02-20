@@ -91,7 +91,7 @@ response.cookies("kid")=request.QueryString("kid")
         <div class="am-form-group">
         <label for="doc-ipt-email-1">Country of birth <span>*</span></label>
             <select id="country" name="a5" size="1" required="" class="fsField fsRequired a5" aria-required="true">
-            <option >Please select...</option>
+            <option value="0">Please select...</option>
                 <%=CountrysList%>
             </select>
             
@@ -100,7 +100,7 @@ response.cookies("kid")=request.QueryString("kid")
                 <div class="am-form-group">
         <label for="doc-ipt-email-1">Country of citizenship (as shown in your passport) <span>*</span></label>
             <select id="country" name="a6" size="1" required="" class="fsField fsRequired a6" aria-required="true">
-            <option >Please select...</option>
+            <option value="0">Please select...</option>
                 <%=CountrysList%>
             </select>
             
@@ -121,7 +121,7 @@ response.cookies("kid")=request.QueryString("kid")
          <div class="am-form-group hide a7a">
         <label for="doc-ipt-email-1">Second Citizenship <span>*</span></label>
             <select id="country" name="a7a1" size="1" required="" class="fsField fsRequired a7a1" aria-required="true">
-            <option value="">Please select...</option>
+            <option value="0">Please select...</option>
                 <%=CountrysList%>
             </select>
             

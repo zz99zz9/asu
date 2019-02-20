@@ -95,7 +95,7 @@ response.cookies("kid")=request.QueryString("kid")
             <div class="am-form-group">
                 <label for="doc-ipt-email-1">How many documents would you like to upload? <span>*</span></label>
                     <select id="country" name="d6" size="1" required="" class="fsField fsRequired d6" aria-required="true">
-                    <option >Please select...</option>
+                    <option  value="0">Please select...</option>
                     <%for a=1 to 9%>
                         <option value="<%=a%>"><%=a%></option>
                     <%next%>

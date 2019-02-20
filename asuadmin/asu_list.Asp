@@ -54,8 +54,8 @@ rs.open sql,conn,1,1
             <td class="hidden-phone"><%=rs("id")%></td>
             <td><%=rs("a1")%> <%=rs("a2")%></td>
             <td class="hidden-phone"><%= rs("a4") %></td>
-            <td class="hidden-phone"><%=rs("a5")%></td>
-            <td class="hidden-phone"><%=rs("a6")%></td>
+            <td class="hidden-phone"><%call country(rs("a5"))%></td>
+            <td class="hidden-phone"><%call country(rs("a6"))%></td>
             <td class="hidden-phone"><%= FormatDateTime(rs("uptime"),2) %></td>
             <td > 
               <a href="asu_detail.asp?ID=<%=rs("id")%>" class="btn btn-success btn-xs">查看</a>
