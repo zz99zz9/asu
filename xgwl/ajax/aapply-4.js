@@ -116,10 +116,11 @@ function save(e){
     
     },
         function(data,status){
-            
+            console.log("d");
           if(data=="ok" && status=="success"){
            // cookie.set(uid, 1);
             console.log(data);
+            console.log("2");
                 location.href='aapply-'+e+'.Asp'
               }
         });
