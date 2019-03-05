@@ -14,9 +14,11 @@ Mail.Configuration.Fields.Update
 Mail.Subject=subject
 Mail.From="system@umentoredu.com"
 Mail.To=email
-Mail.TextBody="Click on the link to reset the password:"&content
+Mail.TextBody=content
 Mail.Send
 Set Mail = Nothing
+response.write "end"
 end sub
 'Call SendAction(strSubject,strEmail,strSender,strContent)
+
 %>

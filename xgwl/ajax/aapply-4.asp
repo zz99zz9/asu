@@ -1,5 +1,6 @@
 <%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!--#include file="../../inc/conn.asp"-->
+<!--#include file="../../inc/mailto.asp"-->
 <%d1=request("d1")
 	  d2=request("d2")
 	  d3=request("d3")
@@ -65,11 +66,13 @@ Rs.Update
 set Rs=Server.CreateObject("ADODB.Recordset")
 Rs.Open "select * from [application] where uid="&Trim(uid)&" order by id desc",conn,1,3
 aid=Rs("id")
-
+uname=rs("a1")
+umail=rs("c4")
 response.write "ok"
 response.cookies("aid")=aid
 
-
+Call SendAction("Dear "&uname,umail,"Thanks you for your received",""    This is confirmation that we have received new information form from you. "& vbcrlf &"　We will contact you to advise of any missing information, or to let you know that the application has been submitted to ASU. "& vbcrlf & vbcrlf &"                     Kind regards, "& vbcrlf &"                    ASUMENTOR ADMISSION OFFICE")
+Call SendAction("Dear Grace","apply.asu@umentoredu.com","Got a new application form "&uname,"Click on the link to view the application. "& vbcrlf &"http://asu.lvovl.cn/asuadmin/login.asp")
 Rs.close
 set Rs=Nothing
 %>
