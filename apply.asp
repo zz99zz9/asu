@@ -16,7 +16,7 @@
    <a href="aapply-1.asp" class="asubtn">立即提交留学申请</a>
 </div>
 <!--学院简介-->
-
+<%response.cookies("aid")=""%>
 <div class="am-u-sm-12 info">
     <!---->
 <section data-am-widget="accordion" class="am-accordion am-accordion-basic " data-am-accordion='{  }' >
