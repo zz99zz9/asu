@@ -26,8 +26,10 @@ end if%>
 response.cookies("kid")=request.QueryString("kid")
     if aid<>"" then
     set Rs=Server.CreateObject("ADODB.Recordset")
-    Rs.Open "select * from [Application] where id="&aid,conn,1,3
+    sql="select * from [Application] where id="&aid
+    Rs.Open sql,conn,1,3
 
+'response.write sql
         d1=rs("d1")
         d2=rs("d2")
         d3=rs("d3")
