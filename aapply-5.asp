@@ -14,7 +14,9 @@
     <div class="am-form" >
   <fieldset>
     <legend>申请完成</legend>
-
+<style>
+.eq{width:46%;margin-left:23%;}
+</style>
 
         <div class="am-form-group">
             Thank you<br><br>
@@ -23,6 +25,7 @@ Thank you for your interest in Arizona State University. Your form was sent succ
 Please check your junk email folder if you haven’t heard from us.<br><br>
  
 If you have any questions, please feel free to contact: <a href="mailto:apply.asu@umentoredu.com" >apply.asu@umentoredu.com</a><br><br>
+<img src="xgwl/img/eq1.png" class="eq">
         </div>
  
 
