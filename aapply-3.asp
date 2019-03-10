@@ -170,7 +170,7 @@ response.cookies("kid")=request.QueryString("kid")
     <!--c3c-->
     <div class="c3c hide">
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Sponsor nmame <span>*</span> :</label>
+            <label for="doc-ipt-email-1">Sponsor name <span>*</span> :</label>
             <input type="text" class="c3c1" placeholder="" value="<%=c3c1%>">
             <span class="errinfo"></span>
         </div>

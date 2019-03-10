@@ -609,37 +609,37 @@ rs.open sql,conn,1,1
         <% if rs("d6")>=1 then%>
         <tr>
           <th scope="row" >1st file</th>
-          <td><%=rs("d6a1")%></td>
+          <td><%if rs("d6a1")="" then%>未上传文件<%else%><a href="<%=rs("d6a1")%>" target="_blank">【下载文件】</a><%end if%></td>
         </tr>
         <%end if%>
         <% if rs("d6")>=2 then%>
         <tr>
           <th scope="row" >2st file</th>
-          <td><%=rs("d6a2")%></td>
+          <td><%if rs("d6a2")="" then%>未上传文件<%else%><a href="<%=rs("d6a2")%>" target="_blank">【下载文件】</a><%end if%></td>
         </tr>
         <%end if%>
         <% if rs("d6")>=3 then%>
         <tr>
           <th scope="row" >3st file</th>
-          <td><%=rs("d6a3")%></td>
+          <td><%if rs("d6a3")="" then%>未上传文件<%else%><a href="<%=rs("d6a3")%>" target="_blank">【下载文件】</a><%end if%></td>
         </tr>
         <%end if%>
         <% if rs("d6")>=4 then%>
         <tr>
           <th scope="row" >4st file</th>
-          <td><%=rs("d6a4")%></td>
+          <td><%if rs("d6a4")="" then%>未上传文件<%else%><a href="<%=rs("d6a4")%>" target="_blank">【下载文件】</a><%end if%></td>
         </tr>
         <%end if%>
         <% if rs("d6")>=5 then%>
         <tr>
           <th scope="row" >5st file</th>
-          <td><%=rs("d6a5")%></td>
+          <td><%if rs("d6a5")="" then%>未上传文件<%else%><a href="<%=rs("d6a5")%>" target="_blank">【下载文件】</a><%end if%></td>
         </tr>
         <%end if%>
         <% if rs("d6")>=6 then%>
         <tr>
           <th scope="row" >6st file</th>
-          <td><%=rs("d6a6")%></td>
+          <td><%if rs("d6a6")="" then%>未上传文件<%else%><a href="<%=rs("d6a6")%>" target="_blank">【下载文件】</a><%end if%></td>
         </tr>
         <%end if%>
         <% if rs("d6")>=7 then%>
