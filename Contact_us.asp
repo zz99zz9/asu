@@ -14,9 +14,14 @@
     <li><img src="xgwl/img/top.jpeg" /></li>
   </ul>
 </div>
+
 <div class="am-g am-g-fixed am-margin-top ">
   <div class="am-u-sm-12">
+  <style>
+.eq{width:46%;margin-left:23%;}
+</style>
   <%call sHowInfo(1)%>
+  <img src="xgwl/img/eq1.png" class="eq">
    </div>
 
   </div>
