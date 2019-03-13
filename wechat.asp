@@ -11,7 +11,7 @@ Set oToken = SenFe.GetAccess_Token()
 Set oUser = SenFe.GetUser(iOpenId, oToken.access_token)
 If oUser.subscribe = 0 Then
 	'Response.Write "用户 " & oUser.openid & " 未关注,<a href='https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU0MjgwODAxNQ==#wechat_redirect'>进入关注界面</a>"
-	Response.Write "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU0MjgwODAxNQ==#wechat_redirect"
+	Response.Redirect "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU0MjgwODAxNQ==#wechat_redirect"
   'Response.Redirect "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU0MjgwODAxNQ==&scene=126&bizpsid=0#wechat_redirect"
 	Response.End
 End If
