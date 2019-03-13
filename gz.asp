@@ -1,5 +1,5 @@
 <%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
-<%title="请先关注"%>
+<%title="Please follow first"%>
  <!--#include file="inc/header.asp">
 <!-- 页面内容 开发时删除 -->
  <link rel="stylesheet" href="xgwl/css/user.css">
