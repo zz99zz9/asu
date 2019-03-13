@@ -1,3 +1,4 @@
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <%title="会员中心"%>
  <!--#include file="inc/header.asp">
 <!-- 页面内容 开发时删除 -->
