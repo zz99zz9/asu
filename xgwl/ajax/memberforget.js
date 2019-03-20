@@ -18,7 +18,7 @@ function forget(){
         umail:umail
     },
         function(data,status){
-            console.log(data);
+ //           console.log(data);
         //    data='{"lvovl":"dd"}'
             data=JSON.parse(data);
             console.log(data);

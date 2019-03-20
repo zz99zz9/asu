@@ -13,7 +13,8 @@
     <legend>— 找回密码 —</legend>
     <%err2=Request.QueryString("err")%>
 <form name="form2" id="form2" >
-<p>邮件已经发送，请注意查收</p>
+<p style="text-align:center">邮件已经发送，请注意查收!</p>
+<a href="memberlogin.asp" class="am-btn am-btn-danger am-u-sm-12 mt15" >返回登录</a>
   
 
         </form>
@@ -31,6 +32,6 @@
 </footer>
 <!-- 以上页面内容 开发时删除 -->
 <!--#include file="inc/footer.asp"-->
-<script type="text/javascript" src="xgwl/ajax/memberforget.js"></script>
+
 </body>
 </html>
