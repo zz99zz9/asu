@@ -18,10 +18,10 @@ function forget(){
         umail:umail
     },
         function(data,status){
- //           console.log(data);
-        //    data='{"lvovl":"dd"}'
+          console.log(data);
+
             data=JSON.parse(data);
-            console.log(data);
+
           if(data.ok==1 && status=="success"){
            // cookie.set(uid, 1);//请查收邮件修改密码，如果没有收到邮件，请重试~
             console.log("请查收邮件");

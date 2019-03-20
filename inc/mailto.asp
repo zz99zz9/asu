@@ -17,7 +17,7 @@ Mail.To=email
 Mail.TextBody=content
 Mail.Send
 Set Mail = Nothing
-response.write "end"
+'response.write "end"
 end sub
 'Call SendAction(strSubject,strEmail,strSender,strContent)
 

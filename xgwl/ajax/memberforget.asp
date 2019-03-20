@@ -15,7 +15,6 @@ Rs("uptime")=now()
 
 Rs.Update
 Call SendAction ("Reset password of ASU",umail,"ASUmentor","Click on the link to reset the password:http://asu.lvovl.cn/memberpassword.asp?ranNum="&ranNum&"")%>
-
 {"ok":1,"ranNum":"<%=ranNum%>","umail":"<%=umail%>"}
 <%
 else
