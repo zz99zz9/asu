@@ -2,6 +2,7 @@
 Response.Redirect "memberlogin.Asp?err=请先登录再继续提交申请~"
 end if%>
 <!--#include file="inc/conn.asp"-->
+<!--#include file="inc/inc.asp"-->
 <%title="ASU申请表"%>
  <!-- #include file="inc/header.asp">
  <link rel="stylesheet" href="xgwl/css/lib/normalize3.0.2.min.css" />
@@ -85,13 +86,17 @@ response.cookies("kid")=request.QueryString("kid")
             <i class="am-icon-calendar"></i>
          <link href="xgwl/css/lib/mobiscroll.css" rel="stylesheet" />
         <link href="xgwl/css/lib/mobiscroll_date.css" rel="stylesheet" />
-        <input type="text" name="a4" id="USER_AGE" readonly class="input bdate a4 am-form-field " value="<%=bdate%>" placeholder="Date of birth *" />
+        <input type="text" name="a4" id="USER_AGE" readonly class="input bdate a4 am-form-field " value="<%=a4%>" placeholder="Date of birth *" />
             <span class="errinfo"></span>
         </div>
         <div class="am-form-group">
         <label for="doc-ipt-email-1">Country of birth <span>*</span></label>
             <select id="country" name="a5" size="1" required="" class="fsField fsRequired a5" aria-required="true">
+            <%if a5="" then%>
             <option value="0">Please select...</option>
+            <%else%>
+            <option value="<%=a5%>"><%call country(rs("a5"))%></option>
+            <%end if%>
                 <%=CountrysList%>
             </select>
             
@@ -100,7 +105,11 @@ response.cookies("kid")=request.QueryString("kid")
                 <div class="am-form-group">
         <label for="doc-ipt-email-1">Country of citizenship (as shown in your passport) <span>*</span></label>
             <select id="country" name="a6" size="1" required="" class="fsField fsRequired a6" aria-required="true">
+            <%if a6="" then%>
             <option value="0">Please select...</option>
+            <%else%>
+            <option value="<%=a6%>"><%call country(rs("a6"))%></option>
+            <%end if%>
                 <%=CountrysList%>
             </select>
             
@@ -110,18 +119,22 @@ response.cookies("kid")=request.QueryString("kid")
         <label for="doc-ipt-email-1">Do you hold citizenship for any other countries? <span>*</span> :</label>
         
             <label class="am-radio-inline">
-                <input type="radio"  value="Yes" name="a7" class=" a7" > Yes
+                <input type="radio"  value="Yes" name="a7" class=" a7" <%if a7="Yes" then%> checked<%end if%>> Yes
             </label>
             <label class="am-radio-inline">
-                <input type="radio"  value="No" name="a7" class=" a7" > No
+                <input type="radio"  value="No" name="a7" class=" a7" <%if a7="No" then%> checked<%end if%>> No
             </label>
 
         </div>
 <!--如果选择yes显示start-->
-         <div class="am-form-group hide a7a">
+         <div class="am-form-group <%if a7<>"Yes" then%>hide<%end if%> a7a">
         <label for="doc-ipt-email-1">Second Citizenship <span>*</span></label>
             <select id="country" name="a7a1" size="1" required="" class="fsField fsRequired a7a1" aria-required="true">
+            <%if a7a1="" then%>
             <option value="0">Please select...</option>
+            <%else%>
+            <option value="<%=a7a1%>"><%call country(rs("a7a1"))%></option>
+            <%end if%>
                 <%=CountrysList%>
             </select>
             
