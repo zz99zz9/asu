@@ -296,8 +296,10 @@
     z-index: 5;
 }
 .dwbc-p .dwbw {
-    width: 33.33%;
+    width: 50%;
 }
+.dwb-n{display: none;}/*隐藏今天按钮*/
+
 /* Hidden label */
 .dwhl {
     padding-top: 10px;
