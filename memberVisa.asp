@@ -29,6 +29,11 @@ end if%>
     Rs.Open "select * from [Table_Visa] where uid="&uid&" order by id desc",conn,1,3
 
     %>
+    <%if rs.eof then%>
+<p style="text-align:center">您目前还没有申请任何签证</p>
+<a  class="ie-btn me-btn  am-u-sm-12 " href="visa.asp">立即前往申请</a>
+    <%end if%>
+    <%do while not rs.eof or i>10%>
 <!------>
 <% if rs("sh")=0 then%>
 <p class="ie-btn me-btn  am-u-sm-12 " ><%call visacountry(rs("cid"))%> 申情时间：<%=FormatDateTime(rs("uptime"),2)%> [待审核]</p>
@@ -37,6 +42,12 @@ end if%>
 <%elseif rs("sh")=2 then%>
 <p class="ie-btn me-btn  am-u-sm-12 " ><%call visacountry(rs("cid"))%> 申情时间：<%=FormatDateTime(rs("uptime"),2)%> [已完成]</p>
 <%end if%>
+ <%
+	i=i+1
+	  
+	      rs.movenext
+	loop
+%>
         <a type="button" class="am-btn am-btn-default am-u-sm-12 " href="member.asp">返回个人中心</a>
         </form>
   </fieldset>

@@ -27,6 +27,10 @@ end if%>
     set Rs=Server.CreateObject("ADODB.Recordset")
     Rs.Open "select * from [Application] where uid="&uid&" order by id desc",conn,1,3
     %>
+    <%if rs.eof then%>
+<p style="text-align:center">您目前还没有提交留学申请</p>
+<a  class="ie-btn me-btn  am-u-sm-12 " href="apply.asp">立即前往申请</a>
+    <%end if%>
 <!------>
 <% if rs("sh")=0 then%>
 <p class="ie-btn me-btn  am-u-sm-12 " >申请时间：<%=FormatDateTime(rs("uptime"),2)%> [待审核]</p>
