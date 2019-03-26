@@ -732,7 +732,7 @@ if sh2<>"" then
 
 conn.execute "update [application] set sh="&sh2&",shtime=now() where Id="&Trim(id)
 
-Call SendAction("Dear "&request.cookies("cname"),request.cookies("umail"),"Thanks you for your received","The status of your ASU application has been updated.")
+Call SendAction("Dear ",request.cookies("umail"),"Thanks you for your received","The status of your ASU application has been updated.")
 'response.write rs("uname")
 'response.write rs("umail")
 response.Redirect("asu_List.Asp")
