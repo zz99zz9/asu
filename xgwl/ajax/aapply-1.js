@@ -51,15 +51,15 @@ function save(e){
     aid=$(".aid").val();
     a1=$(".a1").val();
     a2=$(".a2").val();
-    a3=$(".a3").val();
+    a3=$('input[name=a3]:checked').val();
     a4=$(".a4").val();
     a5=$(".a5").val();
     a6=$(".a6").val();
-    a7=$(".a7").val();
+    a7=$('input[name=a7]:checked').val();
     a7a1=$(".a7a1").val();
 
 //console.log(e);
-console.log("fdsa");
+console.log(a3);
       $.post("xgwl/ajax/aapply-1.asp",{
         aid:aid,
         a1:a1,

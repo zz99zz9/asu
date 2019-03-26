@@ -78,8 +78,8 @@ function save(e){
         console.log("over");
     }else{
     aid=$(".aid").val();
-    b1=$(".b1").val();
-    b2=$(".b2").val();
+    b1=$('input[name=b1]:checked').val();
+    b2=$('input[name=b2]:checked').val();
     b2d1=$(".b2d1").val();
     b2d2=$(".b2d2").val();
     b2d3=$(".b2d3").val();
@@ -90,7 +90,7 @@ function save(e){
     b2d8=$(".b2d8").val();
     b2d9=$(".b2d9").val();
     b2d10=$(".b2d10").val();
-    b3=$(".b3").val();
+    b3=$('input[name=b3]:checked').val();
     b4=$(".b4").val();
     b5=$(".b5").val();
     b6=$(".b6").val();
@@ -101,7 +101,7 @@ function save(e){
     b11=$(".b11").val();
     b12=$(".b12").val();
     b13=$(".b13").val();
-    b14=$(".b14").val();
+    b14=$('input[name=b14]:checked').val();
     b14a1=$(".b14a1").val();
     b14a2=$(".b14a2").val();
     b14a3=$(".b14a3").val();
@@ -115,21 +115,21 @@ function save(e){
     b19=$(".b19").val();
     b20=$(".b20").val();
     b10=$(".b10").val();
-    b21=$(".b21").val();
+    b21=$('input[name=b21]:checked').val();
     b21a1=$(".b21a1").val();
     b21a2=$(".b21a2").val();
     b21a3=$(".b21a3").val();
     b21a4=$(".b21a4").val();
     b21a5=$(".b21a5").val();
     b21a6=$(".b21a6").val();
-    b22=$(".b22").val();
-    b23=$(".b23").val();
-    b23b1=$(".b23b1").val();
+    b22=$('input[name=b22]:checked').val();
+    b23=$('input[name=b23]:checked').val();
+    b23b1=$('input[name=b23b1]:checked').val();
     b23b2=$(".b23b2").val();
     b23b3=$(".b23b3").val();
-    b24=$(".b24").val();
+    b24=$('input[name=b24]:checked').val();
     b24a1=$(".b24a1").val();
-    b25=$(".b25").val();
+    b25=$('input[name=b25]:checked').val();
 
 //console.log(e);
 //console.log("fdsa");

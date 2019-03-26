@@ -2,6 +2,7 @@
 Response.Redirect "memberlogin.Asp?err=请先登录再继续提交申请~"
 end if%>
 <!--#include file="inc/conn.asp"-->
+<!--#include file="inc/inc.asp"-->
 <%title="asu申请表"%>
  <!-- #include file="inc/header.asp">
  <link rel="stylesheet" href="xgwl/css/lib/normalize3.0.2.min.css" />
@@ -28,26 +29,42 @@ response.cookies("kid")=request.QueryString("kid")
     set Rs=Server.CreateObject("ADODB.Recordset")
     Rs.Open "select * from [Application] where id="&aid,conn,1,3
 
-        b1=rs("b1")
-        b2=rs("b2")
-        b3=rs("b3")
-        b4=rs("b4")
-        b5=rs("b5")
-        b6=rs("b6")
-        b7=rs("b7")
-        b8=rs("b8")
-        b9=rs("b9")
-        b10=rs("b10")
-        b11=rs("b11")
-        b12=rs("b12")
-        b13=rs("b13")
-        b14=rs("b14")
-        b15=rs("b15")
-        b16=rs("b16")
-        b17=rs("b17")
-        b18=rs("b18")
-        b19=rs("b19")
-        b20=rs("b20")
+        c1=rs("c1")
+        c2=rs("c2")
+        c3=rs("c3")
+        c4=rs("c4")
+        c5=rs("c5")
+        c6=rs("c6")
+        c7=rs("c7")
+        c8=rs("c8")
+        c9=rs("c9")
+        c10=rs("c10")
+        c11=rs("c11")
+        c12=rs("c12")
+        c13=rs("c13")
+        c14=rs("c14")
+        c15=rs("c15")
+        c16=rs("c16")
+        c17=rs("c17")
+        c18=rs("c18")
+        c19=rs("c19")
+        c20=rs("c20")
+        c21=rs("c21")
+        c22=rs("c22")
+        c23=rs("c23")
+        c24=rs("c24")
+        c25=rs("c25")
+        c26=rs("c26")
+        c27=rs("c27")
+        c28=rs("c28")
+        c2a1=rs("c2a1")
+        c2a2=rs("c2a2")
+        c3bd1=rs("c3bd1")
+        c3bd2=rs("c3bd2")
+        c3bd3=rs("c3bd3")
+        c3c1=rs("c3c1")
+        c8a1=rs("c8a1")
+        c8a2=rs("c8a2")
 
     end if
 '    Rs.close
@@ -206,10 +223,10 @@ response.cookies("kid")=request.QueryString("kid")
     <div class="am-form-group">
         <label for="doc-ipt-email-1">I would like to connect with ASU on social media :</label>
         <label class="am-radio-inline">
-                <input type="radio"  value="Yes" name="c8" class=" c8" > Yes
+                <input type="radio"  value="Yes" name="c8" class=" c8" <%if c8="Yes" then%> checked<%end if%>> Yes
             </label>
             <label class="am-radio-inline">
-                <input type="radio"  value="No" name="c8" class=" c8" > No
+                <input type="radio"  value="No" name="c8" class=" c8" <%if c8="No" then%> checked<%end if%>> No
             </label>
         <span class="errinfo"></span>
     </div>
@@ -240,10 +257,10 @@ response.cookies("kid")=request.QueryString("kid")
     <div class="am-form-group">
         <label for="doc-ipt-email-1">I would like to receive information by SMS text message :</label>
         <label class="am-radio-inline">
-                <input type="radio"  value="Yes" name="c9" class=" c9" > Yes
+                <input type="radio"  value="Yes" name="c9" class=" c9" <%if c9="Yes" then%> checked<%end if%>> Yes
             </label>
             <label class="am-radio-inline">
-                <input type="radio"  value="No" name="c9" class=" c9" > No
+                <input type="radio"  value="No" name="c9" class=" c9" <%if c9="No" then%> checked<%end if%>> No
             </label>
         <span class="errinfo"></span>
     </div>
@@ -283,7 +300,11 @@ response.cookies("kid")=request.QueryString("kid")
     <div class="am-form-group">
         <label for="doc-ipt-email-1">Permanent home country <span>*</span> :</label>
         <select id="country" name="c15" size="1" required="" class="fsField fsRequired c15" aria-required="true">
-                    <option  value="0">Please select...</option>
+            <%if c15="" then%>
+            <option value="0">Please select...</option>
+            <%else%>
+            <option value="<%=c15%>"><%call country(rs("c15"))%></option>
+            <%end if%>
                         <%=CountrysList%>
                     </select>
         <span class="errinfo"></span>

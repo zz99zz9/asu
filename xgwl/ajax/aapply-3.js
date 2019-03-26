@@ -62,15 +62,15 @@ function save(e){
         console.log("over");
     }else{
     aid=$(".aid").val();
-    c1=$(".c1").val();
-    c2=$(".c2").val();
-    c3=$(".c3").val();
+    c1=$('input[name=c1]:checked').val();
+    c2=$('input[name=c2]:checked').val();
+    c3=$('input[name=c3]:checked').val();
     c4=$(".c4").val();
     c5=$(".c5").val();
     c6=$(".c6").val();
     c7=$(".c7").val();
-    c8=$(".c8").val();
-    c9=$(".c9").val();
+    c8=$('input[name=c8]:checked').val();
+    c9=$('input[name=c9]:checked').val();
     c10=$(".c10").val();
     c11=$(".c11").val();
     c12=$(".c12").val();
