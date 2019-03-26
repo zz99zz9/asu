@@ -8,6 +8,7 @@
 <!--#include file="xgconn.asp"-->
 <!--#include file="../../inc/Function.asp"-->
 <!--#include file="../../inc/inc.asp"-->
+<!--#include file="../../inc/mailto.asp"-->
 <%if request.cookies("adminname")="" then
 response.redirect("login.asp")
 end if%>
