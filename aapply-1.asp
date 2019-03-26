@@ -22,8 +22,12 @@ end if%>
   <fieldset>
 
 
-    <%aid=request.cookies("aid")
-
+    <%aid=request.queryString("aid")
+    if aid="" then
+aid=request.cookies("aid")
+else
+response.cookies("aid")=aid
+end if
 response.cookies("kid")=request.QueryString("kid")
     if aid<>"" then
     set Rs=Server.CreateObject("ADODB.Recordset")
@@ -147,7 +151,7 @@ response.cookies("kid")=request.QueryString("kid")
         <%'备选表单%>
 
 
-<input type="hidden" class="aid" value="<%=request.cookies("aid")%>">
+<input type="hidden" class="aid" value="<%=aid%>">
 <input type="hidden" class="step" value="1">
 
         <button type="button" class="am-btn am-btn-danger am-u-sm-12 " onClick="save(2)">Next</button>

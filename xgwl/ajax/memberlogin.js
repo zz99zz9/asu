@@ -25,7 +25,7 @@ function mlogin(v){
           if(data=="ok" && status=="success"){
            // cookie.set(uid, 1);
             console.log(data);
-            location.href='aapply-1.Asp'
+            location.href='member.Asp'
               }else if(data=="err" && status=="success"){
                 location.href='memberlogin.Asp?err=注册邮箱或密码错误！'
               }

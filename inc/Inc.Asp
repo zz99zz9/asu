@@ -554,8 +554,11 @@ response.write (xmname&" [ "&enname&" ]")
 end sub
 '--------------------------表单id调取国家--------------
 sub country(v)
-if v="Please select..." or v="0" or v="" then
-cname="nothing"
+
+if v="Please select..." or v="0" or v="" or v=null then
+cname="Please select..."
+elseif not IsNumeric(v) then
+cname="Please select..."
 else
 
 set oRs=Server.CreateObject("ADODB.Recordset")
@@ -567,6 +570,32 @@ oRs.close
 set oRs=Nothing
 end if
 response.write (cname)
+end sub
+'--------------------审核状态-----------------
+sub sh(v)
+select case v
+case 0
+zt="待审核"
+case 1
+zt="待完善"
+case 2
+zt="已结束"
+end select
+response.write zt
+end sub
+'--------------------审核状态-----------------
+sub visacountry(v)
+if IsNumeric(v) then
+set oRs=Server.CreateObject("ADODB.Recordset")
+oRs.Open "select * from [class_visa] where cId="&v,conn,1,1
+If Not oRs.eof Then
+country1=ors("cname")
+End if
+oRs.close
+set oRs=Nothing
+end if
+
+response.write country1&"签证"
 end sub
 '------------------显示当前项目图片数-------------------------------------
 sub picN(v)

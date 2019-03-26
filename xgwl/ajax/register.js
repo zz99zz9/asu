@@ -51,8 +51,8 @@ function register(url){
     recommend=$(".recommend").val();
     utel=$(".utel").val();
     action=$(".action").val();
-    sex=$(".sex").val();
-
+    sex=$('input[name=sex]:checked').val();
+    uid=$(".uid").val();
     $.post("xgwl/ajax/register.asp",{
         cname:cname,
         umail:umail,
@@ -61,7 +61,8 @@ function register(url){
         utel:utel,
         recommend:recommend,
         sex:sex,
-        action:action
+        action:action,
+        id:uid
 
     },
         function(data,status){
@@ -69,7 +70,7 @@ function register(url){
           if(data=="ok" && status=="success"){
            // cookie.set(uid, 1);
             console.log(data);
-            location.href='apply.Asp'
+            location.href='member.Asp'
               }
         });
 

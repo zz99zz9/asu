@@ -50,6 +50,9 @@ response.cookies("kid")=request.QueryString("kid")
         d6a5=rs("d6a5")
         d6a6=rs("d6a6")
         d6a7=rs("d6a7")
+        d6a8=rs("d6a8")
+        d6a9=rs("d6a9")
+        d6a10=rs("d6a10")
         d9a1=rs("d9a1")
 
     end if
@@ -99,7 +102,7 @@ response.cookies("kid")=request.QueryString("kid")
                     <select id="country" name="d6" size="1" required="" class="fsField fsRequired d6" aria-required="true">
                     <option  value="0">Please select...</option>
                     <%for a=1 to 9%>
-                        <option value="<%=a%>"><%=a%></option>
+                        <option value="<%=a%>" <%if int(d6)=a then%>selected<%end if%>><%=a%></option>
                     <%next%>
                     </select>
                     <span class="errinfo"></span>
@@ -107,84 +110,120 @@ response.cookies("kid")=request.QueryString("kid")
                 </div>
     <!--d6a-->
     <div id="upfileslist">
-        <div class="d6aa1 hide">
+        <div class="d6aa1 <%if d6<1 then%>hide<%end if%>">
         <div class="am-form-group">
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a1">
             <i class="am-icon-cloud-upload"></i> Upload 1st file </button>
             <input type="hidden" class="d6a1 upfile2" name="d6a1"  value="<%=d6a1%>">
             <span class="errinfo"></span>
+            <%if d6a1="" then%>
             <div class="am-badge d6a1ok" style="display:none;">ok</div>
+            <%else%>
+            <div class="am-badge d6a1ok" style="display:block;"><%=d6a1%></div>
+            <%end if%>
         </div>
         </div>
-        <div class="d6aa2 hide">
+        <div class="d6aa2 <%if d6<2 then%>hide<%end if%>">
         <div class="am-form-group">
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a2">
             <i class="am-icon-cloud-upload"></i> Upload 2st file </button>
             <input type="hidden" class="d6a2 upfile2" name="d6a2"  value="<%=d6a2%>">
             <span class="errinfo"></span>
+            <%if d6a2="" then%>
             <div class="am-badge d6a2ok" style="display:none;">ok</div>
+            <%else%>
+            <div class="am-badge d6a2ok" style="display:block;"><%=d6a2%></div>
+            <%end if%>
         </div>
-        <div class="d6aa3 hide">
+        <div class="d6aa3 <%if d6<3 then%>hide<%end if%>">
         <div class="am-form-group">
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a3">
             <i class="am-icon-cloud-upload"></i> Upload 3st file </button>
             <input type="hidden" class="d6a3 upfile2" name="d6a3"  value="<%=d6a3%>">
             <span class="errinfo"></span>
+            <%if d6a3="" then%>
             <div class="am-badge d6a3ok" style="display:none;">ok</div>
+            <%else%>
+            <div class="am-badge d6a3ok" style="display:block;"><%=d6a3%></div>
+            <%end if%>
         </div>
         </div>
-        <div class="d6aa4 hide">
+        <div class="d6aa4 <%if d6<4 then%>hide<%end if%>">
         <div class="am-form-group">
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a4">
             <i class="am-icon-cloud-upload"></i> Upload 4st file </button>
             <input type="hidden" class="d6a4 upfile2" name="d6a4"  value="<%=d6a4%>">
             <span class="errinfo"></span>
+            <%if d6a4="" then%>
             <div class="am-badge d6a4ok" style="display:none;">ok</div>
+            <%else%>
+            <div class="am-badge d6a4ok" style="display:block;"><%=d6a4%></div>
+            <%end if%>
         </div>
         </div>
-        <div class="d6aa5 hide">
+        <div class="d6aa5 <%if d6<5 then%>hide<%end if%>">
         <div class="am-form-group">
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a5">
             <i class="am-icon-cloud-upload"></i> Upload 5st file </button>
             <input type="hidden" class="d6a5 upfile2" name="d6a5"  value="<%=d6a5%>">
             <span class="errinfo"></span>
+            <%if d6a5="" then%>
             <div class="am-badge d6a5ok" style="display:none;">ok</div>
+            <%else%>
+            <div class="am-badge d6a5ok" style="display:block;"><%=d6a5%></div>
+            <%end if%>
         </div>
         </div>
-        <div class="d6aa6 hide">
+        <div class="d6aa6 <%if d6<6 then%>hide<%end if%>">
         <div class="am-form-group">
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a6">
             <i class="am-icon-cloud-upload"></i> Upload 6st file </button>
             <input type="hidden" class="d6a6 upfile2" name="d6a6"  value="<%=d6a6%>">
             <span class="errinfo"></span>
+            <%if d6a6="" then%>
             <div class="am-badge d6a6ok" style="display:none;">ok</div>
+            <%else%>
+            <div class="am-badge d6a6ok" style="display:block;"><%=d6a6%></div>
+            <%end if%>
         </div>
         </div>
-        <div class="d6aa7 hide">
+        <div class="d6aa7 <%if d6<7 then%>hide<%end if%>">
         <div class="am-form-group">
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a7">
             <i class="am-icon-cloud-upload"></i> Upload 7st file </button>
             <input type="hidden" class="d6a7 upfile2" name="d6a7"  value="<%=d6a7%>">
             <span class="errinfo"></span>
+            <%if d6a7="" then%>
             <div class="am-badge d6a7ok" style="display:none;">ok</div>
+            <%else%>
+            <div class="am-badge d6a7ok" style="display:block;"><%=d6a7%></div>
+            <%end if%>
         </div>
         </div>
-        <div class="d6aa8 hide">
+        <div class="d6aa8 <%if d6<8 then%>hide<%end if%>">
         <div class="am-form-group">
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a8">
             <i class="am-icon-cloud-upload"></i> Upload 8st file </button>
             <input type="hidden" class="d6a8 upfile2" name="d6a8"  value="<%=d6a8%>">
             <span class="errinfo"></span>
+            <%if d6a8="" then%>
             <div class="am-badge d6a8ok" style="display:none;">ok</div>
+            <%else%>
+            <div class="am-badge d6a8ok" style="display:block;"><%=d6a8%></div>
+            <%end if%>
         </div>
         </div>
-        <div class="d6aa9 hide">
+        <div class="d6aa9 <%if d6<9 then%>hide<%end if%>">
         <div class="am-form-group">
             <button type="button" class="am-btn am-btn-warning am-btn-sm upfile" data-id="d6a9">
             <i class="am-icon-cloud-upload"></i> Upload 9st file </button>
             <input type="hidden" class="d6a9 upfile2" name="d6a9"  value="<%=d6a9%>">
             <span class="errinfo"></span>
+            <%if d6a9="" then%>
             <div class="am-badge d6a9ok" style="display:none;">ok</div>
+            <%else%>
+            <div class="am-badge d6a9ok" style="display:block;"><%=d6a9%></div>
+            <%end if%>
         </div>
         </div>
 
@@ -196,7 +235,7 @@ response.cookies("kid")=request.QueryString("kid")
         <div class="am-form-group">
             <label for="doc-ipt-email-1">Questions and comments <span>*</span></label>
         
-            <textarea class="d7" rows="5" id="doc-ta-1"></textarea>
+            <textarea class="d7" rows="5" id="doc-ta-1"><%=d7%></textarea>
              <span class="errinfo"></span>
 
         </div>
@@ -216,14 +255,14 @@ response.cookies("kid")=request.QueryString("kid")
             <select id="country" name="d9" size="1" required="" class="fsField fsRequired d9" aria-required="true">
                     <option >Please select...</option>
 
-                        <option value="A">No, I have never attended or been affiliated with Arizona State University</option>
-                        <option value="B">Yes, I previously attended ASU as an undergraduate degree-seeking student</option>
-                        <option value="C">Yes, I previously attended ASU as a graduate or non-degree student</option>
-                        <option value="D">Yes, I attended ASU's Global Launch</option>
-                        <option value="E">Yes, I attended Global Freshman Academy or any transfer pathway program</option>
-                        <option value="F">Yes, I attended ASU as part of a summer program in high school</option>
-                        <option value="G">Yes, I am currently or previously was an ASU employee</option>
-                        <option value="H">Other (e.g. applied but never enrolled, season ticket holder, etc.)</option>
+                        <option value="A" <%if d9="A" then%> selected<%end if%>>No, I have never attended or been affiliated with Arizona State University</option>
+                        <option value="B" <%if d9="B" then%> selected<%end if%>>Yes, I previously attended ASU as an undergraduate degree-seeking student</option>
+                        <option value="C" <%if d9="C" then%> selected<%end if%>>Yes, I previously attended ASU as a graduate or non-degree student</option>
+                        <option value="D" <%if d9="D" then%> selected<%end if%>>Yes, I attended ASU's Global Launch</option>
+                        <option value="E" <%if d9="E" then%> selected<%end if%>>Yes, I attended Global Freshman Academy or any transfer pathway program</option>
+                        <option value="F" <%if d9="F" then%> selected<%end if%>>Yes, I attended ASU as part of a summer program in high school</option>
+                        <option value="G" <%if d9="G" then%> selected<%end if%>>Yes, I am currently or previously was an ASU employee</option>
+                        <option value="H" <%if d9="H" then%> selected<%end if%>>Other (e.g. applied but never enrolled, season ticket holder, etc.)</option>
 
                     </select>
             <span class="errinfo"></span>

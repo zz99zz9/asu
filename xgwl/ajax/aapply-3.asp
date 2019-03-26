@@ -47,6 +47,7 @@
 if aid="" then
     Rs.Open "select * from [Application] ",conn,1,3
     Rs.Addnew
+    Rs("uptime")=now()
  else
      Rs.Open "select * from [Application] where id="&aid,conn,1,3
  end if
@@ -85,13 +86,18 @@ Rs("c3bd3")=Trim(c3bd3)
 Rs("c3c1")=Trim(c3c1)
 Rs("c8a1")=Trim(c8a1)
 Rs("c8a2")=Trim(c8a2)
-Rs("uptime")=now()
 
+rs("sh")=0
+rs("shtime")=now()
 Rs.Update
 
 
 set Rs=Server.CreateObject("ADODB.Recordset")
+if aid="" then
 Rs.Open "select * from [application] where uid="&Trim(uid)&" order by id desc",conn,1,3
+else
+Rs.Open "select * from [application] where uid="&Trim(uid)&" and id="&aid&" order by id desc",conn,1,3
+end if
 aid=Rs("id")
 
 response.write "ok"

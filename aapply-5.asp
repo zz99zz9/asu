@@ -13,7 +13,7 @@
   <div class="am-u-sm-12">
     <div class="am-form" >
   <fieldset>
-    <legend>申请完成</legend>
+    <!--<legend>申请完成</legend>-->
 <style>
 .eq{width:46%;margin-left:23%;}
 </style>
