@@ -27,6 +27,28 @@ Rs("recommend")=Trim(recommend)
 Rs("sex")=Trim(sex)
 Rs("uptime")=Trim(uptime)
 
+case "mod"
+set Rs=Server.CreateObject("ADODB.Recordset")
+Rs.Open "select * from [Table_member] where id="&id,conn,1,3
+Rs("umail")=Trim(umail)
+Rs("utel")=Trim(utel)
+Rs("cname")=Trim(cname)
+Rs("bdate")=Trim(bdate)
+Rs("sex")=Trim(sex)
+Rs("uptime")=Trim(uptime)
+
+case "pwd"
+set Rs=Server.CreateObject("ADODB.Recordset")
+Rs.Open "select * from [Table_member] where id="&id,conn,1,3
+
+Rs("upwd")=Md5(Trim(upwd))
+
+Rs("uptime")=Trim(uptime)
+
+end select
+
+
+
 Rs.Update
 
 
@@ -38,7 +60,4 @@ set Rs=Nothing
 response.write "ok"
 response.cookies("uid")=uid
 response.cookies("cname")=cname
-case "mod"
-
-end select
       %>

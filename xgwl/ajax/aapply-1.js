@@ -75,7 +75,7 @@ console.log(a3);
             
           if(data=="ok" && status=="success"){
            // cookie.set(uid, 1);
-            console.log(data);
+       //     console.log(data);
                 location.href='aapply-'+e+'.Asp'
               }
         });

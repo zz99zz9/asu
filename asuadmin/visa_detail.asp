@@ -1,21 +1,27 @@
 <!--#include file="inc/xgheader.asp"-->
       <!--sidebar start-->
 <!--#include file="inc/xgmenu.asp"-->
+<!--#include file="inc/asu.asp"-->
       <!--sidebar end-->
       <!--main content start-->
+      <style>
+      td{text-align:left;}
+      tbody tr th{width:280px;}
+      thead tr th{font-size:18px;}
+      </style>
       <section id="main-content">
           <section class="wrapper">
               <!-- page start -->
 <%
 dim i
 dim sql,rs
-'classid=request.QueryString("Prod_Type")
-sql="select * From [Application] "
+id=request.QueryString("id")
+sql="select * From [Table_visa] where id="&id
 sql=sql & " order by id desc"
 
 Set rs= Server.CreateObject("ADODB.Recordset")
-rs.open sql,conn,1,1%>
-
+rs.open sql,conn,1,1
+%>
              <!--成功失败提示-->
 <div class="alert" id="alert" style="display:none;">
                                   <button class="close close-sm" type="button">
@@ -29,52 +35,61 @@ rs.open sql,conn,1,1%>
                   <div class="col-lg-12">
                       <section class="panel">
                           <header class="panel-heading">
-                              留学申请列表 <!--a href="Prod_add.asp?Prod_Type=<%=classid%>" class="btn btn-success add">添加内容</a-->
+                              留学申请详情 <!--a href="Prod_add.asp?Prod_Type=<%=classid%>" class="btn btn-success add">添加内容</a-->
                           </header>
                           
 <!--列表开始-->
 
 <!--以后补一个类别切换-->
 <form>
-<table class="table table-striped border-top table-hover" id="sample_1">
+<table class="table table-striped">
 <thead>
-          <tr > 
+        <tr>
+          <th colspan="2">Student's personal information</th>
           
-            <th width="40" class="hidden-phone"><strong>ID</strong></td>
-            <th width="50" ><strong>名称</strong></td>
-            <th width="50" ><strong>生日</strong></td>
-            <th width="50" class="hidden-phone"><strong>出生国</strong></td>
-            <th width="50" class="hidden-phone"><strong>户籍</strong></td>
-            <th width="32" class="hidden-phone"><strong>申请时间</td>
-            <th width="40" ><strong>状态</strong></td>
-            <th width="32" class="hidden-phone"><strong>更新时间</td>
-            <th width="48" ><strong>操作</strong></td>
-          </tr></thead>
-          <tbody>
-          <%do while not rs.eof%>
-          <tr > 
-            <td class="hidden-phone"><%=rs("id")%></td>
-            <td><%=rs("a1")%> <%=rs("a2")%></td>
-            <td class="hidden-phone"><%= rs("a4") %></td>
-            <td class="hidden-phone"><%call country(rs("a5"))%></td>
-            <td class="hidden-phone"><%call country(rs("a6"))%></td>
-            <td class="hidden-phone"><%= FormatDateTime(rs("uptime"),2) %></td>
-            <td width="40" ><%call sh(rs("sh"))%></td>
-            <td width="40" class="hidden-phone"><%=formatdatetime(rs("shtime"),2)%></td>
-            <td > 
-              <a href="asu_detail.asp?ID=<%=rs("id")%>" class="btn btn-success btn-xs">查看</a>
-              <a href="?id=<%=rs("id")%>&Action=Del" onClick="return ConfirmDel();" class="btn btn-danger btn-xs">删除</a> </td>
-          </tr>
-          <%
-	i=i+1
-	  
-	      rs.movenext
-	loop
-%>
-          </tbody>
-          </table>
-        </table>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">First name</th>
+          <td><%=rs("fname")%></td>
+        </tr>
+        <tr>
+          <th scope="row">Family name/ Surname</th>
+          <td><%=rs("lname")%></td>
+        </tr>
+        <tr>
+          <th scope="row">姓名</th>
+          <td><%=rs("lname")%></td>
+        </tr>
+        <tr>
+          <th scope="row">护照号</th>
+          <td><%=rs("hz")%></td>
+        </tr>
+        <tr>
+          <th scope="row">邮箱</th>
+          <td><%=rs("email")%></td>
+        </tr>
+        <tr>
+          <th scope="row">联系电话</th>
+          <td><%=rs("tel")%></td>
+        </tr>
+      </tbody>
+</table>
+
 </form>
+
+<div class="row <%if rs("sh")=0 then%>hide<%end if%>">
+<div class="col-lg-offset-1 col-lg-8">
+当前状态：<%call sh(rs("sh"))%> [操作时间：<%=rs("shtime")%>]<br><br>
+</div></div>
+<div class="row <%if rs("sh")>0 then%>hide<%end if%>">
+<div class="col-lg-offset-1 col-lg-8">
+<a class="btn btn-danger save" type="button" style="margin:15px auto;" href="?sh=2&id=<%=id%>">已处理</a>
+<!--<a class="btn btn-danger save" type="button" style="margin:15px auto;" href="?sh=1&id=<%=id%>">已通知修改</a>-->
+</div>
+  </div>
 <!--列表结束-->
                       </section>
                   </div>
@@ -89,11 +104,12 @@ rs.open sql,conn,1,1%>
 <!--#include file="inc/xgfooter.asp"-->
 <!--#include file="inc/windows.asp"-->
 <%
-action=request.QueryString("Action")
-delid=request.QueryString("id")
-if action="Del" then
-conn.execute "delete from [application] where id="&Trim(delid)
-response.Redirect("asu_List.Asp?sta=del")
+sh2=request.QueryString("sh")
+id=request.QueryString("id")
+if sh2<>"" then
+conn.execute "update [Table_visa] set sh="&sh2&",shtime=now() where Id="&Trim(id)
+
+response.Redirect("visa_List.Asp")
 end if
 %>
   <script type="text/javascript">

@@ -39,27 +39,32 @@ rs.open sql,conn,1,1
 <thead>
           <tr > 
           
-            <th width="40" class="hidden-phone"><strong>ID</strong></td>
-            <th width="60" class="hidden-phone"><strong>签证人</strong></td>
-            <th width="70" class="hidden-phone"><strong>签证国家</strong></td>
-            <th width="200" ><strong>护照号</strong></td>
+            <th width="10" class="hidden-phone"><strong>ID</strong></td>
+            <th width="30" class="hidden-phone"><strong>签证人</strong></td>
+            <th width="40" class="hidden-phone"><strong>签证国家</strong></td>
+            <th width="50" ><strong>护照号</strong></td>
             <th width="40" class="hidden-phone"><strong>邮箱</strong></td>
             <th width="40" class="hidden-phone"><strong>电话</strong></td>
-            <th width="80" class="hidden-phone"><strong>签证时间</strong></td>
-            <th width="178" ><strong>操作</strong></td>
+            <th width="40" class="hidden-phone"><strong>签证时间</strong></td>
+            <th width="40" ><strong>状态</strong></td>
+            <th width="32" class="hidden-phone"><strong>更新时间</td>
+            <th width="40" ><strong>操作</strong></td>
           </tr></thead>
           <tbody>
           <%do while not rs.eof%>
           <tr > 
             <td class="hidden-phone"><%=rs("id")%></td>
             <td class="hidden-phone"><%=rs("cname")%>[<%=rs("fname")%> <%=rs("lname")%>]</td>
-                            <td class="hidden-phone"><%=rs("cid")%></td>
+                            <td class="hidden-phone"><%call visacountry(rs("cid"))%></td>
             <td><%=rs("hz")%> </td>
             <td><%=rs("email")%> </td>
             <td><%=rs("tel")%> </td>
             <td class="hidden-phone"><%= FormatDateTime(rs("UpTime"),2) %></td>
+            <td width="40" ><%call sh(rs("sh"))%></td>
+            <td width="40" class="hidden-phone"><%=formatdatetime(rs("shtime"),2)%></td>
             <td >
              <!-- <a href="visa_mod.asp?ID=<%=rs("id")%>" class="btn btn-success btn-xs">修改</a> -->
+             <a href="visa_detail.asp?ID=<%=rs("id")%>" class="btn btn-success btn-xs">查看</a>
               <a href="?ID=<%=rs("ID")%>&Action=Del" onClick="return ConfirmDel();" class="btn btn-danger btn-xs">删除</a> </td>
           </tr>
           <%

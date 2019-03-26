@@ -10,6 +10,7 @@ if not(rs.eof and rs.bof) then
 response.write "ok"
 response.cookies("uid")=rs("id")
 response.cookies("umail")=umail
+response.cookies("cname")=rs("cname")
 else
 response.write "err"
 end if

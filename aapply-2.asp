@@ -636,7 +636,7 @@ response.cookies("kid")=request.QueryString("kid")
         <%'备选表单%>
 
 
-<input type="hidden" class="aid" value="<%=request.cookies("aid")%>">
+<input type="hidden" class="aid" value="<%=aid%>">
 <input type="hidden" class="step" value="2">
         <button type="button" class="am-btn am-btn-default am-u-sm-6 " onClick="save(1)">Previous</button>
         <button type="button" class="am-btn am-btn-danger am-u-sm-6 " onClick="save(3)">Next</button>

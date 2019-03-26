@@ -3,7 +3,7 @@
 <%if request.cookies("uid")="" then 
 Response.Redirect "memberlogin.Asp"
 end if%>
-<%title="个人中心"%>
+<%title="我的留学申请记录"%>
  <!--#include file="inc/header.asp">
 <!-- 页面内容 开发时删除 -->
  <link rel="stylesheet" href="xgwl/css/user.css">
@@ -13,7 +13,7 @@ end if%>
   <div class="am-u-sm-12  userbox">
     <div class="am-form" >
   <fieldset>
-    <legend>个人中心</legend>
+    <legend>我的留学申请记录</legend>
     <%err2=Request.QueryString("err")%>
 <form name="form2" id="form2" >
 <%if err<>"" then%>
@@ -22,13 +22,20 @@ end if%>
 </div>
 <%end if%>
 <!------>
+<%uid=request.cookies("uid")
 
+    set Rs=Server.CreateObject("ADODB.Recordset")
+    Rs.Open "select * from [Application] where uid="&uid&" order by id desc",conn,1,3
+    %>
 <!------>
-<a  class="me-btn am-u-sm-6 " href="memberInfo.asp">个人资料</a>
-<a  class="me-btn am-u-sm-6 " href="memberPwd.asp">修改密码</a>
-<a  class="me-btn am-btn-default am-u-sm-6 " href="memberApply.asp">我的留学申请</a>
-<a  class="me-btn am-btn-default am-u-sm-6 " href="memberVisa.asp">我的签证申请</a>
-        <a type="button" class="am-btn am-btn-default am-u-sm-12 " href="memberQuit.asp">退出登录</a>
+<% if rs("sh")=0 then%>
+<p class="ie-btn me-btn  am-u-sm-12 " >申请时间：<%=FormatDateTime(rs("uptime"),2)%> [待审核]</p>
+<%elseif rs("sh")=1 then%>
+<a  class="ie-btn me-btn  am-u-sm-12 " href="aapply-1.asp?aid=<%=rs("id")%>">申请时间：<%=FormatDateTime(rs("uptime"),2)%> [待完善]</a>
+<%elseif rs("sh")=2 then%>
+<p class="ie-btn me-btn  am-u-sm-12 " >申请时间：<%=FormatDateTime(rs("uptime"),2)%> [已完成]</p>
+<%end if%>
+        <a type="button" class="am-btn am-btn-default am-u-sm-12 " href="member.asp">返回个人中心</a>
         </form>
   </fieldset>
    </div>

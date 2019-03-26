@@ -39,7 +39,7 @@
                           <li class="nav2-2"><a class="" href="class_country.asp">国家管理</a></li>
                           <!--<li class="nav2-2"><a class="" href="pro_class.asp">学区学院管理</a></li>
                           <li class="nav2-3"><a class="" href="pro_list.asp">专业管理</a></li>-->
-                          <li class="nav2-4"><a class="" href="class_visa.asp">签证国家管理</a></li>
+                          <!--<li class="nav2-4"><a class="" href="class_visa.asp">签证国家管理</a></li>-->
                           <li class="nav2-5"><a class="" href="visa_list.asp">签证列表管理</a></li>
 
                    <!-- <li class="nav2-3"><a class="" href="single.asp?nav=1">自我评估列表</a></li>-->

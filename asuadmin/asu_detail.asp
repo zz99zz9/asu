@@ -700,6 +700,17 @@ rs.open sql,conn,1,1
         </tbody>
         </table>
 </form>
+
+<div class="row <%if rs("sh")=0 then%>hide<%end if%>">
+<div class="col-lg-offset-1 col-lg-8">
+当前状态：<%call sh(rs("sh"))%> [操作时间：<%=rs("shtime")%>]<br><br>
+</div></div>
+<div class="row <%if rs("sh")>0 then%>hide<%end if%>">
+<div class="col-lg-offset-1 col-lg-8">
+<a class="btn btn-danger save" type="button" style="margin:15px auto;" href="?sh=2&id=<%=id%>">审核通过</a>
+<a class="btn btn-danger save" type="button" style="margin:15px auto;" href="?sh=1&id=<%=id%>">已通知修改</a>
+</div>
+  </div>
 <!--列表结束-->
                       </section>
                   </div>
@@ -714,11 +725,12 @@ rs.open sql,conn,1,1
 <!--#include file="inc/xgfooter.asp"-->
 <!--#include file="inc/windows.asp"-->
 <%
-action=request.QueryString("Action")
-delid=request.QueryString("id")
-if action="Del" then
-conn.execute "delete from [Table_application] where id="&Trim(delid)
-response.Redirect("asu_List.Asp?sta=del")
+sh2=request.QueryString("sh")
+id=request.QueryString("id")
+if sh2<>"" then
+conn.execute "update [application] set sh="&sh2&",shtime=now() where Id="&Trim(id)
+
+response.Redirect("asu_List.Asp")
 end if
 %>
   <script type="text/javascript">

@@ -1,8 +1,11 @@
-.yellow{background:#fdc43f;height:330px;margin-top:-50px;position: absolute;left:0px;top:0px;width:100%;z-index:-1;}
-.yellow img{width:24%;margin-top:140px;margin-left:36%;}
+.yellow{background:#fdc43f;height:330px;margin-top:-50px;position: absolute;left:0px;top:0px;width:100%;z-index:-1;text-align:center;padding-top:170px;color:#8e1f42;font-size:2em;}
+.yellow img{width:24%;margin-top:-30px;}
 .userbox{margin-top:170px;background:#fff;width:86%;margin-left:7%;border-radius:7px;box-shadow:0px 0px 5px rgba(0,0,0,0.1);}
 .userbox input{border-radius:20px !important;padding-left:20px;background:#f5f5f5 !important;}
-.am-btn{border-radius:20px !important;background:#8e1f42;border:0 !important;}
+.am-btn{border-radius:20px !important;background:#8e1f42;border:0 !important;color:#fff !important;}
+.ie-btn{width:100% !important;}
+.me-btn{margin-bottom:15px;border:1px solid #f2f2f2;margin:0 5px 20px 5px;width:45%;border-radius:7px;background:#fff;font-size:0.8em;text-align:center;color:#999 !important;padding:6px 0;}
+
 .right{text-align:right;}
 .link{color:#666;font-size:0.8em;}
 .mt15{margin-top:15px;}
