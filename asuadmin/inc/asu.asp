@@ -70,6 +70,21 @@ end select
 Response.Write t
 End sub
 
+sub c3(v)
+select case v
+case "A"
+t="I am self-funding"
+case "B"
+t="I am family-funded"
+case "C"
+t="I have sponsorship from a government, organization or individual"
+case "D"
+t="Other"
+
+end select
+Response.Write t
+End sub
+
 sub d9(v)
 select case v
 case "A"

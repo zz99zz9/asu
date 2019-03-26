@@ -252,7 +252,7 @@ rs.open sql,conn,1,1
       </thead>
       <tbody>
       <tr>
-          <th scope="row" colspan="2"><%=rs("b25")%></th>
+          <th scope="row" colspan="2"><%call b25(rs("b25"))%></th>
           
         </tr>
         </tbody>
@@ -414,7 +414,7 @@ rs.open sql,conn,1,1
       <tbody>
       <tr>
           <th scope="row" >Financial Guarantee source</th>
-          <td><%=rs("c3")%></td>
+          <td><%call c3(rs("c3"))%></td>
         </tr>
         <% if rs("c3")="B" or rs("c3")="D" then%>
             <tr>
