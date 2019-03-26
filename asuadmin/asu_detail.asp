@@ -83,7 +83,7 @@ rs.open sql,conn,1,1
         <%if rs("a7")="Yes" then%>
         <tr>
           <th scope="row">Second citizenship</th>
-          <td><%=rs("a7a1")%></td>
+          <td><%call country(rs("a7a1"))%></td>
         </tr>
         <%end if%>
       </tbody>
