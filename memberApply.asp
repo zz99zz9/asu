@@ -30,7 +30,7 @@ end if%>
     <%if rs.eof then%>
 <p style="text-align:center">您目前还没有提交留学申请</p>
 <a  class="ie-btn me-btn  am-u-sm-12 " href="apply.asp">立即前往申请</a>
-    <%end if%>
+    <%else%>
 <!------>
 <% if rs("sh")=0 then%>
 <p class="ie-btn me-btn  am-u-sm-12 " >申请时间：<%=FormatDateTime(rs("uptime"),2)%> [待审核]</p>
@@ -38,6 +38,7 @@ end if%>
 <a  class="ie-btn me-btn  am-u-sm-12 " href="aapply-1.asp?aid=<%=rs("id")%>">申请时间：<%=FormatDateTime(rs("uptime"),2)%> [待完善]</a>
 <%elseif rs("sh")=2 then%>
 <p class="ie-btn me-btn  am-u-sm-12 " >申请时间：<%=FormatDateTime(rs("uptime"),2)%> [已完成]</p>
+<%end if%>
 <%end if%>
         <a type="button" class="am-btn am-btn-default am-u-sm-12 " href="member.asp">返回个人中心</a>
         </form>
