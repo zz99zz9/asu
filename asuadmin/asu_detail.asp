@@ -585,23 +585,23 @@ rs.open sql,conn,1,1
       <tbody>
       <tr>
           <th scope="row" >Proof of English proficiency (TOEFL, IELTS, Pearson PTE or Kaplan iBT)</th>
-          <td><%=rs("d1")%></td>
+          <td><%call yorn(rs("d1"))%></td>
         </tr>
         <tr>
           <th scope="row" >Official transcripts for the last 3 years at secondary school or post-secondary institutions, including final diploma/certificate if available. Submit a certified English translation of all documents not in English.</th>
-          <td><%=rs("d2")%></td>
+          <td><%call yorn(rs("d2"))%></td>
         </tr>
         <tr>
           <th scope="row" >SAT or ACT score (if required)</th>
-          <td><%=rs("d3")%></td>
+          <td><%call yorn(rs("d3"))%></td>
         </tr>
         <tr>
           <th scope="row" >Passport copy</th>
-          <td><%=rs("d4")%></td>
+          <td><%call yorn(rs("d4"))%></td>
         </tr>
         <tr>
           <th scope="row" >Previous I-20 or copy of visa (if you have studied in the USA)</th>
-          <td><%=rs("d5")%></td>
+          <td><%call yorn(rs("d5"))%></td>
         </tr>
         <tr>
           <th scope="row" >How many documents would you like to upload?</th>

@@ -85,6 +85,8 @@ end select
 Response.Write t
 End sub
 
+
+
 sub d9(v)
 select case v
 case "A"
@@ -107,4 +109,13 @@ end select
 Response.Write t
 End sub
 
+
+sub yorn(v)
+if v="YES" then
+t="Yes"
+else
+t="No"
+end if
+response.write t
+end sub
 %>
