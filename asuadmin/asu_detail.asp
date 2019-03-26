@@ -2,6 +2,7 @@
       <!--sidebar start-->
 <!--#include file="inc/xgmenu.asp"-->
 <!--#include file="inc/asu.asp"-->
+
       <!--sidebar end-->
       <!--main content start-->
       <style>
@@ -728,8 +729,12 @@ rs.open sql,conn,1,1
 sh2=request.QueryString("sh")
 id=request.QueryString("id")
 if sh2<>"" then
+
 conn.execute "update [application] set sh="&sh2&",shtime=now() where Id="&Trim(id)
 
+Call SendAction("Dear "&request.cookies("cname"),request.cookies("umail"),"Thanks you for your received","The status of your ASU application has been updated.")
+'response.write rs("uname")
+'response.write rs("umail")
 response.Redirect("asu_List.Asp")
 end if
 %>

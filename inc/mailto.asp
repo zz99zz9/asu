@@ -20,5 +20,5 @@ Set Mail = Nothing
 'response.write "end"
 end sub
 'Call SendAction(strSubject,strEmail,strSender,strContent)
-
+'Call SendAction("Dear ","4659489@qq.com","Thanks you for your received","The status of your ASU application has been updated")
 %>
