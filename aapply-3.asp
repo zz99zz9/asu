@@ -337,7 +337,13 @@ response.cookies("kid")=request.QueryString("kid")
     <div class="am-form-group">
         <label for="doc-ipt-email-1">Permanent home country <span>*</span> :</label>
         <select id="country" name="c20" size="1" required="" class="fsField fsRequired c20" aria-required="true">
-                    <option  value="0">Please select...</option>
+
+            <%if c20="" then%>
+            <option value="0">Please select...</option>
+            <%else%>
+            <option value="<%=c20%>"><%call country(rs("c20"))%></option>
+            <%end if%>
+
                         <%=CountrysList%>
                     </select>
         <span class="errinfo"></span>

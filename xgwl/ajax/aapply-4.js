@@ -64,17 +64,17 @@ function save(e){
         console.log("over");
     }else{
     aid=$(".aid").val();
-    d1=$(".d1").val();
-    d2=$(".d2").val();
-    d3=$(".d3").val();
-    d4=$(".d4").val();
-    d5=$(".d5").val();
+    d1=$('input[name=d1]:checked').val();
+    d2=$('input[name=d2]:checked').val();
+    d3=$('input[name=d3]:checked').val();
+    d4=$('input[name=d4]:checked').val();
+    d5=$('input[name=d5]:checked').val();
     d6=$(".d6").val();
     d7=$(".d7").val();
     d8=$(".d8").val();
     d9=$(".d9").val();
-    d10=$(".d10").val();
-    d11=$(".d11").val();
+    d10=$('input[name=d10]:checked').val();
+    d11=$('input[name=d11]:checked').val();
     d6a1=$(".d6a1").val();
     d6a2=$(".d6a2").val();
     d6a3=$(".d6a3").val();
