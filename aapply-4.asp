@@ -76,7 +76,7 @@ response.cookies("kid")=request.QueryString("kid")
 
 <!--d1--d5-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Select each of the documents you are uploading with this ASU undergraduate application <span>*</span> :</label>
+            <label for="doc-ipt-email-1">Select each of the documents you are uploading with this ASU undergraduate application <!--<span>*</span>--> :</label>
         
             <label class="am-checkbox">
                 <input type="checkbox"  value="YES" name="d1" class="d1" <%if d1="YES" then%> checked<%end if%>> Proof of English proficiency (TOEFL, IELTS, Pearson PTE or Kaplan iBT)
@@ -98,7 +98,7 @@ response.cookies("kid")=request.QueryString("kid")
 <!--d6-->
 
             <div class="am-form-group">
-                <label for="doc-ipt-email-1">How many documents would you like to upload? <span>*</span></label>
+                <label for="doc-ipt-email-1">How many documents would you like to upload? <!--<span>*</span>--></label>
                     <select id="country" name="d6" size="1" required="" class="fsField fsRequired d6" aria-required="true">
                     <option  value="0">Please select...</option>
                     <%for a=1 to 9%>
@@ -233,7 +233,7 @@ response.cookies("kid")=request.QueryString("kid")
 <legend>Additional information</legend>
 <!--d7-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Questions and comments <span>*</span></label>
+            <label for="doc-ipt-email-1">Questions and comments <!--<span>*</span>--></label>
         
             <textarea class="d7" rows="5" id="doc-ta-1"><%=d7%></textarea>
              <span class="errinfo"></span>
@@ -241,7 +241,7 @@ response.cookies("kid")=request.QueryString("kid")
         </div>
 <!--d8-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Additional email (optional) <span>*</span></label>
+            <label for="doc-ipt-email-1">Additional email (optional) <!--<span>*</span>--></label>
         
             <input type="text" class="d8" placeholder="" value="<%=d8%>">
             <span class="errinfo"></span>
@@ -250,7 +250,7 @@ response.cookies("kid")=request.QueryString("kid")
         </div>
 <!--d9-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Do you have a previous affiliation with ASU? <span>*</span></label>
+            <label for="doc-ipt-email-1">Do you have a previous affiliation with ASU? <!--<span>*</span>--></label>
         
             <select id="country" name="d9" size="1" required="" class="fsField fsRequired d9" aria-required="true">
                     <option >Please select...</option>

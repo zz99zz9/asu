@@ -102,7 +102,7 @@ response.cookies("kid")=request.QueryString("kid")
 
 
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">what level of degree do you want to study? <span>*</span> :</label>
+            <label for="doc-ipt-email-1">what level of degree do you want to study? <!--<span>*</span>--> :</label>
         
             <label class="am-radio">
                 <input type="radio"  value="Undergraduate" name="b1" class="b1" <%if b1="Undergraduate" then%> checked<%end if%>> Undergraduate
@@ -114,7 +114,7 @@ response.cookies("kid")=request.QueryString("kid")
         </div>
 <!--b2-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Admission type<span>*</span> :</label>
+            <label for="doc-ipt-email-1">Admission type<!--<span>*</span>--> :</label>
         
             <label class="am-radio">
                 <input type="radio"  value="A" name="b2" class="b2" <%if b2="A" then%> checked<%end if%>> Undergraduate academic pathway:ASU-USA Pathway
@@ -137,7 +137,7 @@ response.cookies("kid")=request.QueryString("kid")
     <!--b2d1-->
 
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">Undergraduate grade average <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Undergraduate grade average <!--<span>*</span>--> :</label>
             <input type="text" class="b2d1" placeholder="" value="<%=b2d1%>">
             <span class="errinfo"></span>
         </div>
@@ -145,7 +145,7 @@ response.cookies("kid")=request.QueryString("kid")
     <!--b2d2-->
 
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">Name of last institution you attended for undergraduate study <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Name of last institution you attended for undergraduate study <!--<span>*</span>--> :</label>
             <input type="text" class="b2d2" placeholder="" value="<%=b2d2%>">
             <span class="errinfo"></span>
         </div>
@@ -153,14 +153,14 @@ response.cookies("kid")=request.QueryString("kid")
     <!--b2d3-->
 
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">Institution country <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Institution country <!--<span>*</span>--> :</label>
             <input type="text" class="b2d3" placeholder="" value="<%=b2d3%>">
             <span class="errinfo"></span>
         </div>
     <!--b2d4-->
 
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">State/ Province/ Region <span>*</span> :</label>
+        <label for="doc-ipt-email-1">State/ Province/ Region <!--<span>*</span>--> :</label>
             <input type="text" class="b2d4" placeholder="" value="<%=b2d4%>">
             <span class="errinfo"></span>
         </div>
@@ -168,7 +168,7 @@ response.cookies("kid")=request.QueryString("kid")
     <!--b2d5-->
 
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">City <span>*</span> :</label>
+        <label for="doc-ipt-email-1">City <!--<span>*</span>--> :</label>
             <input type="text" class="b2d5" placeholder="" value="<%=b2d5%>">
             <span class="errinfo"></span>
         </div>
@@ -176,7 +176,7 @@ response.cookies("kid")=request.QueryString("kid")
     <!--b2d6-->
 
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">Undergraduate major <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Undergraduate major <!--<span>*</span>--> :</label>
             <input type="text" class="b2d6" placeholder="" value="<%=b2d6%>">
             <span class="errinfo"></span>
         </div>
@@ -184,14 +184,14 @@ response.cookies("kid")=request.QueryString("kid")
     <!--b2d7-->
 
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">Undergraduate major <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Undergraduate major <!--<span>*</span>--> :</label>
             <input type="text" class="b2d7" placeholder="" value="<%=b2d7%>">
             <span class="errinfo"></span>
         </div>
 
     <!--b2d8-->
         <div class="am-form-group am-form-icon">
-        <label for="doc-ipt-email-1">Date first attended <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Date first attended <!--<span>*</span>--> :</label>
             <i class="am-icon-calendar"></i>
             <link href="xgwl/css/lib/mobiscroll.css" rel="stylesheet" />
             <link href="xgwl/css/lib/mobiscroll_date.css" rel="stylesheet" />
@@ -201,7 +201,7 @@ response.cookies("kid")=request.QueryString("kid")
 
     <!--b2d9-->
         <div class="am-form-group am-form-icon">
-        <label for="doc-ipt-email-1">Date last attended <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Date last attended <!--<span>*</span>--> :</label>
             <i class="am-icon-calendar"></i>
             <input type="text" name="b2d9" readonly class="input bdate b2d9 am-form-field " value="<%=b2d9%>" />
             <span class="errinfo"></span>
@@ -209,7 +209,7 @@ response.cookies("kid")=request.QueryString("kid")
 
     <!--b2d10-->
         <div class="am-form-group am-form-icon">
-        <label for="doc-ipt-email-1">Date degree awarded (graduation) <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Date degree awarded (graduation) <!--<span>*</span>--> :</label>
             <i class="am-icon-calendar"></i>
             <input type="text" name="b2d10" readonly class="input bdate b2d10 am-form-field " value="<%=b2d10%>" />
             <span class="errinfo"></span>
@@ -218,7 +218,7 @@ response.cookies("kid")=request.QueryString("kid")
     </div>
 <!--b3-->
      <div class="am-form-group">
-            <label for="doc-ipt-email-1">When do you want to start your studies at ASU?<span>*</span> :</label>
+            <label for="doc-ipt-email-1">When do you want to start your studies at ASU?<!--<span>*</span>--> :</label>
         
             <label class="am-radio">
                 <input type="radio"  value="A" name="b3" class="b3" <%if b3="A" then%> checked<%end if%>> Spring 2019 （January）
@@ -238,13 +238,13 @@ response.cookies("kid")=request.QueryString("kid")
 <a href="xgwl/pdf/ASU_degrees.pdf" target="blank">Download Graduate degrees's PDF</a>
 <!--b4-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">First choice of major <span>*</span> :</label>
+        <label for="doc-ipt-email-1">First choice of major <!--<span>*</span>--> :</label>
             <input type="text" class="b4" placeholder="" value="<%=b4%>">
             <span class="errinfo"></span>
         </div>
         <!--b5-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">First choice major:which campus do you want to attend? <span>*</span></label>
+        <label for="doc-ipt-email-1">First choice major:which campus do you want to attend? <!--<span>*</span>--></label>
             <select id="country" name="b5" size="1" required="" class="fsField fsRequired b5" aria-required="true">
             <option  value="0">Please select...</option>
             <option value="A" <%if b5="A" then%> selected<%end if%>>Tempe</option>
@@ -258,13 +258,13 @@ response.cookies("kid")=request.QueryString("kid")
         </div>
 <!--b6-->
   <div class="am-form-group">
-  <label for="doc-ipt-email-1">Second choice of major <span>*</span> :</label>
+  <label for="doc-ipt-email-1">Second choice of major <!--<span>*</span>--> :</label>
             <input type="text" class="b6" placeholder="" value="<%=b6%>">
             <span class="errinfo"></span>
         </div>
         <!--b7-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">Second choice major:which campus do you want to attend? <span>*</span></label>
+        <label for="doc-ipt-email-1">Second choice major:which campus do you want to attend? <!--<span>*</span>--></label>
             <select id="country" name="b7" size="1" required="" class="fsField fsRequired b7" aria-required="true">
             <option  value="0" >Please select...</option>
             <option value="A" <%if b7="A" then%> selected<%end if%>>Tempe</option>
@@ -281,13 +281,13 @@ response.cookies("kid")=request.QueryString("kid")
 
 <!--b8-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">Name of previous secondary/ high school<span>*</span> :</label>
+        <label for="doc-ipt-email-1">Name of previous secondary/ high school<!--<span>*</span>--> :</label>
             <input type="text" class="b8" placeholder="" value="<%=b8%>">
             <span class="errinfo"></span>
         </div>
 <!--b9-->
        <div class="am-form-group">
-        <label for="doc-ipt-email-1">Country <span>*</span></label>
+        <label for="doc-ipt-email-1">Country <!--<span>*</span>--></label>
             <select id="country" name="b9" size="1" required="" class="fsField fsRequired b9" aria-required="true">
             <%if b9="" then%>
             <option value="0">Please select...</option>
@@ -300,20 +300,20 @@ response.cookies("kid")=request.QueryString("kid")
         </div>
 <!--b10-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">State/ Province / Region <span>*</span> :</label>
+        <label for="doc-ipt-email-1">State/ Province / Region <!--<span>*</span>--> :</label>
             <input type="text" class="b10" placeholder="" value="<%=b10%>">
             <span class="errinfo"></span>
         </div>
 <!--b11-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">City <span>*</span> :</label>
+        <label for="doc-ipt-email-1">City <!--<span>*</span>--> :</label>
             <input type="text" class="b11" placeholder="" value="<%=b11%>">
             <span class="errinfo"></span>
         </div>
 <!--b12-->
 
         <div class="am-form-group am-form-icon">
-        <label for="doc-ipt-email-1">Date first attended <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Date first attended <!--<span>*</span>--> :</label>
             <i class="am-icon-calendar"></i>
          <link href="xgwl/css/lib/mobiscroll.css" rel="stylesheet" />
         <link href="xgwl/css/lib/mobiscroll_date.css" rel="stylesheet" />
@@ -324,14 +324,14 @@ response.cookies("kid")=request.QueryString("kid")
 <!--b13-->
 
         <div class="am-form-group am-form-icon">
-        <label for="doc-ipt-email-1">Date last attended <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Date last attended <!--<span>*</span>--> :</label>
             <i class="am-icon-calendar"></i>
         <input type="text" name="b13"  readonly class="input bdate b13 am-form-field " value="<%=b13%>" placeholder="" />
             <span class="errinfo"></span>
         </div>
 <!--b14-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">Have you attended another secondary/ high school? <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Have you attended another secondary/ high school? <!--<span>*</span>--> :</label>
         
             <label class="am-radio-inline">
                 <input type="radio"  value="Yes" name="b14" class=" b14" <%if b14="Yes" then%> checked<%end if%>> Yes
@@ -348,13 +348,13 @@ response.cookies("kid")=request.QueryString("kid")
 
         <!--b14a1-->
             <div class="am-form-group">
-            <label for="doc-ipt-email-1">Name of previous secondary/ high school<span>*</span> :</label>
+            <label for="doc-ipt-email-1">Name of previous secondary/ high school<!--<span>*</span>--> :</label>
                 <input type="text" class="b14a1" placeholder="" value="<%=b14a1%>">
                 <span class="errinfo"></span>
             </div>
         <!--b14a2-->
             <div class="am-form-group">
-                <label for="doc-ipt-email-1">Country <span>*</span></label>
+                <label for="doc-ipt-email-1">Country <!--<span>*</span>--></label>
                     <select id="country" name="b14a2" size="1" required="" class="fsField fsRequired b14a2" aria-required="true">
                     <%if b14a2="" then%>
                     <option value="0">Please select...</option>
@@ -367,20 +367,20 @@ response.cookies("kid")=request.QueryString("kid")
                 </div>
         <!--b14a3-->
                 <div class="am-form-group">
-                <label for="doc-ipt-email-1">State/ Province / Region <span>*</span> :</label>
+                <label for="doc-ipt-email-1">State/ Province / Region <!--<span>*</span>--> :</label>
                     <input type="text" class="b14a3" placeholder="" value="<%=b14a3%>">
                     <span class="errinfo"></span>
                 </div>
         <!--b14a4-->
                 <div class="am-form-group">
-                <label for="doc-ipt-email-1">City <span>*</span> :</label>
+                <label for="doc-ipt-email-1">City <!--<span>*</span>--> :</label>
                     <input type="text" class="b14a4" placeholder="" value="<%=b14a4%>">
                     <span class="errinfo"></span>
                 </div>
         <!--b14a5-->
 
                 <div class="am-form-group am-form-icon">
-                <label for="doc-ipt-email-1">Date first attended <span>*</span> :</label>
+                <label for="doc-ipt-email-1">Date first attended <!--<span>*</span>--> :</label>
                     <i class="am-icon-calendar"></i>
                 <link href="xgwl/css/lib/mobiscroll.css" rel="stylesheet" />
                 <link href="xgwl/css/lib/mobiscroll_date.css" rel="stylesheet" />
@@ -391,7 +391,7 @@ response.cookies("kid")=request.QueryString("kid")
         <!--b14a6-->
 
                 <div class="am-form-group am-form-icon">
-                <label for="doc-ipt-email-1">Date last attended <span>*</span> :</label>
+                <label for="doc-ipt-email-1">Date last attended <!--<span>*</span>--> :</label>
                     <i class="am-icon-calendar"></i>
                 <input type="text" name="b14a6"  readonly class="input bdate b14a6 am-form-field " value="<%=b14a6%>" placeholder="" />
                     <span class="errinfo"></span>
@@ -400,7 +400,7 @@ response.cookies("kid")=request.QueryString("kid")
         </div>
 <!--b25-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">Have you previously attended or are you currently attending a college or university? <span>*</span></label>
+        <label for="doc-ipt-email-1">Have you previously attended or are you currently attending a college or university? <!--<span>*</span>--></label>
             <label class="am-radio">
                 <input type="radio"  value="A" name="b25" class=" b25" <%if b25="A" then%> checked<%end if%>> I currently am or have attended college or university
             </label>
@@ -424,13 +424,13 @@ response.cookies("kid")=request.QueryString("kid")
 <legend>About your College/ university</legend>
 <!--b15-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">Name of previous College/ university school<span>*</span> :</label>
+        <label for="doc-ipt-email-1">Name of previous College/ university school<!--<span>*</span>--> :</label>
             <input type="text" class="b15" placeholder="" value="<%=b15%>">
             <span class="errinfo"></span>
         </div>
 <!--b16-->
        <div class="am-form-group">
-        <label for="doc-ipt-email-1">Country <span>*</span></label>
+        <label for="doc-ipt-email-1">Country <!--<span>*</span>--></label>
             <select id="country" name="b16" size="1" required="" class="fsField fsRequired b16" aria-required="true">
             <%if b16="" then%>
             <option value="0">Please select...</option>
@@ -443,20 +443,20 @@ response.cookies("kid")=request.QueryString("kid")
         </div>
 <!--b17-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">State/ Province / Region <span>*</span> :</label>
+        <label for="doc-ipt-email-1">State/ Province / Region <!--<span>*</span>--> :</label>
             <input type="text" class="b17" placeholder="" value="<%=b17%>">
             <span class="errinfo"></span>
         </div>
 <!--b18-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">City <span>*</span> :</label>
+        <label for="doc-ipt-email-1">City <!--<span>*</span>--> :</label>
             <input type="text" class="b18" placeholder="" value="<%=b18%>">
             <span class="errinfo"></span>
         </div>
 <!--b19-->
 
         <div class="am-form-group am-form-icon">
-        <label for="doc-ipt-email-1">Date first attended <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Date first attended <!--<span>*</span>--> :</label>
             <i class="am-icon-calendar"></i>
          <link href="xgwl/css/lib/mobiscroll.css" rel="stylesheet" />
         <link href="xgwl/css/lib/mobiscroll_date.css" rel="stylesheet" />
@@ -467,14 +467,14 @@ response.cookies("kid")=request.QueryString("kid")
 <!--b20-->
 
         <div class="am-form-group am-form-icon">
-        <label for="doc-ipt-email-1">Date last attended <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Date last attended <!--<span>*</span>--> :</label>
             <i class="am-icon-calendar"></i>
         <input type="text" name="b20"  readonly class="input bdate b20 am-form-field " value="<%=b20%>" placeholder="" />
             <span class="errinfo"></span>
         </div>
 <!--b21-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">Have you attended another College/ university school? <span>*</span></label>
+        <label for="doc-ipt-email-1">Have you attended another College/ university school? <!--<span>*</span>--></label>
         
             <label class="am-radio-inline">
                 <input type="radio"  value="Yes" name="b21" class=" b21" <%if b21="Yes" then%> checked<%end if%>> Yes
@@ -489,13 +489,13 @@ response.cookies("kid")=request.QueryString("kid")
 
         <!--b21a1-->
             <div class="am-form-group">
-            <label for="doc-ipt-email-1">Name of previous College/ university school<span>*</span> :</label>
+            <label for="doc-ipt-email-1">Name of previous College/ university school<!--<span>*</span>--> :</label>
                 <input type="text" class="b21a1" placeholder="" value="<%=b21a1%>">
                 <span class="errinfo"></span>
             </div>
         <!--b21a2-->
             <div class="am-form-group">
-                <label for="doc-ipt-email-1">Country <span>*</span></label>
+                <label for="doc-ipt-email-1">Country <!--<span>*</span>--></label>
                     <select id="country" name="b21a2" size="1" required="" class="fsField fsRequired b21a2" aria-required="true">
                      <%if b21a2="" then%>
             <option value="0">Please select...</option>
@@ -508,20 +508,20 @@ response.cookies("kid")=request.QueryString("kid")
                 </div>
         <!--b21a3-->
                 <div class="am-form-group">
-                <label for="doc-ipt-email-1">State/ Province / Region <span>*</span> :</label>
+                <label for="doc-ipt-email-1">State/ Province / Region <!--<span>*</span>--> :</label>
                     <input type="text" class="b21a3" placeholder="" value="<%=b21a3%>">
                     <span class="errinfo"></span>
                 </div>
         <!--b21a4-->
                 <div class="am-form-group">
-                <label for="doc-ipt-email-1">City <span>*</span> :</label>
+                <label for="doc-ipt-email-1">City <!--<span>*</span>--> :</label>
                     <input type="text" class="b21a4" placeholder="" value="<%=b21a4%>">
                     <span class="errinfo"></span>
                 </div>
         <!--b21a5-->
 
                 <div class="am-form-group am-form-icon">
-                <label for="doc-ipt-email-1">Date first attended <span>*</span> :</label>
+                <label for="doc-ipt-email-1">Date first attended <!--<span>*</span>--> :</label>
                     <i class="am-icon-calendar"></i>
                 <link href="xgwl/css/lib/mobiscroll.css" rel="stylesheet" />
                 <link href="xgwl/css/lib/mobiscroll_date.css" rel="stylesheet" />
@@ -532,7 +532,7 @@ response.cookies("kid")=request.QueryString("kid")
         <!--b21a6-->
 
                 <div class="am-form-group am-form-icon">
-                <label for="doc-ipt-email-1">Date last attended <span>*</span> :</label>
+                <label for="doc-ipt-email-1">Date last attended <!--<span>*</span>--> :</label>
                     <i class="am-icon-calendar"></i>
                 <input type="text" name="b21a6"  readonly class="input bdate b21a6 am-form-field " value="<%=b21a6%>" placeholder="" />
                     <span class="errinfo"></span>
@@ -548,7 +548,7 @@ response.cookies("kid")=request.QueryString("kid")
 
 <!--b22-->
 <div class="am-form-group">
-        <label for="doc-ipt-email-1">Do you have college credits from an accredited university that you plan on transferrig to ASU? <span>*</span> </label>
+        <label for="doc-ipt-email-1">Do you have college credits from an accredited university that you plan on transferrig to ASU? <!--<span>*</span>--> </label>
         
             <label class="am-radio-inline">
                 <input type="radio"  value="Yes" name="b22" class=" b22"  <%if b22="Yes" then%> checked<%end if%>> Yes
@@ -563,7 +563,7 @@ response.cookies("kid")=request.QueryString("kid")
 
 <!--b23-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">How you will meet the English proficiency requirement for the Pathway program? <span>*</span> <%=b23%></label>
+        <label for="doc-ipt-email-1">How you will meet the English proficiency requirement for the Pathway program? <!--<span>*</span>--> <%=b23%></label>
         
             <label class="am-radio">
                 <input type="radio"  value="A" name="b23" class=" b23" <%if b23="A" then%> checked<%end if%>> I will attend the intensive English program at ASU
@@ -581,7 +581,7 @@ response.cookies("kid")=request.QueryString("kid")
 
             <!--b23b1-->
                 <div class="am-form-group">
-                    <label for="doc-ipt-email-1">Which English proficiency exam score are you submitting? <span>*</span></label>
+                    <label for="doc-ipt-email-1">Which English proficiency exam score are you submitting? <!--<span>*</span>--></label>
             
                     <label class="am-radio">
                         <input type="radio"  value="TOEFL" name="b23b1" class=" b23b1" <%if b23b1="TOEFL" then%> checked<%end if%>> TOEFL
@@ -598,14 +598,14 @@ response.cookies("kid")=request.QueryString("kid")
                 </div>
             <!--b23b2-->
                 <div class="am-form-group am-form-icon">
-                    <label for="doc-ipt-email-1">Date taken <span>*</span> :</label>
+                    <label for="doc-ipt-email-1">Date taken <!--<span>*</span>--> :</label>
                         <i class="am-icon-calendar"></i>
                     <input type="text" name="b23b2"  readonly class="input bdate b23b2 am-form-field " value="<%=b23b2%>" placeholder="" />
                         <span class="errinfo"></span>
                 </div>
             <!--b23b3-->
                 <div class="am-form-group ">
-                    <label for="doc-ipt-email-1">Overall Score <span>*</span> :</label>
+                    <label for="doc-ipt-email-1">Overall Score <!--<span>*</span>--> :</label>
                    
                     <input type="text" name="b23b3" class="input b23b3 am-form-field " value="<%=b23b3%>" placeholder="" />
                         <span class="errinfo"></span>
@@ -628,7 +628,7 @@ response.cookies("kid")=request.QueryString("kid")
         <!--b24a-->
         <div class="b24a"  <%if b24="" then%>hide<%end if%>>
             <div class="am-form-group ">
-                <label for="doc-ipt-email-1">Overall Score <span>*</span> :</label>
+                <label for="doc-ipt-email-1">Overall Score <!--<span>*</span>--> :</label>
                 <input type="text" name="b24a1" class="input b24a1 am-form-field " value="<%=b24a1%>" placeholder="" />
                 <span class="errinfo"></span>
             </div>

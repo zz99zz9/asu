@@ -87,7 +87,7 @@ response.cookies("kid")=request.QueryString("kid")
 
 <!--c1-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Are you a US permanent resident or a refugee in the USA? <span>*</span> :</label>
+            <label for="doc-ipt-email-1">Are you a US permanent resident or a refugee in the USA? <!--<span>*</span>--> :</label>
         
             <label class="am-radio-inline">
                 <input type="radio"  value="Yes" name="c1" class="c1" <%if c1="Yes" then%> checked<%end if%>> Yes
@@ -99,7 +99,7 @@ response.cookies("kid")=request.QueryString("kid")
         </div>
 <!--c2-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Are you currently in the United States on any kind of student visa? <span>*</span></label>
+            <label for="doc-ipt-email-1">Are you currently in the United States on any kind of student visa? <!--<span>*</span>--></label>
         
             <label class="am-radio-inline">
                 <input type="radio" value="Yes" name="c2" class="c2" <%if c2="Yes" then%> checked<%end if%>> Yes
@@ -113,7 +113,7 @@ response.cookies("kid")=request.QueryString("kid")
     <div class="c2a hide">
         <!--c2a1-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Will you be transferring your 1-20 from another American school? <span>*</span></label>
+            <label for="doc-ipt-email-1">Will you be transferring your 1-20 from another American school? <!--<span>*</span>--></label>
         
             <label class="am-radio-inline">
                 <input type="radio"  value="Yes" name="c2a1" class="c2a1" <%if c2a1="Yes" then%> checked<%end if%>> Yes
@@ -124,7 +124,7 @@ response.cookies("kid")=request.QueryString("kid")
         </div>
         <!--c2a2-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">What type of visa do you have? <span>*</span></label>
+            <label for="doc-ipt-email-1">What type of visa do you have? <!--<span>*</span>--></label>
         
             <label class="am-radio">
                 <input type="radio"  value="A" name="c2a2" class="c2a2" <%if c2a2="A" then%> checked<%end if%>> F-1 student visa
@@ -145,7 +145,7 @@ response.cookies("kid")=request.QueryString("kid")
 <legend>Financial guarantee</legend>
 <!--c3-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Financial Guarantee source <span>*</span></label>
+            <label for="doc-ipt-email-1">Financial Guarantee source <!--<span>*</span>--></label>
         
             <label class="am-radio">
                 <input type="radio"  value="A" name="c3" class="c3" <%if c3="A" then%> checked<%end if%>> I am self-funding
@@ -165,19 +165,19 @@ response.cookies("kid")=request.QueryString("kid")
     <div class="c3bd hide">
         <!--c3bd1-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">First Name <span>*</span> :</label>
+            <label for="doc-ipt-email-1">First Name <!--<span>*</span>--> :</label>
             <input type="text" class="c3bd1" placeholder="" value="<%=c3bd1%>">
             <span class="errinfo"></span>
         </div>
         <!--c3bd2-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Last Name <span>*</span> :</label>
+            <label for="doc-ipt-email-1">Last Name <!--<span>*</span>--> :</label>
             <input type="text" class="c3bd2" placeholder="" value="<%=c3bd2%>">
             <span class="errinfo"></span>
         </div>
          <!--c3bd3-->
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Guarantor relationship to student <span>*</span> :</label>
+            <label for="doc-ipt-email-1">Guarantor relationship to student <!--<span>*</span>--> :</label>
             <input type="text" class="c3bd3" placeholder="" value="<%=c3bd3%>">
             <span class="errinfo"></span>
         </div>
@@ -187,7 +187,7 @@ response.cookies("kid")=request.QueryString("kid")
     <!--c3c-->
     <div class="c3c hide">
         <div class="am-form-group">
-            <label for="doc-ipt-email-1">Sponsor name <span>*</span> :</label>
+            <label for="doc-ipt-email-1">Sponsor name <!--<span>*</span>--> :</label>
             <input type="text" class="c3c1" placeholder="" value="<%=c3c1%>">
             <span class="errinfo"></span>
         </div>
@@ -196,7 +196,7 @@ response.cookies("kid")=request.QueryString("kid")
 <legend>Student's contact details</legend>
 <!--c4-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Email <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Email <!--<span>*</span>--> :</label>
         <input type="text" class="c4" placeholder="" value="<%=c4%>">
         <span class="errinfo"></span>
     </div>
@@ -208,13 +208,13 @@ response.cookies("kid")=request.QueryString("kid")
     </div>
 <!--c6-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Cellphone or US phone number <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Cellphone or US phone number <!--<span>*</span>--> :</label>
         <input type="text" class="c6" placeholder="" value="<%=c6%>">
         <span class="errinfo"></span>
     </div>
 <!--c7-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Home phone number <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Home phone number <!--<span>*</span>--> :</label>
         <input type="text" class="c7" placeholder="" value="<%=c7%>">
         <span class="errinfo"></span>
     </div>
@@ -235,7 +235,7 @@ response.cookies("kid")=request.QueryString("kid")
     <div class="c8a hide">
     <!--c8a1-->
         <div class="am-form-group">
-        <label for="doc-ipt-email-1">Messaging app <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Messaging app <!--<span>*</span>--> :</label>
         <select id="country" name="c8a1" size="1" required="" class="fsField fsRequired c8a1" aria-required="true">
                     <option value="0">Please select...</option>
                         <option value="Facebook">Facebook</option>
@@ -246,7 +246,7 @@ response.cookies("kid")=request.QueryString("kid")
 
     <!--c8a2-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Messaging App Account / Username <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Messaging App Account / Username <!--<span>*</span>--> :</label>
         <input type="text" class="c8a2" placeholder="" value="<%=c8a2%>">
         <span class="errinfo"></span>
     </div>
@@ -268,37 +268,37 @@ response.cookies("kid")=request.QueryString("kid")
 <legend>Address details</legend>
 <!--c10-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Permanent home address - line 1 <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Permanent home address - line 1 <!--<span>*</span>--> :</label>
         <input type="text" class="c10" placeholder="" value="<%=c10%>">
         <span class="errinfo"></span>
     </div>
 <!--c11-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Permanent home address - line 2 <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Permanent home address - line 2 <!--<span>*</span>--> :</label>
         <input type="text" class="c11" placeholder="" value="<%=c11%>">
         <span class="errinfo"></span>
     </div>
 <!--c12-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Permanent home city <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Permanent home city <!--<span>*</span>--> :</label>
         <input type="text" class="c12" placeholder="" value="<%=c12%>">
         <span class="errinfo"></span>
     </div>
 <!--c13-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Permanent home state / province / region <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Permanent home state / province / region <!--<span>*</span>--> :</label>
         <input type="text" class="c13" placeholder="" value="<%=c13%>">
         <span class="errinfo"></span>
     </div>
 <!--c14-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Permanent home postal code <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Permanent home postal code <!--<span>*</span>--> :</label>
         <input type="text" class="c14" placeholder="" value="<%=c14%>">
         <span class="errinfo"></span>
     </div>
 <!--c15-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Permanent home country <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Permanent home country <!--<span>*</span>--> :</label>
         <select id="country" name="c15" size="1" required="" class="fsField fsRequired c15" aria-required="true">
             <%if c15="" then%>
             <option value="0">Please select...</option>
@@ -311,31 +311,31 @@ response.cookies("kid")=request.QueryString("kid")
     </div>
 <!--c16-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Mailing address for immigration documents <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Mailing address for immigration documents <!--<span>*</span>--> :</label>
         <input type="text" class="c16" placeholder="" value="<%=c16%>">
         <span class="errinfo"></span>
     </div>
 <!--c17-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">City <span>*</span> :</label>
+        <label for="doc-ipt-email-1">City <!--<span>*</span>--> :</label>
         <input type="text" class="c17" placeholder="" value="<%=c17%>">
         <span class="errinfo"></span>
     </div>
 <!--c18-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">State / Province <span>*</span> :</label>
+        <label for="doc-ipt-email-1">State / Province <!--<span>*</span>--> :</label>
         <input type="text" class="c18" placeholder="" value="<%=c18%>">
         <span class="errinfo"></span>
     </div>
 <!--c19-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">ZIP / Postal <span>*</span> :</label>
+        <label for="doc-ipt-email-1">ZIP / Postal <!--<span>*</span>--> :</label>
         <input type="text" class="c19" placeholder="" value="<%=c19%>">
         <span class="errinfo"></span>
     </div>
 <!--c20-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Permanent home country <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Permanent home country <!--<span>*</span>--> :</label>
         <select id="country" name="c20" size="1" required="" class="fsField fsRequired c20" aria-required="true">
 
             <%if c20="" then%>
@@ -350,25 +350,25 @@ response.cookies("kid")=request.QueryString("kid")
     </div>
 <!--c21-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">First Name <span>*</span> :</label>
+        <label for="doc-ipt-email-1">First Name <!--<span>*</span>--> :</label>
         <input type="text" class="c21" placeholder="" value="<%=c21%>">
         <span class="errinfo"></span>
     </div>
 <!--c22-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Last Name <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Last Name <!--<span>*</span>--> :</label>
         <input type="text" class="c22" placeholder="" value="<%=c22%>">
         <span class="errinfo"></span>
     </div>
 <!--c23-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Recipient email for immigration documents <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Recipient email for immigration documents <!--<span>*</span>--> :</label>
         <input type="text" class="c23" placeholder="" value="<%=c23%>">
         <span class="errinfo"></span>
     </div>
 <!--c24-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Recipient phone for immigration documents <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Recipient phone for immigration documents <!--<span>*</span>--> :</label>
         <input type="text" class="c24" placeholder="" value="<%=c24%>">
         <span class="errinfo"></span>
     </div>
@@ -376,25 +376,25 @@ response.cookies("kid")=request.QueryString("kid")
 <legend>Emergency contact</legend>
 <!--c25-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">First Name <span>*</span> :</label>
+        <label for="doc-ipt-email-1">First Name <!--<span>*</span>--> :</label>
         <input type="text" class="c25" placeholder="" value="<%=c25%>">
         <span class="errinfo"></span>
     </div>
 <!--c26-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Last Name <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Last Name <!--<span>*</span>--> :</label>
         <input type="text" class="c26" placeholder="" value="<%=c26%>">
         <span class="errinfo"></span>
     </div>
 <!--c27-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Emergency contact phone <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Emergency contact phone <!--<span>*</span>--> :</label>
         <input type="text" class="c27" placeholder="" value="<%=c27%>">
         <span class="errinfo"></span>
     </div>
 <!--c28-->
     <div class="am-form-group">
-        <label for="doc-ipt-email-1">Emergency contact email <span>*</span> :</label>
+        <label for="doc-ipt-email-1">Emergency contact email <!--<span>*</span>--> :</label>
         <input type="text" class="c28" placeholder="" value="<%=c28%>">
         <span class="errinfo"></span>
     </div>
