@@ -19,7 +19,7 @@
 <!--学院简介-->
 
 <%uid=request.cookies("uid")
-
+if uid="" then uid=0
     set Rs=Server.CreateObject("ADODB.Recordset")
     Rs.Open "select * from [Application] where uid="&uid&" order by id desc",conn,1,3
     %>
