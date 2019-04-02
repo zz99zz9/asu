@@ -17,7 +17,17 @@
    <a href="aapply-1.asp" class="asubtn">立即提交留学申请</a>
 </div>
 <!--学院简介-->
+
+<%uid=request.cookies("uid")
+
+    set Rs=Server.CreateObject("ADODB.Recordset")
+    Rs.Open "select * from [Application] where uid="&uid&" order by id desc",conn,1,3
+    %>
+    <%if rs.eof then%>
 <%response.cookies("aid")=""%>
+    <%else%>
+<%response.cookies("aid")=rs("id")%>
+    <%end if%>
 <div class="am-u-sm-12 info">
     <!---->
 <section data-am-widget="accordion" class="am-accordion am-accordion-basic " data-am-accordion='{  }' >

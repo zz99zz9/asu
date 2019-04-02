@@ -23,6 +23,7 @@ end if%>
 
 
     <%aid=request.queryString("aid")
+    
     if aid="" then
 aid=request.cookies("aid")
 else
