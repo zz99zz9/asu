@@ -97,7 +97,7 @@ response.cookies("kid")=request.QueryString("kid")
         </div>
 <!--d6-->
 <div class="am-form-group">
-                <label for="doc-ipt-email-1">Relevant Document Download</label>
+                <label for="doc-ipt-email-1">Relevant Document Download</label><br>
 
             <a href="xgwl/pdf/2019-2020-financial-guarantee-form.pdf" target="_blank">2019-2020 financial-guarantee-form.pdf</a><br>
             <a href="xgwl/pdf/sevis-transfer-form_9-10-18.pdf" target="_blank">sevis-transfer-form_9-10-18.pdf</a><br>
