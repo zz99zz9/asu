@@ -96,7 +96,14 @@ response.cookies("kid")=request.QueryString("kid")
 
         </div>
 <!--d6-->
+<div class="am-form-group">
+                <label for="doc-ipt-email-1"></label>
 
+            <ul><a href="xgwl/pdf/2019-2020-financial-guarantee-form.pdf" target="_blank">2019-2020 financial-guarantee-form.pdf</a>
+            <a href="xgwl/pdf/sevis-transfer-form_9-10-18.pdf" target="_blank">sevis-transfer-form_9-10-18.pdf</a>
+             reference:
+            <a href="xgwl/pdf/Masters-programs-adminssion-requirement_10-20-18.pdf" target="_blank">Masters-programs-adminssion-requirement_10-20-18.pdf</a></ul>
+            </div>
             <div class="am-form-group">
                 <label for="doc-ipt-email-1">How many documents would you like to upload? <!--<span>*</span>--></label>
                     <select id="country" name="d6" size="1" required="" class="fsField fsRequired d6" aria-required="true">
