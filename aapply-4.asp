@@ -99,10 +99,10 @@ response.cookies("kid")=request.QueryString("kid")
 <div class="am-form-group">
                 <label for="doc-ipt-email-1">Relevant Document Download</label>
 
-            <ul><a href="xgwl/pdf/2019-2020-financial-guarantee-form.pdf" target="_blank">2019-2020 financial-guarantee-form.pdf</a><br>
+            <a href="xgwl/pdf/2019-2020-financial-guarantee-form.pdf" target="_blank">2019-2020 financial-guarantee-form.pdf</a><br>
             <a href="xgwl/pdf/sevis-transfer-form_9-10-18.pdf" target="_blank">sevis-transfer-form_9-10-18.pdf</a><br>
              reference:<br>
-            <a href="xgwl/pdf/Masters-programs-adminssion-requirement_10-20-18.pdf" target="_blank">Masters-programs-adminssion-requirement_10-20-18.pdf</a></ul>
+            <a href="xgwl/pdf/Masters-programs-adminssion-requirement_10-20-18.pdf" target="_blank">Masters-programs-adminssion-requirement_10-20-18.pdf</a>
             </div>
             <div class="am-form-group">
                 <label for="doc-ipt-email-1">How many documents would you like to upload? <!--<span>*</span>--></label>
