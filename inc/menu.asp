@@ -69,7 +69,7 @@ header a{color:#fff;}
                     <a href="member.asp" class="">会员中心</a>
                   </li>
                   <li class="">
-                    <a href="##" class="">线上课堂</a>
+                    <a href="https://asupd-saas.blackboard.com.cn/" class="" target="blank">线上课堂</a>
                   </li>
                   <li class="">
                     <a href="Contact_us.asp" class="">联系我们</a>
