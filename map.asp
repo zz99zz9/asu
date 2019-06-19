@@ -1,5 +1,5 @@
 <!--#include file="inc/conn.asp"-->
-<%title="校园生活"%>
+<%title="校园地图"%>
  <!--#include file="inc/header.asp">
 <!-- 页面内容 开发时删除 -->
 <link rel="stylesheet" href="xgwl/css/list.css">

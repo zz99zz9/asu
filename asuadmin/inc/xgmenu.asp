@@ -57,6 +57,7 @@
                     <li class="nav5-1"><a class="" href="class_wc.Asp">ASU微群分类</a></li>
                     <li class="nav5-2"><a class="" href="class_live.Asp">校内生活分类</a></li>
                     <li class="nav5-3"><a class="" href="class_zb.Asp">学校周边分类</a></li>
+                    <li class="nav5-4"><a class="" href="class_map.Asp">校园地图管理</a></li>
                       </ul>
                   </li>
   <li class="sub-menu nav3">
