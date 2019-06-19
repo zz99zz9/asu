@@ -15,7 +15,7 @@ Set rs= Server.CreateObject("ADODB.Recordset")
 rs.open sql,conn,1,1
 %>
  <%do while not rs.eof%>
-     <div class="am-u-sm-6 guojia">
+     <div class="am-u-sm-12 guojia">
       <a class="vli" href="<%=rs("ctxt")%>" style="background-image:url(<%=rs("CFile")%>);"><%=rs("cname")%></a>
     </div>
 <%
