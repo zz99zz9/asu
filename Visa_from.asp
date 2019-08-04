@@ -24,14 +24,14 @@ body{background:#f2f2f2;}
 </div>
 <div class="am-slider am-margin-top-15" data-am-flexslider id="demo-slider-0">
 <p class="h1">一对一指导及预约签证</p>
-<hr><b>*F1签证服务项目：</b><br><br>
+<hr><b>*F1签证服务项目：</b><br>
 
 1、DS160表格填写<br>
 2、CGI账号注册、交费、预约<br>
 3、Sevis网上交费（需申请人提供信用卡信息）、生成打印收据<br>
 4、简单面谈指导（基本信息）<br><br><br>
 
-<b>*访问签证服务项目：</b><br><br>
+<b>*访问签证服务项目：</b><br>
 
 1、DS160表格填写<br>
 2、CGI账号注册、交费、预约<br>
