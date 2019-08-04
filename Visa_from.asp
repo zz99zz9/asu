@@ -75,7 +75,7 @@ body{background:#f2f2f2;}
         <input type="hidden" class="cid" value="<%=cid%>">
         <input type="hidden" class="uid" value="<%=request.cookies("uid")%>">
         <input type="hidden" class="action" value="add">
-        <button type="button" class="am-btn am-btn-danger am-u-sm-12 " onClick="save()">微信支付</button>
+        <button type="button" class="am-btn am-btn-danger am-u-sm-12 " onClick="save()">提交表单</button>
 
         </form>
   </fieldset>
