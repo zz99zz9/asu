@@ -20,11 +20,13 @@ body{background:#f2f2f2;}
     <li><img src="xgwl/img/ad3.png" /></li>
   </ul>
 </div>
-<div class="am-slider am-margin-top-15" data-am-flexslider id="demo-slider-0">
-<p class="h1">签证加急服务</p>
-<hr>（1500元/位服务费，不含签证费、SEVIS费）<br>面签基础全套服务+加急处理资料+加急预约+加急出签（提供资料我们申请至面试至拿到签证，全程13-14工作日左右拿到签证，行政审理CHECK除外）
-</div>
 
+<div class="am-g am-g-fixed vul">
+  <div class="am-u-sm-12 vtxt">
+  <p class="h1">签证加急服务</p>
+（1500元/位服务费，不含签证费、SEVIS费）<br>面签基础全套服务+加急处理资料+加急预约+加急出签（提供资料我们申请至面试至拿到签证，全程13-14工作日左右拿到签证，行政审理CHECK除外）
+  </div>
+</div>
 <!--<footer class="am-margin-top">
   <hr/>
   <p class="am-text-center">
