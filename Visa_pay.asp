@@ -26,19 +26,12 @@ end function%>
 
 <form action="pay/wx_pay.asp" method="post">
 		<div class="input">
-			<label>订单号:<%=GetOrderId()%></label>
-			<input type="hidden" name="out_trade_no" value="<%=GetOrderId()%>">
+			<label>签证提交成功，您的签证信息我们已经收到，我们将尽快和您取得联系！</label>
+			<a href="member.Asp" class="am-btn am-btn-default am-u-sm-12 " >返回个人中心</a>
 		</div>
-		<div class="input">
-			<label>商品名称:签证订金</label>
-			<input type="hidden" name="body" value="签证">
-		</div>
-		<div class="input">
-			<label>支付金额</label>
-			<input type="hidden" name="total_fee" value="1000">
-			<p>签证定金为<font color="#FF00000">1000</font>元</p>
-		</div>
-		<div class="submit"><input type="submit" value="微信支付"></div>
+
+
+		
 		
 		</form>	
 

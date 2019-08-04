@@ -55,7 +55,7 @@ function save(){
           if(data=="ok" && status=="success"){
            // cookie.set(uid, 1);
             console.log(data);
-            location.href='/visa_from.asp?tel='+tel
+            location.href='/visa_pay.asp?tel='+tel
               }
         });
 
