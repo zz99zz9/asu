@@ -4,12 +4,44 @@
  <!--#include file="inc/inc.asp"-->
  <!--#include file="inc/header.asp">
 <!-- 页面内容 开发时删除 -->
+<style>
+.am-control-nav{display:none;}
+body{background:#f2f2f2;}
+.am-margin-top-15{background:#fff;padding:10px;width:90%;margin-left:5%;margin-top:-40px;border-radius:5px;box-shadow: 0px 3px 3px rgba(0,0,0,0.1);}
+.vul{background-color:#fff;}
+.vtit{padding-top:10px;padding-left:20px;color:#831c3a;font-weight:bold;}
+.guojia{margin-bottom:1em;margin-top:1em;}
+.vli{width:100%;height:100px;display:block;background-size:cover;text-align:center;line-height:100px;color:#fff;font-weight:blod;}
+.h1{text-align:center;font-size:1.2em;color:#831c3a;}
+.vtxt{padding:20px;}
+</style>
+<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+  <ul class="am-slides">
+    <li><img src="xgwl/img/ad1.png" /></li>
+    <li><img src="xgwl/img/ad2.png" /></li>
+    <li><img src="xgwl/img/ad3.png" /></li>
+  </ul>
+</div>
+<div class="am-slider am-margin-top-15" data-am-flexslider id="demo-slider-0">
+<p class="h1">一对一指导及预约签证</p>
+<hr>*F1签证服务项目：<br><br>
 
+1、DS160表格填写<br>
+2、CGI账号注册、交费、预约<br>
+3、Sevis网上交费（需申请人提供信用卡信息）、生成打印收据<br>
+4、简单面谈指导（基本信息）<br><br><br>
+
+*访问签证服务项目：<br><br>
+
+1、DS160表格填写<br>
+2、CGI账号注册、交费、预约<br>
+3、简单面谈指导（基本信息）
+</div>
 <div class="am-g am-g-fixed am-margin-top">
   <div class="am-u-sm-12">
     <div class="am-form" >
   <fieldset>
-    <legend><%call showName("class_visa",cid,"cid","cname")%>签证</legend>
+    <legend>签证表单</legend>
    
 <form name="form2" id="form2" >
 
