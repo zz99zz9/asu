@@ -40,7 +40,7 @@ rs.open sql,conn,1,1
 %>
  <%do while not rs.eof%>
     <div class="am-u-sm-6 guojia">
-      <a class="vli" href="visa_from.asp?cid=<%=rs("cid")%>" style="background-image:url(<%=rs("CFile")%>);"><%=rs("cname")%></a>
+      <a class="vli" href="<%=rs("CTxt")%>" style="background-image:url(<%=rs("CFile")%>);"><%=rs("cname")%></a>
     </div>
 <%
 	      rs.movenext
