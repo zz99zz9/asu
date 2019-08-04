@@ -22,7 +22,7 @@ body{background:#f2f2f2;}
 </div>
 <div class="am-slider am-margin-top-15" data-am-flexslider id="demo-slider-0">
 <p class="h1">拒签再签服务</p>
-<hr>（8999元起/位服务费，不含签证费、SEVIS费）<br>
+<hr>（8999元起/位服务费，不含签证费、SEVIS费）<br><br>
 U MENTOR签证中心除提供日常签证服务外，也提供成绩单/毕业证/学位证翻译、陪签、面试培训等服务，用低于市场的价格为您提供优质省心的服务。<br>
 1、翻译服务：毕业证、学位证、成绩单、个人简历、学习计划等<br>
 2、陪签服务<br>

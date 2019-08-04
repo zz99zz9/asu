@@ -22,7 +22,7 @@ body{background:#f2f2f2;}
 </div>
 <div class="am-slider am-margin-top-15" data-am-flexslider id="demo-slider-0">
 <p class="h1">拒签再签服务</p>
-<hr>（8999元起/位服务费，不含签证费、SEVIS费）<br>
+<hr>（8999元起/位服务费，不含签证费、SEVIS费）<br><br>
 1、提供美国各类签证拒签档案调档、拒签再签、拒签翻案服务<br>
 2、个性化签证方案设计<br>
 3、一对一面试培训<br>
