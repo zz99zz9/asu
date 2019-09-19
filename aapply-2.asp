@@ -221,16 +221,16 @@ response.cookies("kid")=request.QueryString("kid")
             <label for="doc-ipt-email-1">When do you want to start your studies at ASU?<!--<span>*</span>--> :</label>
         
             <label class="am-radio">
-                <input type="radio"  value="A" name="b3" class="b3" <%if b3="A" then%> checked<%end if%>> Spring 2019 （January）
+                <input type="radio"  value="A" name="b3" class="b3" <%if b3="A" then%> checked<%end if%>> Spring 2020 （January）
             </label>
             <label class="am-radio">
-                <input type="radio"  value="B" name="b3" class="b3" <%if b3="B" then%> checked<%end if%>> Summer 2019 (May)
+                <input type="radio"  value="B" name="b3" class="b3" <%if b3="B" then%> checked<%end if%>> Summer 2020 (May)
             </label>
             <label class="am-radio">
-                <input type="radio"  value="C" name="b3" class="b3" <%if b3="C" then%> checked<%end if%>> Fall 2019 (Auguest)
+                <input type="radio"  value="C" name="b3" class="b3" <%if b3="C" then%> checked<%end if%>> Fall 2020 (Auguest)
             </label>
             <label class="am-radio">
-                <input type="radio"  value="D" name="b3" class="b3" <%if b3="D" then%> checked<%end if%>> Spring 2020 (January)
+                <input type="radio"  value="D" name="b3" class="b3" <%if b3="D" then%> checked<%end if%>> Spring 2021 (January)
             </label>
         </div>            
 

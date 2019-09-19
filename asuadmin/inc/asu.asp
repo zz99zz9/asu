@@ -15,13 +15,13 @@ End sub
 sub b3(v)
 select case v
 case "A"
-t="Spring 2019(January)"
-case "B"
-t="Summer 2019(May)"
-case "C"
-t="Fall 2019(Auguest)"
-case "D"
 t="Spring 2020(January)"
+case "B"
+t="Summer 2020(May)"
+case "C"
+t="Fall 2020(Auguest)"
+case "D"
+t="Spring 2021(January)"
 end select
 Response.Write t
 End sub
