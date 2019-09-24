@@ -35,9 +35,9 @@ function check2(v){
         $(v).addClass("no");
         $(v).next(".errinfo").html("手机号码不能为空");
 
-    }else if(!reg2.test($(v).val())){
-        $(v).addClass("no");
-        $(v).next(".errinfo").html("请检查手机号码是否正确");
+    //}else if(!reg2.test($(v).val())){
+      //  $(v).addClass("no");
+      //  $(v).next(".errinfo").html("请检查手机号码是否正确");
 
     }else{
         $(v).removeClass("no");
